@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Predictions - AI Football Analysis</title>
+    <link rel="stylesheet" href="styles.css?v=1719166700">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="aurora-background">
+        <div class="aurora-shape aurora-shape1"></div>
+        <div class="aurora-shape aurora-shape2"></div>
+        <div class="aurora-shape aurora-shape3"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <i class="fas fa-atom"></i>
+                <h1>Quantum Predictions</h1>
+            </div>
+            <div class="header-controls">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="team-search" placeholder="Search team...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span id="total-matches">0</span>
+                <label>Matches Analyzed</label>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span id="last-update-time">-</span>
+                <label>Last Update</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Date Navigator Section -->
+    <section class="date-navigator-section">
+        <div class="date-navigator">
+            <button class="date-nav-btn" id="prev-date-btn" title="Previous Day">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="current-date">
+                <span id="current-date-text">Today</span>
+                <span id="current-date-full"></span>
+            </div>
+            <button class="date-nav-btn" id="next-date-btn" title="Next Day">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Filters -->
+        <section class="filters-panel">
+            <div class="filter-group">
+                <label for="competition-filter"><i class="fas fa-flag"></i> Country</label>
+                <div class="country-selector-wrapper">
+                    <button class="country-selector-btn" id="country-selector-btn">
+                        <span class="selected-country">All Countries</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="confidence-filter"><i class="fas fa-shield-alt"></i> Confidence</label>
+                <div class="confidence-selector-wrapper">
+                    <button class="confidence-selector-btn" id="confidence-selector-btn">
+                        <span class="selected-confidence">All Levels</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="strategy-filter"><i class="fas fa-chess"></i> Strategy</label>
+                <div class="strategy-selector-wrapper">
+                    <button class="strategy-selector-btn" id="strategy-selector-btn">
+                        <span class="selected-strategy">All Strategies</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="sort-time-filter"><i class="fas fa-clock"></i> Sort by Time</label>
+                <div class="sort-time-selector-wrapper">
+                    <button class="sort-time-selector-btn" id="sort-time-selector-btn">
+                        <span class="selected-sort-time">Competition Groups</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="hide-started-toggle"><i class="fas fa-eye-slash"></i> Hide Started</label>
+                <div class="toggle-wrapper">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="hide-started-toggle" checked>
+                        <span class="toggle-slider">
+                            <span class="toggle-button"></span>
+                        </span>
+                    </label>
+                    <span class="toggle-label">Hide Started Matches</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matches List -->
+        <section id="matches-list" class="matches-list-section">
+            <!-- Loading State -->
+            <div id="loading" class="loading-state">
+                <div class="spinner"></div>
+                <p>Initializing Quantum AI... Analyzing match data...</p>
+            </div>
+
+            <!-- Match cards will be injected here by JS -->
+
+            <!-- No Results State -->
+            <div id="no-results" class="no-results-state" style="display: none;">
+                <i class="fas fa-ghost"></i>
+                <h3>No Matches Found</h3>
+                <p>Adjust your filters or the AI model is taking a break.</p>
+                <button class="reset-filters-btn">Reset Filters</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2025 Quantum Predictions. All rights reserved. AI-powered football analysis.</p>
+        <p class="disclaimer">Please gamble responsibly. Predictions are not guarantees.</p>
+    </footer>
+
+    <!-- Country Selector Modal -->
+    <div class="country-modal-overlay" id="country-modal-overlay">
+        <div class="country-modal" id="country-modal">
+            <div class="country-modal-header">
+                <h3><i class="fas fa-flag"></i> Select Country</h3>
+                <button class="close-modal-btn" id="close-modal-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="country-modal-content">
+                <div class="country-search">
+                    <input type="text" id="country-search-input" placeholder="Search countries..." />
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="country-list" id="country-list">
+                    <!-- Countries will be populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confidence Selector Modal -->
+    <div class="confidence-modal-overlay" id="confidence-modal-overlay">
+        <div class="confidence-modal" id="confidence-modal">
+            <div class="confidence-modal-header">
+                <h3><i class="fas fa-shield-alt"></i> Select Confidence Level</h3>
+                <button class="close-confidence-modal-btn" id="close-confidence-modal-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="confidence-modal-content">
+                <div class="confidence-list" id="confidence-list">
+                    <!-- Confidence levels will be populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strategy Selector Modal -->
+    <div class="strategy-modal-overlay" id="strategy-modal-overlay">
+        <div class="strategy-modal" id="strategy-modal">
+            <div class="strategy-modal-header">
+                <h3><i class="fas fa-chess"></i> Select Strategy</h3>
+                <button class="close-strategy-modal-btn" id="close-strategy-modal-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="strategy-modal-content">
+                <div class="strategy-list" id="strategy-list">
+                    <!-- Strategy options will be populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sort Time Selector Modal -->
+    <div class="sort-time-modal-overlay" id="sort-time-modal-overlay">
+        <div class="sort-time-modal" id="sort-time-modal">
+            <div class="sort-time-modal-header">
+                <h3><i class="fas fa-clock"></i> Sort by Time</h3>
+                <button class="close-sort-time-modal-btn" id="close-sort-time-modal-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="sort-time-modal-content">
+                <div class="sort-time-list" id="sort-time-list">
+                    <!-- Sort time options will be populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=23123"></script>
+</body>
+</html> 
