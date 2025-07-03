@@ -1587,6 +1587,15 @@ body {
     font-weight: 500;
 }
 
+.team-value {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-top: 2px;
+    opacity: 0.8;
+    font-family: var(--font-mono);
+}
+
 .team-info {
     display: flex;
     flex-direction: column;
@@ -2026,6 +2035,10 @@ body {
     
     .team-name {
         font-size: 0.9rem;
+    }
+    
+    .team-value {
+        font-size: 0.7rem;
     }
     
     .team-score {

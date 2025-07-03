@@ -3064,6 +3064,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${match1.home_team_logo_local || ''}" class="team-logo" alt="${match1.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
+                        <div class="team-value">${match1.team_values ? match1.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match1.home_team}</span>
                     </div>
                     <div class="match-center-info x-brothers-center">
@@ -3073,6 +3074,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match1.away_team}</span>
+                        <div class="team-value">${match1.team_values ? match1.team_values.away_team_value : 'N/A'}</div>
                         <img src="${match1.away_team_logo_local || ''}" class="team-logo" alt="${match1.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3081,6 +3083,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${match2.home_team_logo_local || ''}" class="team-logo" alt="${match2.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
+                        <div class="team-value">${match2.team_values ? match2.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match2.home_team}</span>
                     </div>
                     <div class="match-center-info x-brothers-center">
@@ -3090,6 +3093,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match2.away_team}</span>
+                        <div class="team-value">${match2.team_values ? match2.team_values.away_team_value : 'N/A'}</div>
                         <img src="${match2.away_team_logo_local || ''}" class="team-logo" alt="${match2.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3110,6 +3114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
+                        <div class="team-value">${match.team_values ? match.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match.home_team}</span>
                     </div>
                     <div class="match-center-info">
@@ -3119,6 +3124,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match.away_team}</span>
+                        <div class="team-value">${match.team_values ? match.team_values.away_team_value : 'N/A'}</div>
                         <img src="${awayLogo}" class="team-logo" alt="${match.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3166,6 +3172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
+                        <div class="team-value">${match.team_values ? match.team_values.home_team_value : 'N/A'}</div>
                         <div class="team-info">
                             <span class="team-name">${match.home_team}</span>
                             ${hasScore ? `<span class="team-score">${homeScore}${hasHalftimeScore ? ` <span class="halftime-score">(${homeHalftimeScore})</span>` : ''}</span>` : ''}
@@ -3180,6 +3187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="team-name">${match.away_team}</span>
                             ${hasScore ? `<span class="team-score">${awayScore}${hasHalftimeScore ? ` <span class="halftime-score">(${awayHalftimeScore})</span>` : ''}</span>` : ''}
                         </div>
+                        <div class="team-value">${match.team_values ? match.team_values.away_team_value : 'N/A'}</div>
                         <img src="${awayLogo}" class="team-logo" alt="${match.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
