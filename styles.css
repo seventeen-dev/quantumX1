@@ -168,7 +168,56 @@ body {
     gap: var(--spacing-lg);
 }
 
+.bankroll-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-fast);
+}
 
+.bankroll-wrapper:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(0, 163, 255, 0.2);
+}
+
+.bankroll-wrapper i {
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+}
+
+.bankroll-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.bankroll-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    min-width: 80px;
+    text-align: right;
+}
+
+.edit-bankroll-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.edit-bankroll-btn:hover {
+    background: var(--accent-blue);
+    color: white;
+    transform: scale(1.1);
+}
 
 .search-wrapper {
     position: relative;
@@ -1725,15 +1774,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(138, 43, 226, 0.15);
-    border: 1px solid rgba(138, 43, 226, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    /* border: 1px solid rgba(138, 43, 226, 0.3); */
     border-radius: var(--border-radius-sm);
     padding: var(--spacing-md);
     width: 100%;
 }
 
 .halftime-score-item .score-value {
-    color: var(--accent-purple);
+    /* color: var(--accent-purple); */
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 1rem;
 }
@@ -1892,6 +1942,21 @@ body {
         flex-direction: column;
         gap: var(--spacing-md);
         align-items: stretch;
+    }
+
+    .bankroll-wrapper {
+        order: 0;
+        align-self: center;
+        flex-shrink: 0;
+    }
+
+    .bankroll-amount {
+        min-width: 60px;
+        font-size: 1rem;
+    }
+
+    .bankroll-label {
+        font-size: 0.8rem;
     }
     
     .search-wrapper {
@@ -3450,4 +3515,474 @@ body {
     background: linear-gradient(135deg, rgba(255, 68, 68, 0.08), rgba(255, 68, 68, 0.03));
     border: 1px solid rgba(255, 68, 68, 0.2);
     border-radius: var(--border-radius-md);
+}
+
+/* ----------------------------------
+   Detail Popup - Redesign Modern & Clean
+---------------------------------- */
+.detail-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.detail-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.detail-popup {
+    background: linear-gradient(145deg, rgba(25, 25, 35, 0.98) 0%, rgba(35, 35, 55, 0.98) 100%);
+    border-radius: 16px;
+    max-width: 420px;
+    width: 90%;
+    max-height: 85vh;
+    overflow: hidden;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.detail-popup-overlay.active .detail-popup {
+    transform: scale(1) translateY(0);
+}
+
+/* Header simplu */
+.detail-popup-header {
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.15) 0%, rgba(0, 123, 255, 0.15) 100%);
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail-popup-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.detail-popup-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-popup-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Conținut principal - simplu și clean */
+.detail-popup-content {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prediction-display {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prediction-main-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.prediction-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.prediction-probability {
+    flex: 1;
+    text-align: center;
+}
+
+.prob-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.prob-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00a3ff;
+}
+
+.prediction-status {
+    flex: 1;
+    text-align: center;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-badge.correct {
+    background: rgba(36, 255, 0, 0.15);
+    color: var(--confidence-high);
+    border: 1px solid rgba(36, 255, 0, 0.3);
+}
+
+.status-badge.incorrect {
+    background: rgba(255, 45, 0, 0.15);
+    color: var(--confidence-low);
+    border: 1px solid rgba(255, 45, 0, 0.3);
+}
+
+.status-badge.neutral {
+    background: rgba(255, 213, 0, 0.15);
+    color: var(--confidence-medium);
+    border: 1px solid rgba(255, 213, 0, 0.3);
+}
+
+.status-badge.pending {
+    background: rgba(128, 128, 128, 0.15);
+    color: var(--text-secondary);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Calculator Kelly simplu */
+.kelly-calculator {
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.03) 0%, rgba(0, 123, 255, 0.03) 100%);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(0, 163, 255, 0.1);
+}
+
+.calculator-header {
+    margin-bottom: 16px;
+}
+
+.calculator-header h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calculator-input {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.calculator-input label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.calculator-input input {
+    flex: 1;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.calculator-input input:focus {
+    outline: none;
+    border-color: rgba(0, 163, 255, 0.4);
+    box-shadow: 0 0 0 2px rgba(0, 163, 255, 0.1);
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.8) 0%, rgba(0, 123, 255, 0.8) 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calculate-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.9) 0%, rgba(0, 123, 255, 0.9) 100%);
+    transform: translateY(-1px);
+}
+
+.calculate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Rezultate Kelly - simplificate */
+.kelly-results {
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(0, 163, 255, 0.1);
+}
+
+.kelly-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kelly-result-item:last-child {
+    border-bottom: none;
+}
+
+.kelly-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.kelly-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.kelly-result-item.positive .kelly-value {
+    color: var(--confidence-high);
+}
+
+.kelly-result-item.negative .kelly-value {
+    color: var(--confidence-low);
+}
+
+.kelly-result-item.highlight .kelly-value {
+    color: #00a3ff;
+    font-size: 1rem;
+}
+
+.kelly-bet-action {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.place-bet-btn {
+    width: 100%;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.25);
+    min-height: 60px;
+}
+
+.place-bet-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.place-bet-btn:hover::before {
+    left: 100%;
+}
+
+.place-bet-btn:hover {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.35);
+}
+
+.place-bet-btn:active {
+    transform: translateY(0);
+}
+
+.place-bet-btn.bet-placed {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    cursor: not-allowed;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.25);
+}
+
+.place-bet-btn.bet-placed:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.35);
+}
+
+.place-bet-btn .bet-amount,
+.place-bet-btn .bet-success {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.place-bet-btn i {
+    font-size: 1rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .detail-popup {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+    
+    .detail-popup-header {
+        padding: 12px 16px;
+    }
+    
+    .detail-popup-title {
+        font-size: 0.8rem;
+    }
+    
+    .detail-popup-content {
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .prediction-display {
+        padding: 16px;
+    }
+    
+    .prediction-main-value {
+        font-size: 1.2rem;
+    }
+    
+    .prediction-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .prediction-probability,
+    .prediction-status {
+        flex: none;
+        width: 100%;
+    }
+    
+    .prob-value {
+        font-size: 1rem;
+    }
+    
+    .kelly-calculator {
+        padding: 12px;
+    }
+    
+    .calculator-input {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .calculator-input label {
+        font-size: 0.75rem;
+    }
+    
+    .calculator-input input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .calculate-btn,
+    .place-bet-btn {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+        min-height: 55px;
+    }
+    
+    .place-bet-btn .bet-amount,
+    .place-bet-btn .bet-success {
+        font-size: 0.75rem;
+    }
+    
+    .kelly-results {
+        padding: 12px;
+    }
+    
+    .kelly-result-item {
+        padding: 6px 0;
+    }
+    
+    .kelly-label {
+        font-size: 0.75rem;
+    }
+    
+    .kelly-value {
+        font-size: 0.8rem;
+    }
+    
+    .kelly-result-item.highlight .kelly-value {
+        font-size: 0.9rem;
+    }
+}
+
+/* Eliminăm toate stilurile vechi pentru popup */
+.popup-content-wrapper,
+.prediction-main-card,
+.kelly-calculator-section,
+.kelly-results-container {
+    display: none;
 }

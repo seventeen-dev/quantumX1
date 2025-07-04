@@ -2884,6 +2884,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     applyCompetitionColors();
                 }
             }
+            
+            // Add clickable styles after rendering
+            setTimeout(() => {
+                if (window.addClickableStyles) {
+                    window.addClickableStyles();
+                }
+            }, 100);
         }
         
         updateStats(filteredCompetitions);
@@ -3064,7 +3071,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${match1.home_team_logo_local || ''}" class="team-logo" alt="${match1.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
-                        <div class="team-value">${match1.team_values ? match1.team_values.home_team_value : 'N/A'}</div>
+                        <div class="team-value">${match1.predictions?.team_values ? match1.predictions.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match1.home_team}</span>
                     </div>
                     <div class="match-center-info x-brothers-center">
@@ -3074,7 +3081,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match1.away_team}</span>
-                        <div class="team-value">${match1.team_values ? match1.team_values.away_team_value : 'N/A'}</div>
+                        <div class="team-value">${match1.predictions?.team_values ? match1.predictions.team_values.away_team_value : 'N/A'}</div>
                         <img src="${match1.away_team_logo_local || ''}" class="team-logo" alt="${match1.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3083,7 +3090,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${match2.home_team_logo_local || ''}" class="team-logo" alt="${match2.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
-                        <div class="team-value">${match2.team_values ? match2.team_values.home_team_value : 'N/A'}</div>
+                        <div class="team-value">${match2.predictions?.team_values ? match2.predictions.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match2.home_team}</span>
                     </div>
                     <div class="match-center-info x-brothers-center">
@@ -3093,7 +3100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match2.away_team}</span>
-                        <div class="team-value">${match2.team_values ? match2.team_values.away_team_value : 'N/A'}</div>
+                        <div class="team-value">${match2.predictions?.team_values ? match2.predictions.team_values.away_team_value : 'N/A'}</div>
                         <img src="${match2.away_team_logo_local || ''}" class="team-logo" alt="${match2.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3114,7 +3121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
-                        <div class="team-value">${match.team_values ? match.team_values.home_team_value : 'N/A'}</div>
+                        <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
                         <span class="team-name">${match.home_team}</span>
                     </div>
                     <div class="match-center-info">
@@ -3124,7 +3131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="team-display away">
                         <span class="team-name">${match.away_team}</span>
-                        <div class="team-value">${match.team_values ? match.team_values.away_team_value : 'N/A'}</div>
+                        <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.away_team_value : 'N/A'}</div>
                         <img src="${awayLogo}" class="team-logo" alt="${match.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -3172,7 +3179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="match-summary">
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
-                        <div class="team-value">${match.team_values ? match.team_values.home_team_value : 'N/A'}</div>
+                        <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
                         <div class="team-info">
                             <span class="team-name">${match.home_team}</span>
                             ${hasScore ? `<span class="team-score">${homeScore}${hasHalftimeScore ? ` <span class="halftime-score">(${homeHalftimeScore})</span>` : ''}</span>` : ''}
@@ -3187,7 +3194,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="team-name">${match.away_team}</span>
                             ${hasScore ? `<span class="team-score">${awayScore}${hasHalftimeScore ? ` <span class="halftime-score">(${awayHalftimeScore})</span>` : ''}</span>` : ''}
                         </div>
-                        <div class="team-value">${match.team_values ? match.team_values.away_team_value : 'N/A'}</div>
+                        <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.away_team_value : 'N/A'}</div>
                         <img src="${awayLogo}" class="team-logo" alt="${match.away_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                     </div>
                 </div>
@@ -4502,6 +4509,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Apply competition colors IMMEDIATELY after rendering
                 applyCompetitionColors();
             }
+            
+            // Add clickable styles to all items after rendering
+            setTimeout(() => {
+                if (window.addClickableStyles) {
+                    window.addClickableStyles();
+                }
+            }, 100);
         }
         
         // Update stats without changing the detailed stats buttons
@@ -4668,15 +4682,561 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2 * 60 * 1000); // 2 minutes
     };
 
+    // Detail Popup Functionality
+    const setupDetailPopup = () => {
+        const popupOverlay = document.getElementById('detail-popup-overlay');
+        const popupClose = document.getElementById('detail-popup-close');
+        const popupTitleText = document.getElementById('detail-popup-title-text');
+        const popupContent = document.getElementById('detail-popup-content');
+
+        // Close popup when clicking overlay or close button
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay || e.target === popupClose || e.target.closest('#detail-popup-close')) {
+                closeDetailPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                closeDetailPopup();
+            }
+        });
+
+        // Setup dynamic popup event listeners
+        popupOverlay.addEventListener('input', (e) => {
+            if (e.target.id === 'house-odds') {
+                const calculateBtn = popupOverlay.querySelector('.calculate-btn');
+                const oddsValue = parseFloat(e.target.value);
+                
+                if (oddsValue && oddsValue >= 1) {
+                    calculateBtn.disabled = false;
+                } else {
+                    calculateBtn.disabled = true;
+                }
+            }
+        });
+
+        // Setup calculate button click handler
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target.classList.contains('calculate-btn') || e.target.closest('.calculate-btn')) {
+                const calculateBtn = e.target.classList.contains('calculate-btn') ? e.target : e.target.closest('.calculate-btn');
+                if (!calculateBtn.disabled) {
+                    handleKellyCalculation();
+                }
+            }
+            
+            // Setup place bet button click handler
+            if (e.target.classList.contains('place-bet-btn') || e.target.closest('.place-bet-btn')) {
+                const placeBetBtn = e.target.classList.contains('place-bet-btn') ? e.target : e.target.closest('.place-bet-btn');
+                handlePlaceBet(placeBetBtn);
+            }
+        });
+
+        // Setup click handlers for clickable items
+        document.addEventListener('click', (e) => {
+            const scoreItem = e.target.closest('.score-item');
+            const marketItem = e.target.closest('.market-item');
+            const halftimeScoreItem = e.target.closest('.halftime-score-item');
+
+            if (scoreItem) {
+                handleScoreItemClick(scoreItem);
+            } else if (marketItem) {
+                handleMarketItemClick(marketItem);
+            } else if (halftimeScoreItem) {
+                handleHalftimeScoreItemClick(halftimeScoreItem);
+            }
+        });
+
+        // Add clickable styles to elements
+        const addClickableStyles = () => {
+            const scoreItems = document.querySelectorAll('.score-item');
+            const marketItems = document.querySelectorAll('.market-item');
+            const halftimeItems = document.querySelectorAll('.halftime-score-item');
+
+            [...scoreItems, ...marketItems, ...halftimeItems].forEach(item => {
+                item.classList.add('clickable-item');
+            });
+        };
+
+        // Call this function after content updates
+        window.addClickableStyles = addClickableStyles;
+    };
+
+    // Kelly Calculation Handler
+    const handleKellyCalculation = () => {
+        const popupOverlay = document.getElementById('detail-popup-overlay');
+        const houseOddsInput = popupOverlay.querySelector('#house-odds');
+        const probabilityElement = popupOverlay.querySelector('.prob-value');
+        
+        if (!houseOddsInput || !probabilityElement) return;
+        
+        // Handle both comma and dot as decimal separator
+        const houseOdds = parseFloat(houseOddsInput.value.replace(',', '.'));
+        const probabilityText = probabilityElement.textContent;
+        
+        // Extract probability percentage (remove % if present)
+        const probability = parseFloat(probabilityText.replace('%', '')) / 100;
+        
+        if (isNaN(houseOdds) || isNaN(probability) || houseOdds < 1 || probability <= 0) {
+            alert('Te rog verifică cotele și probabilitatea!');
+            return;
+        }
+        
+        // Pasul 1: Calculez edge-ul
+        const edge = (houseOdds * probability) - 1;
+        
+        if (edge <= 0) {
+            showKellyResults({
+                edge: edge,
+                hasEdge: false,
+                message: 'Nu avem edge pozitiv! Nu este recomandat să pariezi.'
+            });
+            return;
+        }
+        
+        // Pasul 2: Calculez fracțiunea Kelly
+        const kellyFraction = edge / (houseOdds - 1);
+        
+        // Pasul 3: Întreb dacă vrea să folosească doar 30% din Kelly
+        const use30Percent = confirm(`🎯 REZULTATE KELLY:\n\n` +
+            `Edge: ${(edge * 100).toFixed(2)}%\n` +
+            `Kelly Fraction: ${(kellyFraction * 100).toFixed(2)}%\n\n` +
+            `Vrei să folosești doar 30% din Kelly pentru mai multă siguranță?`);
+        
+        let finalFraction = kellyFraction;
+        if (use30Percent) {
+            finalFraction = kellyFraction * 0.3;
+        }
+        
+        // Pasul 4: Calculez miza din bankroll
+        const bankrollElement = document.getElementById('bankroll-amount');
+        const bankrollText = bankrollElement ? bankrollElement.textContent : '1000 RON';
+        const bankrollAmount = parseFloat(bankrollText.replace('€', '').replace(' RON', '').replace('RON', '').replace(',', ''));
+        
+        if (isNaN(bankrollAmount) || bankrollAmount <= 0) {
+            alert('Te rog setează un bankroll valid în header!');
+            return;
+        }
+        
+        const betAmount = bankrollAmount * finalFraction;
+        
+        showKellyResults({
+            edge: edge,
+            hasEdge: true,
+            kellyFraction: kellyFraction,
+            finalFraction: finalFraction,
+            use30Percent: use30Percent,
+            bankrollAmount: bankrollAmount,
+            betAmount: betAmount,
+            houseOdds: houseOdds,
+            probability: probability
+        });
+    };
+
+    // Show Kelly Results
+    const showKellyResults = (results) => {
+        const container = document.getElementById('kelly-results-container');
+        
+        if (!results.hasEdge) {
+            const noEdgeHTML = `
+                <div class="kelly-results">
+                    <div class="kelly-result-item negative">
+                        <div class="kelly-label">Edge:</div>
+                        <div class="kelly-value">${(results.edge * 100).toFixed(2)}%</div>
+                    </div>
+                    <div class="kelly-result-item">
+                        <div class="kelly-label">Status:</div>
+                        <div class="kelly-value">❌ Nu este profitabil</div>
+                    </div>
+                </div>
+            `;
+            container.innerHTML = noEdgeHTML;
+            return;
+        }
+        
+        const resultsHTML = `
+            <div class="kelly-results">
+                <div class="kelly-result-item positive">
+                    <div class="kelly-label">Edge:</div>
+                    <div class="kelly-value">${(results.edge * 100).toFixed(2)}%</div>
+                </div>
+                <div class="kelly-result-item">
+                    <div class="kelly-label">Kelly Fraction:</div>
+                    <div class="kelly-value">${(results.kellyFraction * 100).toFixed(2)}%</div>
+                </div>
+                ${results.use30Percent ? `
+                <div class="kelly-result-item">
+                    <div class="kelly-label">30% din Kelly:</div>
+                    <div class="kelly-value">${(results.finalFraction * 100).toFixed(2)}%</div>
+                </div>
+                ` : ''}
+                <div class="kelly-result-item highlight">
+                    <div class="kelly-label">Miza Recomandată:</div>
+                    <div class="kelly-value">${results.betAmount.toFixed(2)} RON</div>
+                </div>
+                <div class="kelly-bet-action">
+                    <button class="place-bet-btn" data-bet-amount="${results.betAmount.toFixed(2)}" data-new-bankroll="${(results.bankrollAmount - results.betAmount).toFixed(2)}">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Pariez pe acest eveniment
+                        <span class="bet-amount">(-${results.betAmount.toFixed(2)} RON)</span>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        container.innerHTML = resultsHTML;
+    };
+
+    // Handle Place Bet Action
+    const handlePlaceBet = (button) => {
+        const betAmount = parseFloat(button.dataset.betAmount);
+        const newBankroll = parseFloat(button.dataset.newBankroll);
+        
+        // Confirmation dialog
+        const confirmBet = confirm(`🎰 CONFIRMARE PARIU:\n\n` +
+            `Miza: ${betAmount.toFixed(2)} RON\n` +
+            `Bankroll nou: ${newBankroll.toFixed(2)} RON\n\n` +
+            `Ești sigur că vrei să pariezi pe acest eveniment?`);
+        
+        if (!confirmBet) return;
+        
+        // Update bankroll in localStorage
+        const formattedBankroll = `${newBankroll.toFixed(2)} RON`;
+        localStorage.setItem('footballPredictionsBankroll', formattedBankroll);
+        
+        // Update bankroll display in header
+        const bankrollElement = document.getElementById('bankroll-amount');
+        if (bankrollElement) {
+            bankrollElement.textContent = formattedBankroll;
+        }
+        
+        // Update button to show success
+        button.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            Pariu Plasat cu Succes!
+            <span class="bet-success">${betAmount.toFixed(2)} RON dedus din bankroll</span>
+        `;
+        button.classList.add('bet-placed');
+        button.disabled = true;
+    };
+
+    const handleScoreItemClick = (element) => {
+        const scoreValue = element.querySelector('.score-value')?.textContent || 'N/A';
+        const probabilityElement = element.querySelector('.probability-badge');
+        const probability = probabilityElement ? probabilityElement.textContent : 'N/A';
+        
+        // Get match context
+        const matchCard = element.closest('.match-card');
+        const homeTeam = matchCard?.querySelector('.team-display.home .team-name')?.textContent || 'N/A';
+        const awayTeam = matchCard?.querySelector('.team-display.away .team-name')?.textContent || 'N/A';
+        
+        // Better status detection - check for multiple classes and probability
+        const isCorrect = element.classList.contains('status-correct');
+        const isIncorrect = element.classList.contains('status-incorrect');
+        const isActualMatch = element.classList.contains('actual-result-match');
+        const isHighestProb = element.classList.contains('highest-probability');
+        const hasHighProbability = probability && parseFloat(probability.replace('%', '')) > 65;
+        
+        let status = 'pending';
+        let statusText = '⏰ Pending';
+        
+        if (isCorrect || isActualMatch) {
+            status = 'correct';
+            statusText = isActualMatch ? '🎯 Actual Result' : '✅ Correct';
+        } else if (isIncorrect) {
+            status = 'incorrect';
+            statusText = '❌ Incorrect';
+        } else if (isHighestProb || hasHighProbability) {
+            status = 'neutral';
+            statusText = '🔥 Highest Prob';
+        }
+
+        const content = `
+            <div class="prediction-display">
+                <div class="prediction-main-value">${scoreValue}</div>
+                <div class="prediction-stats">
+                    <div class="prediction-probability">
+                        <div class="prob-label">Probabilitate</div>
+                        <div class="prob-value">${probability}</div>
+                    </div>
+                    <div class="prediction-status">
+                        <div class="status-badge ${status}">
+                            ${statusText}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kelly-calculator">
+                <div class="calculator-header">
+                    <h4><i class="fas fa-calculator"></i> Calculator Kelly</h4>
+                </div>
+                <div class="calculator-input">
+                    <label>Cota:</label>
+                    <input type="number" id="house-odds" placeholder="Ex: 2.50" step="0.01" min="1">
+                </div>
+                <button class="calculate-btn" onclick="handleKellyCalculation()">
+                    <i class="fas fa-calculator"></i> Calculează
+                </button>
+                <div id="kelly-results-container"></div>
+            </div>
+        `;
+
+        openDetailPopup(`${homeTeam} vs ${awayTeam}`, content);
+    };
+
+    const handleMarketItemClick = (element) => {
+        const marketName = element.querySelector('.market-name')?.textContent || 'N/A';
+        const marketValue = element.querySelector('.market-value')?.textContent || 'N/A';
+        const probabilityElement = element.querySelector('.probability-badge');
+        const probability = probabilityElement ? probabilityElement.textContent : 'N/A';
+        
+        // Clean market value - remove probability if it's included
+        let cleanMarketValue = marketValue;
+        if (marketValue.includes(':') && marketValue.includes('%')) {
+            // If market value contains both : and %, extract only the part before the percentage
+            const parts = marketValue.split(':');
+            if (parts.length > 1) {
+                cleanMarketValue = parts[1].replace(/\d+\.\d+%/g, '').trim();
+            }
+        }
+        
+        // Get match context
+        const matchCard = element.closest('.match-card');
+        const homeTeam = matchCard?.querySelector('.team-display.home .team-name')?.textContent || 'N/A';
+        const awayTeam = matchCard?.querySelector('.team-display.away .team-name')?.textContent || 'N/A';
+        
+        // Better status detection - check for multiple classes and probability
+        const isCorrect = element.classList.contains('status-correct');
+        const isIncorrect = element.classList.contains('status-incorrect');
+        const isHighestMarket = element.classList.contains('highest-market');
+        const hasHighProbability = probability && parseFloat(probability.replace('%', '')) > 65;
+        
+        let status = 'pending';
+        let statusText = '⏰ Pending';
+        
+        if (isCorrect) {
+            status = 'correct';
+            statusText = '✅ Correct';
+        } else if (isIncorrect) {
+            status = 'incorrect';
+            statusText = '❌ Incorrect';
+        } else if (isHighestMarket || hasHighProbability) {
+            status = 'neutral';
+            statusText = '🔥 Highest Value';
+        }
+
+        const content = `
+            <div class="prediction-display">
+                <div class="prediction-main-value">${marketName}</div>
+                <div class="prediction-stats">
+                    <div class="prediction-probability">
+                        <div class="prob-label">Probabilitate</div>
+                        <div class="prob-value">${probability}</div>
+                    </div>
+                    <div class="prediction-status">
+                        <div class="status-badge ${status}">
+                            ${statusText}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kelly-calculator">
+                <div class="calculator-header">
+                    <h4><i class="fas fa-calculator"></i> Calculator Kelly</h4>
+                </div>
+                <div class="calculator-input">
+                    <label>Cota:</label>
+                    <input type="number" id="house-odds" placeholder="Ex: 2.50" step="0.01" min="1">
+                </div>
+                <button class="calculate-btn" onclick="handleKellyCalculation()">
+                    <i class="fas fa-calculator"></i> Calculează
+                </button>
+                <div id="kelly-results-container"></div>
+            </div>
+        `;
+
+        openDetailPopup(`${homeTeam} vs ${awayTeam}`, content);
+    };
+
+    const handleHalftimeScoreItemClick = (element) => {
+        const scoreValue = element.querySelector('.score-value')?.textContent || 'N/A';
+        const probabilityElement = element.querySelector('.probability-badge');
+        const probability = probabilityElement ? probabilityElement.textContent : 'N/A';
+        
+        // Get match context
+        const matchCard = element.closest('.match-card');
+        const homeTeam = matchCard?.querySelector('.team-display.home .team-name')?.textContent || 'N/A';
+        const awayTeam = matchCard?.querySelector('.team-display.away .team-name')?.textContent || 'N/A';
+        
+        // Better status detection - check for multiple classes and probability
+        const isCorrect = element.classList.contains('status-correct');
+        const isIncorrect = element.classList.contains('status-incorrect');
+        const isActualMatch = element.classList.contains('actual-result-match');
+        const isHighestHalftime = element.classList.contains('highest-halftime');
+        const hasHighProbability = probability && parseFloat(probability.replace('%', '')) > 65;
+        
+        let status = 'pending';
+        let statusText = '⏰ Pending';
+        
+        if (isCorrect || isActualMatch) {
+            status = 'correct';
+            statusText = isActualMatch ? '🎯 Actual Result' : '✅ Correct';
+        } else if (isIncorrect) {
+            status = 'incorrect';
+            statusText = '❌ Incorrect';
+        } else if (isHighestHalftime || hasHighProbability) {
+            status = 'neutral';
+            statusText = '🔥 Most Likely';
+        }
+
+        const content = `
+            <div class="prediction-display">
+                <div class="prediction-main-value">${scoreValue}</div>
+                <div class="prediction-stats">
+                    <div class="prediction-probability">
+                        <div class="prob-label">Probabilitate</div>
+                        <div class="prob-value">${probability}</div>
+                    </div>
+                    <div class="prediction-status">
+                        <div class="status-badge ${status}">
+                            ${statusText}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kelly-calculator">
+                <div class="calculator-header">
+                    <h4><i class="fas fa-calculator"></i> Calculator Kelly</h4>
+                </div>
+                <div class="calculator-input">
+                    <label>Cota:</label>
+                    <input type="number" id="house-odds" placeholder="Ex: 2.50" step="0.01" min="1">
+                </div>
+                <button class="calculate-btn" onclick="handleKellyCalculation()">
+                    <i class="fas fa-calculator"></i> Calculează
+                </button>
+                <div id="kelly-results-container"></div>
+            </div>
+        `;
+
+        openDetailPopup(`${homeTeam} vs ${awayTeam}`, content);
+    };
+
+    // Helper functions
+    const getProbabilityLevel = (probability) => {
+        const numProb = parseFloat(probability);
+        if (numProb >= 70) return 'Very High';
+        if (numProb >= 50) return 'High';
+        if (numProb >= 30) return 'Medium';
+        if (numProb >= 15) return 'Low';
+        return 'Very Low';
+    };
+
+    const getRiskLevel = (probability) => {
+        const numProb = parseFloat(probability);
+        if (numProb >= 70) return 'Low Risk';
+        if (numProb >= 50) return 'Medium Risk';
+        if (numProb >= 30) return 'High Risk';
+        return 'Very High Risk';
+    };
+
+    const getEarlyGameIndicator = (score) => {
+        if (score.includes('0-0')) return 'Slow Start';
+        if (score.includes('1-0') || score.includes('0-1')) return 'Cautious Play';
+        if (score.includes('1-1')) return 'Balanced';
+        if (score.includes('2-') || score.includes('-2')) return 'Fast Pace';
+        return 'Dynamic';
+    };
+
+    const getFullTimeImpact = (score) => {
+        if (score.includes('0-0')) return 'Open Second Half';
+        if (score.includes('1-0') || score.includes('0-1')) return 'Pressure Building';
+        if (score.includes('1-1')) return 'Anyone\'s Game';
+        if (score.includes('2-') || score.includes('-2')) return 'Momentum Set';
+        return 'Unpredictable';
+    };
+
+    const openDetailPopup = (title, content) => {
+        const popupOverlay = document.getElementById('detail-popup-overlay');
+        const popupTitleText = document.getElementById('detail-popup-title-text');
+        const popupContent = document.getElementById('detail-popup-content');
+
+        popupTitleText.textContent = title;
+        popupContent.innerHTML = content;
+        popupOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeDetailPopup = () => {
+        const popupOverlay = document.getElementById('detail-popup-overlay');
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
+
+    // Bankroll Management
+    const initializeBankroll = () => {
+        const savedBankroll = localStorage.getItem('footballPredictionsBankroll');
+        const bankrollAmount = document.getElementById('bankroll-amount');
+        const editBankrollBtn = document.getElementById('edit-bankroll-btn');
+        
+        // Set initial bankroll
+        if (savedBankroll) {
+            bankrollAmount.textContent = savedBankroll;
+        } else {
+            // Set default bankroll in RON if none exists
+            bankrollAmount.textContent = '1000 RON';
+        }
+        
+        // Edit bankroll functionality
+        editBankrollBtn.addEventListener('click', () => {
+            const currentAmount = bankrollAmount.textContent;
+            const newAmount = prompt('Introdu noul bankroll:', currentAmount);
+            
+            if (newAmount !== null && newAmount.trim() !== '') {
+                // Format the amount (ensure it's a valid number)
+                let formattedAmount = newAmount.trim();
+                
+                // Remove RON or € if user included it
+                if (formattedAmount.startsWith('€')) {
+                    formattedAmount = formattedAmount.substring(1);
+                } else if (formattedAmount.endsWith(' RON')) {
+                    formattedAmount = formattedAmount.substring(0, formattedAmount.length - 4);
+                } else if (formattedAmount.endsWith('RON')) {
+                    formattedAmount = formattedAmount.substring(0, formattedAmount.length - 3);
+                }
+                
+                // Validate it's a number
+                const numericValue = parseFloat(formattedAmount);
+                if (!isNaN(numericValue) && numericValue >= 0) {
+                    const finalAmount = `${numericValue} RON`;
+                    bankrollAmount.textContent = finalAmount;
+                    localStorage.setItem('footballPredictionsBankroll', finalAmount);
+                } else {
+                    alert('Te rog introdu o sumă validă!');
+                }
+            }
+        });
+    };
+
     // --- Start ---
+    initializeBankroll();
     initializeApp();
     setupEventListeners();
     scheduleDataRefresh();
+    setupDetailPopup();
     
     // Apply competition colors after initial load
     window.addEventListener('load', () => {
         setTimeout(() => {
             applyCompetitionColors();
+            // Add clickable styles after content is loaded
+            if (window.addClickableStyles) {
+                window.addClickableStyles();
+            }
         }, 500);
     });
 }); 

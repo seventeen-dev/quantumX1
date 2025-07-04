@@ -25,6 +25,14 @@
                 <h1>Quantum Predictions</h1>
             </div>
             <div class="header-controls">
+                <div class="bankroll-wrapper">
+                    <i class="fas fa-wallet"></i>
+                    <span class="bankroll-label">Bankroll:</span>
+                    <span class="bankroll-amount" id="bankroll-amount">1000 RON</span>
+                    <button class="edit-bankroll-btn" id="edit-bankroll-btn">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
                     <input type="text" id="team-search" placeholder="Search team...">
@@ -216,6 +224,24 @@
         </div>
     </div>
 
-    <script src="script.js?v=23123"></script>
+    <!-- Detail Popup Modal -->
+    <div class="detail-popup-overlay" id="detail-popup-overlay">
+        <div class="detail-popup" id="detail-popup">
+            <div class="detail-popup-header">
+                <div class="detail-popup-title">
+                    <i class="fas fa-info-circle"></i>
+                    <span id="detail-popup-title-text">Item Details</span>
+                </div>
+                <button class="detail-popup-close" id="detail-popup-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="detail-popup-content" id="detail-popup-content">
+                <!-- Content will be dynamically populated -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=23124"></script>
 </body>
 </html> 
