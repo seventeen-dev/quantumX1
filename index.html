@@ -33,6 +33,11 @@
                         <i class="fas fa-edit"></i>
                     </button>
                 </div>
+                <div class="ticket-wrapper">
+                    <button class="ticket-btn" id="ticket-btn" title="Generate Ticket">
+                        <i class="fas fa-ticket-alt"></i>
+                    </button>
+                </div>
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
                     <input type="text" id="team-search" placeholder="Search team...">
@@ -242,6 +247,127 @@
         </div>
     </div>
 
-    <script src="script.js?v=42121"></script>
+    <!-- Ticket Generator Modal -->
+    <div class="ticket-modal-overlay" id="ticket-modal-overlay">
+        <div class="ticket-modal" id="ticket-modal">
+            <div class="ticket-modal-header">
+                <div class="ticket-modal-title">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>Generate Prediction Ticket</span>
+                </div>
+                <button class="ticket-modal-close" id="ticket-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="ticket-modal-content" id="ticket-modal-content">
+                <div class="ticket-step" id="ticket-step-1">
+                    <div class="ticket-step-header">
+                        <h3>Select Prediction Categories</h3>
+                        <p>Choose one or more categories to include in your ticket:</p>
+                    </div>
+                    <div class="prediction-categories">
+                        <div class="category-option" data-category="top-scores">
+                            <div class="category-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Top Scores</h4>
+                                <p>Highest probability exact score predictions</p>
+                            </div>
+                            <div class="category-checkbox">
+                                <input type="checkbox" id="category-top-scores" data-category="top-scores">
+                                <label for="category-top-scores"></label>
+                            </div>
+                        </div>
+                        <div class="category-option" data-category="halftime">
+                            <div class="category-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Halftime Score</h4>
+                                <p>Most likely halftime score predictions</p>
+                            </div>
+                            <div class="category-checkbox">
+                                <input type="checkbox" id="category-halftime" data-category="halftime">
+                                <label for="category-halftime"></label>
+                            </div>
+                        </div>
+                        <div class="category-option" data-category="goal-markets">
+                            <div class="category-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Goal Markets</h4>
+                                <p>Over/Under goals and related markets</p>
+                            </div>
+                            <div class="category-checkbox">
+                                <input type="checkbox" id="category-goal-markets" data-category="goal-markets">
+                                <label for="category-goal-markets"></label>
+                            </div>
+                        </div>
+                        <div class="category-option" data-category="team-markets">
+                            <div class="category-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Team Markets</h4>
+                                <p>Both teams to score and team-specific markets</p>
+                            </div>
+                            <div class="category-checkbox">
+                                <input type="checkbox" id="category-team-markets" data-category="team-markets">
+                                <label for="category-team-markets"></label>
+                            </div>
+                        </div>
+                        <div class="category-option" data-category="bookmaker-odds">
+                            <div class="category-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="category-info">
+                                <h4>Bookmaker Odds</h4>
+                                <p>Best value odds based on predictions</p>
+                            </div>
+                            <div class="category-checkbox">
+                                <input type="checkbox" id="category-bookmaker-odds" data-category="bookmaker-odds">
+                                <label for="category-bookmaker-odds"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-step-actions">
+                        <button class="generate-ticket-btn" id="generate-ticket-btn" disabled>
+                            <i class="fas fa-magic"></i>
+                            Generate Ticket
+                        </button>
+                    </div>
+                </div>
+                <div class="ticket-step" id="ticket-step-2" style="display: none;">
+                    <div class="ticket-header-compact">
+                        <button class="compact-nav-btn back-to-selection-btn" id="back-to-selection-btn" title="Back to Selection">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <div class="ticket-counter">
+                            <button class="counter-btn remove-match-btn" id="remove-match-btn" title="Remove Match">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="match-count" id="match-count">0</span>
+                            <button class="counter-btn add-match-btn" id="add-match-btn" title="Add Match">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="compact-nav-btn regenerate-ticket-btn" id="regenerate-ticket-btn" title="Regenerate Ticket">
+                            <i class="fas fa-refresh"></i>
+                        </button>
+                    </div>
+                    <div class="ticket-content-compact" id="ticket-content">
+                        <!-- Generated predictions will appear here -->
+                    </div>
+                    <div class="ticket-footer" id="ticket-footer">
+                        <!-- Average probability will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=42112328"></script>
 </body>
 </html> 
