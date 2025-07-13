@@ -446,6 +446,85 @@ body {
     font-size: 14px;
 }
 
+/* Time Filter Section */
+.time-filter-section {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+}
+
+.time-filter-header {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.time-filter-header h4 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.time-filter-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.time-filter-options {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.time-filter-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--bg-glass);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.time-filter-btn:hover {
+    background: var(--bg-glass-light);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.time-filter-btn.active {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.time-filter-btn.active:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+.time-filter-btn i {
+    font-size: 1.2rem;
+}
+
+.time-filter-btn span {
+    font-weight: 600;
+}
+
 /* Ticket Actions */
 .ticket-step-actions {
     display: flex;
@@ -2523,6 +2602,26 @@ body {
     
     .ticket-footer-content {
         padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+    
+    /* Time filter responsive */
+    .time-filter-section {
+        margin: var(--spacing-md) 0;
+        padding: var(--spacing-md);
+    }
+    
+    .time-filter-options {
+        gap: var(--spacing-sm);
+    }
+    
+    .time-filter-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-width: 70px;
+        font-size: 0.8rem;
+    }
+    
+    .time-filter-btn i {
         font-size: 1rem;
     }
     

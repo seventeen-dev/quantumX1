@@ -5239,4 +5239,555 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 500);
     });
+
+    // --- Ticket Generator Functionality ---
+    let ticketGeneratorData = {
+        selectedCategories: [],
+        generatedPredictions: [],
+        availableMatches: [],
+        selectedTimeFilter: null // hours filter (1, 3, 4, or null)
+    };
+
+    // Initialize ticket generator
+    const initializeTicketGenerator = () => {
+        const ticketBtn = document.getElementById('ticket-btn');
+        const ticketModalOverlay = document.getElementById('ticket-modal-overlay');
+        const ticketModalClose = document.getElementById('ticket-modal-close');
+        const categoryCheckboxes = document.querySelectorAll('.category-checkbox input[type="checkbox"]');
+        const generateTicketBtn = document.getElementById('generate-ticket-btn');
+        const backToSelectionBtn = document.getElementById('back-to-selection-btn');
+        const regenerateTicketBtn = document.getElementById('regenerate-ticket-btn');
+        const addMatchBtn = document.getElementById('add-match-btn');
+        const removeMatchBtn = document.getElementById('remove-match-btn');
+
+        // Open ticket modal
+        ticketBtn.addEventListener('click', () => {
+            openTicketModal();
+        });
+
+        // Close ticket modal
+        ticketModalClose.addEventListener('click', () => {
+            closeTicketModal();
+        });
+
+        ticketModalOverlay.addEventListener('click', (e) => {
+            if (e.target === ticketModalOverlay) {
+                closeTicketModal();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && ticketModalOverlay.classList.contains('active')) {
+                closeTicketModal();
+            }
+        });
+
+        // Handle category selection
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', handleCategoryChange);
+        });
+
+        // Handle category option click (entire div)
+        const categoryOptions = document.querySelectorAll('.category-option');
+        categoryOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                // Don't trigger if clicked directly on checkbox (to avoid double trigger)
+                if (e.target.type === 'checkbox') return;
+                
+                const checkbox = option.querySelector('input[type="checkbox"]');
+                if (checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                    handleCategoryChange();
+                }
+            });
+        });
+
+        // Handle time filter buttons
+        const timeFilterBtns = document.querySelectorAll('.time-filter-btn');
+        timeFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                handleTimeFilterChange(btn);
+            });
+        });
+
+        // Generate ticket button
+        generateTicketBtn.addEventListener('click', generateTicket);
+
+        // Back to selection button
+        backToSelectionBtn.addEventListener('click', () => {
+            showTicketStep(1);
+        });
+
+        // Regenerate ticket button
+        regenerateTicketBtn.addEventListener('click', () => {
+            // Store current number of matches and categories
+            const currentMatchCount = ticketGeneratorData.generatedPredictions.length;
+            const currentCategories = [...ticketGeneratorData.selectedCategories];
+            
+            // Clear predictions but keep categories
+            ticketGeneratorData.generatedPredictions = [];
+            
+            // Regenerate with same number of matches
+            generateTicketWithFixedCount(currentMatchCount, currentCategories);
+        });
+
+        // Add/Remove match buttons
+        addMatchBtn.addEventListener('click', () => {
+            addRandomMatch();
+        });
+
+        removeMatchBtn.addEventListener('click', () => {
+            removeRandomMatch();
+        });
+    };
+
+    // Open ticket modal
+    const openTicketModal = () => {
+        const ticketModalOverlay = document.getElementById('ticket-modal-overlay');
+        ticketModalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Reset to step 1
+        showTicketStep(1);
+        
+        // Reset all category selections
+        const categoryCheckboxes = document.querySelectorAll('.category-checkbox input[type="checkbox"]');
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        
+        // Clear selected categories and time filter
+        ticketGeneratorData.selectedCategories = [];
+        ticketGeneratorData.selectedTimeFilter = null;
+        
+        // Reset time filter buttons
+        const timeFilterBtns = document.querySelectorAll('.time-filter-btn');
+        timeFilterBtns.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Update available matches
+        updateAvailableMatches();
+    };
+
+    // Close ticket modal
+    const closeTicketModal = () => {
+        const ticketModalOverlay = document.getElementById('ticket-modal-overlay');
+        ticketModalOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        // Reset data
+        ticketGeneratorData = {
+            selectedCategories: [],
+            generatedPredictions: [],
+            availableMatches: []
+        };
+    };
+
+    // Handle category checkbox change
+    const handleCategoryChange = () => {
+        const categoryCheckboxes = document.querySelectorAll('.category-checkbox input[type="checkbox"]');
+        const generateTicketBtn = document.getElementById('generate-ticket-btn');
+        
+        // Update selected categories
+        ticketGeneratorData.selectedCategories = Array.from(categoryCheckboxes)
+            .filter(cb => cb.checked)
+            .map(cb => cb.dataset.category);
+        
+        // Update category option visual state
+        categoryCheckboxes.forEach(checkbox => {
+            const categoryOption = checkbox.closest('.category-option');
+            if (checkbox.checked) {
+                categoryOption.classList.add('selected');
+            } else {
+                categoryOption.classList.remove('selected');
+            }
+        });
+        
+        // Enable/disable generate button
+        generateTicketBtn.disabled = ticketGeneratorData.selectedCategories.length === 0;
+    };
+
+    // Handle time filter button change
+    const handleTimeFilterChange = (clickedBtn) => {
+        const timeFilterBtns = document.querySelectorAll('.time-filter-btn');
+        const hours = parseInt(clickedBtn.dataset.hours);
+        
+        // Toggle the clicked button
+        if (clickedBtn.classList.contains('active')) {
+            // Deactivate if already active
+            clickedBtn.classList.remove('active');
+            ticketGeneratorData.selectedTimeFilter = null;
+        } else {
+            // Deactivate all other buttons and activate this one
+            timeFilterBtns.forEach(btn => btn.classList.remove('active'));
+            clickedBtn.classList.add('active');
+            ticketGeneratorData.selectedTimeFilter = hours;
+        }
+        
+        // Update available matches with new filter
+        updateAvailableMatches();
+        
+        console.log('Time filter changed:', ticketGeneratorData.selectedTimeFilter ? `${ticketGeneratorData.selectedTimeFilter}h` : 'none');
+    };
+
+    // Show specific ticket step
+    const showTicketStep = (stepNumber) => {
+        const step1 = document.getElementById('ticket-step-1');
+        const step2 = document.getElementById('ticket-step-2');
+        
+        if (stepNumber === 1) {
+            step1.style.display = 'block';
+            step2.style.display = 'none';
+        } else {
+            step1.style.display = 'none';
+            step2.style.display = 'block';
+        }
+    };
+
+    // Check if match starts within specified hours
+    const isMatchWithinTimeFilter = (matchData, hours) => {
+        if (!hours) return true; // No filter applied
+        
+        try {
+            const now = new Date();
+            const matchTimeStr = matchData.time || '';
+            
+            // Try to parse match time (format: "HH:MM" or similar)
+            const timeMatch = matchTimeStr.match(/(\d{1,2}):(\d{2})/);
+            if (!timeMatch) return true; // Can't parse time, include it
+            
+            const matchHours = parseInt(timeMatch[1]);
+            const matchMinutes = parseInt(timeMatch[2]);
+            
+            // Create match date (assuming it's today for time filter)
+            const matchDate = new Date();
+            matchDate.setHours(matchHours, matchMinutes, 0, 0);
+            
+            // If match time is earlier than now, assume it's tomorrow
+            if (matchDate <= now) {
+                matchDate.setDate(matchDate.getDate() + 1);
+            }
+            
+            // Calculate time difference in hours
+            const timeDiff = (matchDate - now) / (1000 * 60 * 60); // Convert to hours
+            
+            return timeDiff <= hours && timeDiff >= 0;
+        } catch (error) {
+            console.log('Error parsing match time:', error);
+            return true; // Include match if we can't parse time
+        }
+    };
+
+    // Update available matches based on current filtered data
+    const updateAvailableMatches = () => {
+        const allMatches = [];
+        
+        // Get all visible match cards that are not started
+        const matchCards = document.querySelectorAll('.match-card');
+        
+        matchCards.forEach(card => {
+            const matchId = card.dataset.matchId;
+            if (!matchId) return;
+            
+            // Find the match data
+            let matchData = null;
+            for (const competition of allMatchesData) {
+                const match = competition.matches.find(m => m.id === matchId || m.match_id === matchId);
+                if (match) {
+                    matchData = match;
+                    break;
+                }
+            }
+            
+            if (matchData && !hasMatchStarted(matchData)) {
+                // Apply time filter if selected
+                if (isMatchWithinTimeFilter(matchData, ticketGeneratorData.selectedTimeFilter)) {
+                    allMatches.push({
+                        matchData: matchData,
+                        card: card
+                    });
+                }
+            }
+        });
+        
+        ticketGeneratorData.availableMatches = allMatches;
+        const filterText = ticketGeneratorData.selectedTimeFilter ? ` (within ${ticketGeneratorData.selectedTimeFilter}h)` : '';
+        console.log(`Updated available matches: ${allMatches.length} matches${filterText}`);
+    };
+
+    // Generate ticket with EXACTLY 4 matches by default (random from all categories)
+    const generateTicket = () => {
+        if (ticketGeneratorData.selectedCategories.length === 0) {
+            alert('Please select at least one category');
+            return;
+        }
+        
+        updateAvailableMatches();
+        
+        if (ticketGeneratorData.availableMatches.length === 0) {
+            alert('No unstarted matches available');
+            return;
+        }
+        
+        // Generate exactly 4 random predictions from all selected categories
+        const predictions = generateRandomPredictions(4);
+        
+        ticketGeneratorData.generatedPredictions = predictions;
+        
+        // Display generated ticket
+        displayGeneratedTicket();
+        
+        // Show step 2
+        showTicketStep(2);
+    };
+
+    // Generate exactly N random predictions from all selected categories
+    const generateRandomPredictions = (targetCount) => {
+        const predictions = [];
+        const availableMatches = [...ticketGeneratorData.availableMatches];
+        const selectedCategories = [...ticketGeneratorData.selectedCategories];
+        
+        // Shuffle available matches
+        for (let i = availableMatches.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [availableMatches[i], availableMatches[j]] = [availableMatches[j], availableMatches[i]];
+        }
+        
+        let attempts = 0;
+        const maxAttempts = availableMatches.length * selectedCategories.length;
+        
+        while (predictions.length < targetCount && attempts < maxAttempts) {
+            // Pick a random match
+            const randomMatch = availableMatches[Math.floor(Math.random() * availableMatches.length)];
+            
+            // Pick a random category
+            const randomCategory = selectedCategories[Math.floor(Math.random() * selectedCategories.length)];
+            
+            // Check if this combination already exists
+            const matchId = randomMatch.matchData.id || randomMatch.matchData.match_id;
+            const combinationExists = predictions.some(p => 
+                p.matchId === matchId && p.category === getCategoryName(randomCategory)
+            );
+            
+            if (!combinationExists) {
+                const prediction = extractPredictionForCategory(randomMatch, randomCategory);
+                if (prediction) {
+                    predictions.push(prediction);
+                }
+            }
+            
+            attempts++;
+        }
+        
+        return predictions;
+    };
+
+    // Generate ticket with fixed count (for regenerate)
+    const generateTicketWithFixedCount = (targetCount, categories) => {
+        updateAvailableMatches();
+        
+        if (ticketGeneratorData.availableMatches.length === 0) {
+            alert('No unstarted matches available');
+            return;
+        }
+        
+        // Set the categories for this regeneration
+        ticketGeneratorData.selectedCategories = categories;
+        
+        // Generate exactly the same number of predictions
+        const predictions = generateRandomPredictions(targetCount);
+        
+        ticketGeneratorData.generatedPredictions = predictions;
+        displayGeneratedTicket();
+    };
+
+    // Helper function to get category display name
+    const getCategoryName = (category) => {
+        switch (category) {
+            case 'top-scores': return 'Top Score';
+            case 'halftime': return 'Halftime Score';
+            case 'goal-markets': return 'Goal Market';
+            case 'team-markets': return 'Team Market';
+            case 'bookmaker-odds': return 'Bookmaker Odds';
+            default: return category;
+        }
+    };
+
+    // Extract prediction for a specific category from match
+    const extractPredictionForCategory = (matchInfo, category) => {
+        const { matchData, card } = matchInfo;
+        
+        let predictionText = '';
+        let probability = '';
+        let categoryName = '';
+        
+        switch (category) {
+            case 'top-scores':
+                const topScoreItem = card.querySelector('.score-item.highest-probability');
+                if (topScoreItem) {
+                    const scoreValue = topScoreItem.querySelector('.score-value');
+                    const scoreProb = topScoreItem.querySelector('.probability-badge');
+                    if (scoreValue && scoreProb) {
+                        predictionText = scoreValue.textContent;
+                        probability = scoreProb.textContent;
+                        categoryName = 'Top Score';
+                    }
+                }
+                break;
+                
+            case 'halftime':
+                const halftimeItem = card.querySelector('.halftime-score-item.highest-halftime');
+                if (halftimeItem) {
+                    const scoreValue = halftimeItem.querySelector('.score-value');
+                    const scoreProb = halftimeItem.querySelector('.probability-badge');
+                    if (scoreValue && scoreProb) {
+                        predictionText = scoreValue.textContent;
+                        probability = scoreProb.textContent;
+                        categoryName = 'Halftime Score';
+                    }
+                }
+                break;
+                
+            case 'goal-markets':
+                const goalMarketItem = card.querySelector('.market-item.highest-market');
+                if (goalMarketItem) {
+                    const marketName = goalMarketItem.querySelector('.market-name');
+                    const marketProb = goalMarketItem.querySelector('.probability-badge');
+                    if (marketName && marketProb) {
+                        predictionText = marketName.textContent;
+                        probability = marketProb.textContent;
+                        categoryName = 'Goal Market';
+                    }
+                }
+                break;
+                
+            case 'team-markets':
+                const teamMarketItem = card.querySelector('.market-item.highest-team-market');
+                if (teamMarketItem) {
+                    const marketName = teamMarketItem.querySelector('.market-name');
+                    const marketProb = teamMarketItem.querySelector('.probability-badge');
+                    if (marketName && marketProb) {
+                        predictionText = marketName.textContent;
+                        probability = marketProb.textContent;
+                        categoryName = 'Team Market';
+                    }
+                }
+                break;
+                
+            case 'bookmaker-odds':
+                const bestOddsItem = card.querySelector('.odds-item.best-odds');
+                if (bestOddsItem) {
+                    const oddsLabel = bestOddsItem.querySelector('.odds-label');
+                    const oddsValue = bestOddsItem.querySelector('.odds-value');
+                    if (oddsLabel && oddsValue) {
+                        predictionText = `${oddsLabel.textContent} (${oddsValue.textContent})`;
+                        probability = '70%'; // Default probability for odds
+                        categoryName = 'Bookmaker Odds';
+                    }
+                }
+                break;
+        }
+        
+        if (predictionText) {
+            return {
+                matchId: matchData.id || matchData.match_id,
+                homeTeam: matchData.home_team,
+                awayTeam: matchData.away_team,
+                category: categoryName,
+                prediction: predictionText,
+                probability: probability,
+                matchTime: matchData.time || 'TBD'
+            };
+        }
+        
+        return null;
+    };
+
+    // Display generated ticket
+    const displayGeneratedTicket = () => {
+        const ticketContent = document.getElementById('ticket-content');
+        const ticketFooter = document.getElementById('ticket-footer');
+        const matchCount = document.getElementById('match-count');
+        
+        if (ticketGeneratorData.generatedPredictions.length === 0) {
+            ticketContent.innerHTML = '<p>No predictions generated</p>';
+            ticketFooter.innerHTML = '';
+            matchCount.textContent = '0';
+            return;
+        }
+        
+        // Update match counter
+        matchCount.textContent = ticketGeneratorData.generatedPredictions.length;
+        
+        // Display predictions
+        const predictionsHTML = ticketGeneratorData.generatedPredictions.map(pred => `
+            <div class="ticket-prediction">
+                <div class="ticket-prediction-header">
+                    <span class="ticket-match-info">${pred.homeTeam} vs ${pred.awayTeam}</span>
+                    <span class="ticket-prediction-category">${pred.category}</span>
+                </div>
+                <div class="ticket-prediction-content">${pred.prediction}</div>
+                <div class="ticket-prediction-probability">
+                    <span>Probability: ${pred.probability}</span>
+                    <span>Time: ${pred.matchTime}</span>
+                </div>
+            </div>
+        `).join('');
+        
+        ticketContent.innerHTML = predictionsHTML;
+        
+        // Calculate average probability for footer
+        const totalPredictions = ticketGeneratorData.generatedPredictions.length;
+        const avgProbability = ticketGeneratorData.generatedPredictions.reduce((sum, pred) => {
+            const prob = parseFloat(pred.probability.replace('%', '')) || 0;
+            return sum + prob;
+        }, 0) / totalPredictions;
+        
+        // Display footer with average probability
+        ticketFooter.innerHTML = `
+            <div class="ticket-footer-content">
+                <i class="fas fa-chart-line"></i>
+                <span>Average Probability: ${avgProbability.toFixed(1)}%</span>
+            </div>
+        `;
+    };
+
+    // Add random match to ticket
+    const addRandomMatch = () => {
+        updateAvailableMatches();
+        
+        if (ticketGeneratorData.availableMatches.length === 0) {
+            alert('No more matches available');
+            return;
+        }
+        
+        // Generate one more random prediction
+        const newPredictions = generateRandomPredictions(1);
+        
+        if (newPredictions.length > 0) {
+            ticketGeneratorData.generatedPredictions.push(newPredictions[0]);
+            displayGeneratedTicket();
+        } else {
+            alert('No new predictions available for selected categories');
+        }
+    };
+
+    // Remove random match from ticket
+    const removeRandomMatch = () => {
+        if (ticketGeneratorData.generatedPredictions.length <= 1) {
+            alert('Cannot remove all predictions');
+            return;
+        }
+        
+        const randomIndex = Math.floor(Math.random() * ticketGeneratorData.generatedPredictions.length);
+        ticketGeneratorData.generatedPredictions.splice(randomIndex, 1);
+        displayGeneratedTicket();
+    };
+
+    // Initialize ticket generator after DOM is ready
+    setTimeout(() => {
+        initializeTicketGenerator();
+    }, 1000);
 }); 
