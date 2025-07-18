@@ -5357,9 +5357,10 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.checked = false;
         });
         
-        // Clear selected categories and time filter
+        // Clear selected categories, time filter, and generated predictions
         ticketGeneratorData.selectedCategories = [];
         ticketGeneratorData.selectedTimeFilter = null;
+        ticketGeneratorData.generatedPredictions = [];
         
         // Reset time filter buttons
         const timeFilterBtns = document.querySelectorAll('.time-filter-btn');
@@ -5381,7 +5382,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ticketGeneratorData = {
             selectedCategories: [],
             generatedPredictions: [],
-            availableMatches: []
+            availableMatches: [],
+            selectedTimeFilter: null
         };
     };
 
@@ -5483,6 +5485,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update available matches based on current filtered data
     const updateAvailableMatches = () => {
         const allMatches = [];
+        const seenMatchIds = new Set(); // To prevent duplicates
         
         // Get all visible match cards that are not started
         const matchCards = document.querySelectorAll('.match-card');
@@ -5490,6 +5493,9 @@ document.addEventListener('DOMContentLoaded', () => {
         matchCards.forEach(card => {
             const matchId = card.dataset.matchId;
             if (!matchId) return;
+            
+            // Skip if we've already seen this match ID
+            if (seenMatchIds.has(matchId)) return;
             
             // Find the match data
             let matchData = null;
@@ -5508,6 +5514,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         matchData: matchData,
                         card: card
                     });
+                    seenMatchIds.add(matchId); // Mark this match ID as seen
                 }
             }
         });
@@ -5565,13 +5572,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Pick a random category
             const randomCategory = selectedCategories[Math.floor(Math.random() * selectedCategories.length)];
             
-            // Check if this combination already exists
+            // Check if this match already exists in predictions (regardless of category)
             const matchId = randomMatch.matchData.id || randomMatch.matchData.match_id;
-            const combinationExists = predictions.some(p => 
-                p.matchId === matchId && p.category === getCategoryName(randomCategory)
-            );
+            const matchAlreadyExists = predictions.some(p => p.matchId === matchId);
             
-            if (!combinationExists) {
+            if (!matchAlreadyExists) {
                 const prediction = extractPredictionForCategory(randomMatch, randomCategory);
                 if (prediction) {
                     predictions.push(prediction);
@@ -5763,11 +5768,27 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Generate one more random prediction
-        const newPredictions = generateRandomPredictions(1);
+        // Get existing match IDs to avoid duplicates
+        const existingMatchIds = ticketGeneratorData.generatedPredictions.map(p => p.matchId);
         
-        if (newPredictions.length > 0) {
-            ticketGeneratorData.generatedPredictions.push(newPredictions[0]);
+        // Filter out matches that are already in the ticket
+        const availableMatches = ticketGeneratorData.availableMatches.filter(match => {
+            const matchId = match.matchData.id || match.matchData.match_id;
+            return !existingMatchIds.includes(matchId);
+        });
+        
+        if (availableMatches.length === 0) {
+            alert('No more unique matches available');
+            return;
+        }
+        
+        // Pick a random match from available ones
+        const randomMatch = availableMatches[Math.floor(Math.random() * availableMatches.length)];
+        const randomCategory = ticketGeneratorData.selectedCategories[Math.floor(Math.random() * ticketGeneratorData.selectedCategories.length)];
+        
+        const prediction = extractPredictionForCategory(randomMatch, randomCategory);
+        if (prediction) {
+            ticketGeneratorData.generatedPredictions.push(prediction);
             displayGeneratedTicket();
         } else {
             alert('No new predictions available for selected categories');
