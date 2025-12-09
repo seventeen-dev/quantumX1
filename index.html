@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Helper class to hide match-cards when top-percentage filter is active */
+        .hidden-by-top { display: none !important; }
+    </style>
 </head>
 <body>
     <div class="aurora-background">
@@ -127,6 +131,18 @@
                         </span>
                     </label>
                     <span class="toggle-label">Hide Started Matches</span>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label for="top-percentage-toggle"><i class="fas fa-filter"></i> Doar top probabilitate</label>
+                <div class="toggle-wrapper">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="top-percentage-toggle">
+                        <span class="toggle-slider">
+                            <span class="toggle-button"></span>
+                        </span>
+                    </label>
+                    <span class="toggle-label">Arată doar meciurile care conțin cea mai mare probabilitate (score-percentage)</span>
                 </div>
             </div>
         </section>
