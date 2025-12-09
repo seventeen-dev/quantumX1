@@ -229,31 +229,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const matchCards = Array.from(document.querySelectorAll('.match-card'));
+            // Compute the global maximum from the loaded data first (allMatchesData).
+            // This ensures the true max (e.g. 20.9) is used even if that match isn't currently rendered
+            // due to other filters.
             let globalMax = -Infinity;
+            try {
+                if (Array.isArray(allMatchesData) && allMatchesData.length > 0) {
+                    allMatchesData.forEach(comp => {
+                        (comp.matches || []).forEach(match => {
+                            const p = match.predictions || {};
+                            (p.top_3_correct_scores || []).forEach(s => {
+                                const v = parseFloat(s.percentage);
+                                if (!isNaN(v) && v > globalMax) globalMax = v;
+                            });
+                        });
+                    });
+                }
+            } catch (err) {
+                console.warn('Error computing global top percentage from data, falling back to DOM', err);
+            }
 
-            // Find global maximum percentage across all score-percentage badges
-            matchCards.forEach(card => {
-                card.querySelectorAll('.score-percentage .probability-badge, .score-percentage').forEach(elem => {
-                    // Prefer numeric data-value when present
-                    const dv = elem.dataset && elem.dataset.value ? elem.dataset.value : null;
-                    let v = null;
-                    if (dv !== null && dv !== undefined) v = parseFloat(dv);
-                    if (v === null || isNaN(v)) {
-                        const txt = (elem.textContent || '').replace('%', '').trim();
-                        v = parseFloat(txt);
-                    }
-                    if (!isNaN(v) && v > globalMax) globalMax = v;
+            // If we couldn't determine from data, fallback to DOM scanning
+            if (!isFinite(globalMax)) {
+                const matchCards = Array.from(document.querySelectorAll('.match-card'));
+                matchCards.forEach(card => {
+                    card.querySelectorAll('.score-percentage .probability-badge, .score-percentage').forEach(elem => {
+                        const dv = elem.dataset && elem.dataset.value ? elem.dataset.value : null;
+                        let v = null;
+                        if (dv !== null && dv !== undefined) v = parseFloat(dv);
+                        if (v === null || isNaN(v)) {
+                            const txt = (elem.textContent || '').replace('%', '').trim();
+                            v = parseFloat(txt);
+                        }
+                        if (!isNaN(v) && v > globalMax) globalMax = v;
+                    });
                 });
-            });
+            }
 
             if (!isFinite(globalMax)) {
                 // nothing to filter
-                matchCards.forEach(el => el.classList.remove('hidden-by-top'));
+                document.querySelectorAll('.match-card').forEach(el => el.classList.remove('hidden-by-top'));
                 return;
             }
 
             // Toggle visibility: keep cards that contain at least one score-percentage equal to globalMax
+            const matchCards = Array.from(document.querySelectorAll('.match-card'));
             matchCards.forEach(card => {
                 let hasTop = false;
                 card.querySelectorAll('.score-percentage .probability-badge, .score-percentage').forEach(elem => {
