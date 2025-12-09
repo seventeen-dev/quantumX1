@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastUpdateElement = document.getElementById('last-update-time');
     const resetButton = document.querySelector('.reset-filters-btn');
     const hideStartedToggle = document.getElementById('hide-started-toggle');
+    const topPercentToggle = document.getElementById('top-percentage-toggle');
+    const topConfidenceToggle = document.getElementById('top-confidence-toggle');
 
     // --- State ---
     let allMatchesData = [];
@@ -216,6 +218,119 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSelectedConfidence();
             
             console.log('🔄 Reset all filters for non-Today date');
+        }
+    };
+
+    // Apply top-percentage filter: show only match-cards that contain the global maximum
+    const applyTopPercentageFilter = () => {
+        try {
+            if (!topPercentToggle || !topPercentToggle.checked) {
+                document.querySelectorAll('.match-card.hidden-by-top').forEach(el => el.classList.remove('hidden-by-top'));
+                return;
+            }
+
+            // Compute the global maximum from the loaded data first (allMatchesData).
+            // This ensures the true max (e.g. 20.9) is used even if that match isn't currently rendered
+            // due to other filters.
+            let globalMax = -Infinity;
+            try {
+                if (Array.isArray(allMatchesData) && allMatchesData.length > 0) {
+                    allMatchesData.forEach(comp => {
+                        (comp.matches || []).forEach(match => {
+                            const p = match.predictions || {};
+                            (p.top_3_correct_scores || []).forEach(s => {
+                                const v = parseFloat(s.percentage);
+                                if (!isNaN(v) && v > globalMax) globalMax = v;
+                            });
+                        });
+                    });
+                }
+            } catch (err) {
+                console.warn('Error computing global top percentage from data, falling back to DOM', err);
+            }
+
+            // If we couldn't determine from data, fallback to DOM scanning
+            if (!isFinite(globalMax)) {
+                const matchCards = Array.from(document.querySelectorAll('.match-card'));
+                matchCards.forEach(card => {
+                    card.querySelectorAll('.score-percentage .probability-badge, .score-percentage').forEach(elem => {
+                        const dv = elem.dataset && elem.dataset.value ? elem.dataset.value : null;
+                        let v = null;
+                        if (dv !== null && dv !== undefined) v = parseFloat(dv);
+                        if (v === null || isNaN(v)) {
+                            const txt = (elem.textContent || '').replace('%', '').trim();
+                            v = parseFloat(txt);
+                        }
+                        if (!isNaN(v) && v > globalMax) globalMax = v;
+                    });
+                });
+            }
+
+            if (!isFinite(globalMax)) {
+                // nothing to filter
+                document.querySelectorAll('.match-card').forEach(el => el.classList.remove('hidden-by-top'));
+                return;
+            }
+
+            // Toggle visibility: keep cards that contain at least one score-percentage equal to globalMax
+            const matchCards = Array.from(document.querySelectorAll('.match-card'));
+            matchCards.forEach(card => {
+                let hasTop = false;
+                card.querySelectorAll('.score-percentage .probability-badge, .score-percentage').forEach(elem => {
+                    const dv = elem.dataset && elem.dataset.value ? elem.dataset.value : null;
+                    let v = null;
+                    if (dv !== null && dv !== undefined) v = parseFloat(dv);
+                    if (v === null || isNaN(v)) {
+                        const txt = (elem.textContent || '').replace('%', '').trim();
+                        v = parseFloat(txt);
+                    }
+                    if (!isNaN(v) && Math.abs(v - globalMax) < 0.001) hasTop = true;
+                });
+
+                if (hasTop) card.classList.remove('hidden-by-top'); else card.classList.add('hidden-by-top');
+            });
+        } catch (e) {
+            console.error('Error applying top percentage filter', e);
+        }
+    };
+
+    const applyTopConfidenceFilter = () => {
+        try {
+            if (!topConfidenceToggle || !topConfidenceToggle.checked) {
+                document.querySelectorAll('.match-card.hidden-by-confidence').forEach(el => el.classList.remove('hidden-by-confidence'));
+                return;
+            }
+
+            const matchCards = Array.from(document.querySelectorAll('.match-card'));
+            let globalMax = -Infinity;
+
+            // Find global maximum percentage across all confidence-pill elements
+            matchCards.forEach(card => {
+                card.querySelectorAll('.confidence-pill').forEach(elem => {
+                    const txt = (elem.textContent || '').replace('%', '').trim();
+                    const v = parseFloat(txt);
+                    if (!isNaN(v) && v > globalMax) globalMax = v;
+                });
+            });
+
+            if (!isFinite(globalMax)) {
+                matchCards.forEach(el => el.classList.remove('hidden-by-confidence'));
+                return;
+            }
+
+            matchCards.forEach(card => {
+                let hasTop = false;
+                card.querySelectorAll('.confidence-pill').forEach(elem => {
+                    const txt = (elem.textContent || '').replace('%', '').trim();
+                    const v = parseFloat(txt);
+                    if (!isNaN(v) && Math.abs(v - globalMax) < 0.001) hasTop = true;
+                });
+
+                if (hasTop) card.classList.remove('hidden-by-confidence'); else card.classList.add('hidden-by-confidence');
+            });
+
+        } catch (e) {
+            console.error('Error applying top confidence filter', e);
         }
     };
 
@@ -2552,6 +2667,23 @@ document.addEventListener('DOMContentLoaded', () => {
             renderUI();
         });
         
+        // Top-percentage toggle: show only matches that contain the global max score-percentage
+        if (topPercentToggle) {
+            topPercentToggle.addEventListener('change', () => {
+                console.log('🔎 Top-percentage filter toggled:', topPercentToggle.checked);
+                // Re-render so the DOM is rebuilt then the filter is applied in renderUI
+                renderUI();
+            });
+        }
+        
+        // Top-confidence toggle: show only matches which have the global maximum confidence-pill
+        if (topConfidenceToggle) {
+            topConfidenceToggle.addEventListener('change', () => {
+                console.log('🔎 Top-confidence filter toggled:', topConfidenceToggle.checked);
+                renderUI();
+            });
+        }
+        
         // Match cards functionality
         matchesListSection.addEventListener('click', (e) => {
             const summary = e.target.closest('.match-summary');
@@ -2894,6 +3026,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         updateStats(filteredCompetitions);
+        // Apply 'top percentage' filter if toggled (hides non-top match-cards)
+        applyTopPercentageFilter();
+        // Apply top-confidence filter as well (if toggled)
+        applyTopConfidenceFilter();
     };
 
     // Create time-sorted list of matches without competition groups
@@ -4160,7 +4296,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const createProbabilityBadge = (value, showPercentage = true) => {
         const badgeClass = getProbabilityBadgeClass(value);
         const displayValue = showPercentage ? `${value}%` : value;
-        return `<span class="probability-badge ${badgeClass}">${displayValue}</span>`;
+        // include data-value for robust numeric parsing by filters
+        return `<span class="probability-badge ${badgeClass}" data-value="${value}">${displayValue}</span>`;
     };
 
     const calculatePredictionStats = (filteredCompetitions) => {
