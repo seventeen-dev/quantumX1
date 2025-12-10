@@ -363,19 +363,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Snapshot utilities: capture a match-card, place on a colored background and export 9:16 image
+    // Wire snapshot to clicks on the confidence-pill instead of a separate icon
     const setupSnapshotButtons = () => {
         try {
-            document.querySelectorAll('.snapshot-btn').forEach(btn => {
-                // avoid attaching multiple listeners
-                if (btn._snapshotBound) return;
-                btn._snapshotBound = true;
-                btn.addEventListener('click', async (e) => {
+            document.querySelectorAll('.confidence-pill').forEach(pill => {
+                if (pill._snapshotBound) return;
+                pill._snapshotBound = true;
+                pill.addEventListener('click', async (e) => {
                     e.stopPropagation();
                     e.preventDefault();
-                    const bg = btn.dataset.bg || '#0b1220';
-                    const card = btn.closest('.match-card');
+                    const card = pill.closest('.match-card');
                     if (!card) return;
-                    await captureMatchCard(card, bg, 900, 1600);
+                    // Use TikTok gradient as requested
+                    const gradientFlag = 'tiktok-gradient';
+                    // Use 1080x1920 for TikTok vertical images
+                    await captureMatchCard(card, gradientFlag, 1080, 1920);
                 });
             });
         } catch (err) {
@@ -383,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const captureMatchCard = async (cardEl, backgroundColor = '#0b1220', outW = 900, outH = 1600) => {
+    const captureMatchCard = async (cardEl, backgroundColor = '#0b1220', outW = 1080, outH = 1920) => {
         try {
             // Use html2canvas to rasterize the card
             const opts = { backgroundColor: null, useCORS: true, scale: Math.max(1, window.devicePixelRatio || 2) };
@@ -397,15 +399,25 @@ document.addEventListener('DOMContentLoaded', () => {
             outCanvas.height = outH;
             const ctx = outCanvas.getContext('2d');
 
-            // Fill background
-            ctx.fillStyle = backgroundColor || '#0b1220';
+            // Fill background - support special 'tiktok-gradient' flag
+            if (backgroundColor === 'tiktok-gradient') {
+                // Horizontal linear gradient left->right: #FF930F -> #FFF95B
+                const g = ctx.createLinearGradient(0, 0, outCanvas.width, 0);
+                g.addColorStop(0, '#FF930F');
+                g.addColorStop(1, '#FFF95B');
+                ctx.fillStyle = g;
+            } else {
+                ctx.fillStyle = backgroundColor || '#0b1220';
+            }
             ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
 
             // Compute scaling to fit cardCanvas into outCanvas with padding
-            const padding = Math.round(Math.min(outW, outH) * 0.05); // 5% padding
+            const padding = Math.round(Math.min(outW, outH) * 0.06); // 6% padding for nicer framing
             const maxW = outCanvas.width - padding * 2;
             const maxH = outCanvas.height - padding * 2;
-            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, 1);
+            // Allow upscaling up to a limit for better fill on social platforms
+            const maxScale = 2.0;
+            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, maxScale);
             const targetW = Math.round(cardCanvas.width * scale);
             const targetH = Math.round(cardCanvas.height * scale);
             const dx = Math.round((outCanvas.width - targetW) / 2);
@@ -3127,8 +3139,8 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTopConfidenceFilter();
         // Apply header hidden state so header and match-time remain hidden after re-renders
         applyHeaderHiddenState();
-        // Wire snapshot buttons after rendering so each .snapshot-btn is active
-        if (typeof setupSnapshotButtons === 'function') setupSnapshotButtons();
+    // Wire snapshot handler after rendering — clicking the confidence-pill will create the snapshot
+    if (typeof setupSnapshotButtons === 'function') setupSnapshotButtons();
     };
 
     // Create time-sorted list of matches without competition groups
@@ -3301,9 +3313,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="pair-combined-odds">
                     <span class="combined-odds-text">Combined Odds: ${combinedOdds.toFixed(2)}</span>
                 </div>
-                <div class="snapshot-wrapper">
-                    <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
-                </div>
+                
                 
                 <!-- First Match -->
                 <div class="match-summary">
@@ -3357,9 +3367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card x-brothers-match" data-no-details="true">
                 <div class="match-summary">
-                    <div class="snapshot-wrapper">
-                        <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
-                    </div>
+                    
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
@@ -3418,9 +3426,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card${openClass}" data-match-id="${match.id || match.match_id}">
                 <div class="match-summary">
-                    <div class="snapshot-wrapper">
-                        <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
-                    </div>
+                    
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
