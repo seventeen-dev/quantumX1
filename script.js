@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const topPercentToggle = document.getElementById('top-percentage-toggle');
     const topConfidenceToggle = document.getElementById('top-confidence-toggle');
     const closeHeaderBtn = document.getElementById('close-header-btn');
+    const snapshotPaddingRange = document.getElementById('snapshot-padding-range');
+    const snapshotPaddingValue = document.getElementById('snapshot-padding-value');
 
     // --- State ---
     let allMatchesData = [];
@@ -45,6 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // Header closed flag - when true the header and all .match-time elements are hidden until page refresh
     let headerHidden = false;
+    // Snapshot padding percentage (default 8%). This controls how much padding is left around the card in the final 9:16 image.
+    let snapshotPaddingPercent = 8;
+
+    // Read UI value if present
+    if (snapshotPaddingRange && snapshotPaddingValue) {
+        snapshotPaddingPercent = parseInt(snapshotPaddingRange.value, 10) || snapshotPaddingPercent;
+        snapshotPaddingValue.textContent = `${snapshotPaddingPercent}%`;
+        snapshotPaddingRange.addEventListener('input', (e) => {
+            const v = parseInt(e.target.value, 10) || 0;
+            snapshotPaddingPercent = v;
+            snapshotPaddingValue.textContent = `${v}%`;
+        });
+    }
 
     const applyHeaderHiddenState = () => {
         try {
@@ -405,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
 
             // Compute scaling to fit cardCanvas into outCanvas with padding
-            const padding = Math.round(Math.min(outW, outH) * 0.08); // 8% padding for TikTok framing
+            const padding = Math.round(Math.min(outW, outH) * (snapshotPaddingPercent / 100)); // user-controlled padding
             const maxW = outCanvas.width - padding * 2;
             const maxH = outCanvas.height - padding * 2;
             // Do NOT upscale: ensure the whole card fits inside the output canvas
