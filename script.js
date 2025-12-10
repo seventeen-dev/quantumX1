@@ -374,10 +374,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const card = pill.closest('.match-card');
                     if (!card) return;
-                    // Use TikTok gradient as requested
-                    const gradientFlag = 'tiktok-gradient';
+                    // Use previous/default background color as requested
+                    const defaultBg = '#0b1220';
                     // Use 1080x1920 for TikTok vertical images
-                    await captureMatchCard(card, gradientFlag, 1080, 1920);
+                    await captureMatchCard(card, defaultBg, 1080, 1920);
                 });
             });
         } catch (err) {
@@ -400,24 +400,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const ctx = outCanvas.getContext('2d');
 
             // Fill background - support special 'tiktok-gradient' flag
-            if (backgroundColor === 'tiktok-gradient') {
-                // Horizontal linear gradient left->right: #FF930F -> #FFF95B
-                const g = ctx.createLinearGradient(0, 0, outCanvas.width, 0);
-                g.addColorStop(0, '#FF930F');
-                g.addColorStop(1, '#FFF95B');
-                ctx.fillStyle = g;
-            } else {
-                ctx.fillStyle = backgroundColor || '#0b1220';
-            }
+            // Fill with requested background color (default previous color)
+            ctx.fillStyle = backgroundColor || '#0b1220';
             ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
 
             // Compute scaling to fit cardCanvas into outCanvas with padding
-            const padding = Math.round(Math.min(outW, outH) * 0.06); // 6% padding for nicer framing
+            const padding = Math.round(Math.min(outW, outH) * 0.08); // 8% padding for TikTok framing
             const maxW = outCanvas.width - padding * 2;
             const maxH = outCanvas.height - padding * 2;
-            // Allow upscaling up to a limit for better fill on social platforms
-            const maxScale = 2.0;
-            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, maxScale);
+            // Do NOT upscale: ensure the whole card fits inside the output canvas
+            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, 1);
             const targetW = Math.round(cardCanvas.width * scale);
             const targetH = Math.round(cardCanvas.height * scale);
             const dx = Math.round((outCanvas.width - targetW) / 2);
