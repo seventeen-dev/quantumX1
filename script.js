@@ -418,57 +418,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const captureMatchCard = async (cardEl, backgroundColor = '#0b1220', outW = 1080, outH = 1920) => {
         try {
-            // Create an offscreen wrapper sized exactly to the desired output (outW x outH)
-            const paddingPx = Math.round(Math.min(outW, outH) * (snapshotPaddingPercent / 100));
-
-            const wrapper = document.createElement('div');
-            wrapper.style.position = 'fixed';
-            wrapper.style.left = '-99999px';
-            wrapper.style.top = '0';
-            wrapper.style.width = `${outW}px`;
-            wrapper.style.height = `${outH}px`;
-            wrapper.style.display = 'flex';
-            wrapper.style.alignItems = 'center';
-            wrapper.style.justifyContent = 'center';
-            wrapper.style.padding = `${paddingPx}px`;
-            wrapper.style.boxSizing = 'border-box';
-            wrapper.style.background = backgroundColor || '#0b1220';
-            wrapper.style.zIndex = 999999;
-
-            // Clone the card and constrain its size so it fits within the wrapper's inner area
-            const clone = cardEl.cloneNode(true);
-            clone.style.maxWidth = '100%';
-            clone.style.maxHeight = '100%';
-            clone.style.boxSizing = 'border-box';
-            clone.style.margin = '0';
-            // Ensure cloned interactive elements do not trigger
-            clone.querySelectorAll('button, a').forEach(n => n.removeAttribute('onclick'));
-
-            wrapper.appendChild(clone);
-            document.body.appendChild(wrapper);
-
-            // Allow a short delay for fonts/images to settle
-            await new Promise(res => setTimeout(res, 120));
-
-            const h2c = (window.html2canvas || (typeof html2canvas !== 'undefined' && html2canvas));
+            // Use html2canvas to rasterize the card
+            const opts = { backgroundColor: null, useCORS: true, scale: Math.max(1, window.devicePixelRatio || 2) };
+            const h2c = (window.html2canvas || window.html2canvas || (typeof html2canvas !== 'undefined' && html2canvas));
             if (!h2c) throw new Error('html2canvas library not loaded');
+            const cardCanvas = await h2c(cardEl, opts);
 
-            // Capture the whole wrapper at 1:1 pixel size
-            const canvas = await h2c(wrapper, { backgroundColor: null, useCORS: true, scale: 1 });
+            // Create output canvas with desired 9:16 ratio
+            const outCanvas = document.createElement('canvas');
+            outCanvas.width = outW;
+            outCanvas.height = outH;
+            const ctx = outCanvas.getContext('2d');
 
-            // Create final canvas matching exact desired output and draw the captured result into it
-            const finalCanvas = document.createElement('canvas');
-            finalCanvas.width = outW;
-            finalCanvas.height = outH;
-            const ctx = finalCanvas.getContext('2d');
-            // If the captured canvas size differs (due to DPR or html2canvas scaling), draw and scale
-            ctx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, outW, outH);
+            // Fill background - support special 'tiktok-gradient' flag
+            // Fill with requested background color (default previous color)
+            ctx.fillStyle = backgroundColor || '#0b1220';
+            ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
 
-            // Clean up wrapper
-            wrapper.remove();
+            // Compute scaling to fit cardCanvas into outCanvas with padding
+            const padding = Math.round(Math.min(outW, outH) * (snapshotPaddingPercent / 100)); // user-controlled padding
+            const maxW = outCanvas.width - padding * 2;
+            const maxH = outCanvas.height - padding * 2;
+            // Do NOT upscale: ensure the whole card fits inside the output canvas
+            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, 1);
+            const targetW = Math.round(cardCanvas.width * scale);
+            const targetH = Math.round(cardCanvas.height * scale);
+            const dx = Math.round((outCanvas.width - targetW) / 2);
+            const dy = Math.round((outCanvas.height - targetH) / 2);
 
-            // Download
-            const dataUrl = finalCanvas.toDataURL('image/png');
+            // Draw the card (centred)
+            ctx.drawImage(cardCanvas, 0, 0, cardCanvas.width, cardCanvas.height, dx, dy, targetW, targetH);
+
+            // Convert to data URL and trigger download
+            const dataUrl = outCanvas.toDataURL('image/png');
             const a = document.createElement('a');
             a.href = dataUrl;
             const id = cardEl.getAttribute('data-match-id') || `card-${Date.now()}`;
