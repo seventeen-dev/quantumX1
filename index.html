@@ -13,6 +13,8 @@
         /* Helper class to hide match-cards when top-percentage filter is active */
         .hidden-by-top { display: none !important; }
         .hidden-by-confidence { display: none !important; }
+        /* Helper class to hide header and match-time when user closes header */
+        .hidden-by-close { display: none !important; }
     </style>
 </head>
 <body>
@@ -46,6 +48,12 @@
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
                     <input type="text" id="team-search" placeholder="Search team...">
+                </div>
+                <!-- Close header button: hides header and match-time until page refresh -->
+                <div class="header-close-wrapper">
+                    <button id="close-header-btn" class="close-header-btn" title="Close header">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
         </div>
