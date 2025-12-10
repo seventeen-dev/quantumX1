@@ -15,23 +15,9 @@
         .hidden-by-confidence { display: none !important; }
         /* Helper class to hide header and match-time when user closes header */
         .hidden-by-close { display: none !important; }
-        /* Snapshot button styling */
-        .snapshot-btn {
-            background: rgba(0,0,0,0.6);
-            color: #fff;
-            border: none;
-            padding: 8px;
-            border-radius: 6px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-size: 14px;
-        }
-        .snapshot-btn:hover { background: rgba(0,0,0,0.75); }
-        .snapshot-wrapper { position: absolute; right: 10px; top: 8px; z-index: 50; }
         .match-card { position: relative; }
+        /* Make confidence pill indicate it's interactive for snapshot */
+        .confidence-pill { cursor: pointer; }
     </style>
 </head>
 <body>
