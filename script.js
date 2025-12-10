@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hideStartedToggle = document.getElementById('hide-started-toggle');
     const topPercentToggle = document.getElementById('top-percentage-toggle');
     const topConfidenceToggle = document.getElementById('top-confidence-toggle');
+    const closeHeaderBtn = document.getElementById('close-header-btn');
 
     // --- State ---
     let allMatchesData = [];
@@ -41,6 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
         sortTime: '',
         search: '',
         hideStarted: true
+    };
+    // Header closed flag - when true the header and all .match-time elements are hidden until page refresh
+    let headerHidden = false;
+
+    const applyHeaderHiddenState = () => {
+        try {
+            const headerEl = document.querySelector('.main-header');
+            if (headerEl) {
+                if (headerHidden) headerEl.classList.add('hidden-by-close'); else headerEl.classList.remove('hidden-by-close');
+            }
+
+            // Hide/show all match-time elements
+            document.querySelectorAll('.match-time').forEach(el => {
+                if (headerHidden) el.classList.add('hidden-by-close'); else el.classList.remove('hidden-by-close');
+            });
+        } catch (e) {
+            console.warn('applyHeaderHiddenState error', e);
+        }
     };
 
     // --- Date Management ---
@@ -333,6 +352,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error applying top confidence filter', e);
         }
     };
+
+    // Wire close header button (hide header + match-time until page refresh)
+    if (closeHeaderBtn) {
+        closeHeaderBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            headerHidden = true;
+            applyHeaderHiddenState();
+        });
+    }
 
     // --- Initialization ---
     const initializeApp = async () => {
@@ -3030,6 +3058,8 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTopPercentageFilter();
         // Apply top-confidence filter as well (if toggled)
         applyTopConfidenceFilter();
+        // Apply header hidden state so header and match-time remain hidden after re-renders
+        applyHeaderHiddenState();
     };
 
     // Create time-sorted list of matches without competition groups
