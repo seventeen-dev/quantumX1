@@ -362,6 +362,73 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Snapshot utilities: capture a match-card, place on a colored background and export 9:16 image
+    const setupSnapshotButtons = () => {
+        try {
+            document.querySelectorAll('.snapshot-btn').forEach(btn => {
+                // avoid attaching multiple listeners
+                if (btn._snapshotBound) return;
+                btn._snapshotBound = true;
+                btn.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    const bg = btn.dataset.bg || '#0b1220';
+                    const card = btn.closest('.match-card');
+                    if (!card) return;
+                    await captureMatchCard(card, bg, 900, 1600);
+                });
+            });
+        } catch (err) {
+            console.warn('setupSnapshotButtons error', err);
+        }
+    };
+
+    const captureMatchCard = async (cardEl, backgroundColor = '#0b1220', outW = 900, outH = 1600) => {
+        try {
+            // Use html2canvas to rasterize the card
+            const opts = { backgroundColor: null, useCORS: true, scale: Math.max(1, window.devicePixelRatio || 2) };
+            const h2c = (window.html2canvas || window.html2canvas || (typeof html2canvas !== 'undefined' && html2canvas));
+            if (!h2c) throw new Error('html2canvas library not loaded');
+            const cardCanvas = await h2c(cardEl, opts);
+
+            // Create output canvas with desired 9:16 ratio
+            const outCanvas = document.createElement('canvas');
+            outCanvas.width = outW;
+            outCanvas.height = outH;
+            const ctx = outCanvas.getContext('2d');
+
+            // Fill background
+            ctx.fillStyle = backgroundColor || '#0b1220';
+            ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
+
+            // Compute scaling to fit cardCanvas into outCanvas with padding
+            const padding = Math.round(Math.min(outW, outH) * 0.05); // 5% padding
+            const maxW = outCanvas.width - padding * 2;
+            const maxH = outCanvas.height - padding * 2;
+            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, 1);
+            const targetW = Math.round(cardCanvas.width * scale);
+            const targetH = Math.round(cardCanvas.height * scale);
+            const dx = Math.round((outCanvas.width - targetW) / 2);
+            const dy = Math.round((outCanvas.height - targetH) / 2);
+
+            // Draw the card (centred)
+            ctx.drawImage(cardCanvas, 0, 0, cardCanvas.width, cardCanvas.height, dx, dy, targetW, targetH);
+
+            // Convert to data URL and trigger download
+            const dataUrl = outCanvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = dataUrl;
+            const id = cardEl.getAttribute('data-match-id') || `card-${Date.now()}`;
+            a.download = `${id}.png`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        } catch (err) {
+            console.error('captureMatchCard error', err);
+            alert('Failed to create snapshot. See console for details.');
+        }
+    };
+
     // --- Initialization ---
     const initializeApp = async () => {
         try {
@@ -3060,6 +3127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTopConfidenceFilter();
         // Apply header hidden state so header and match-time remain hidden after re-renders
         applyHeaderHiddenState();
+        // Wire snapshot buttons after rendering so each .snapshot-btn is active
+        if (typeof setupSnapshotButtons === 'function') setupSnapshotButtons();
     };
 
     // Create time-sorted list of matches without competition groups
@@ -3232,6 +3301,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="pair-combined-odds">
                     <span class="combined-odds-text">Combined Odds: ${combinedOdds.toFixed(2)}</span>
                 </div>
+                <div class="snapshot-wrapper">
+                    <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
+                </div>
                 
                 <!-- First Match -->
                 <div class="match-summary">
@@ -3285,6 +3357,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card x-brothers-match" data-no-details="true">
                 <div class="match-summary">
+                    <div class="snapshot-wrapper">
+                        <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
+                    </div>
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
@@ -3343,6 +3418,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card${openClass}" data-match-id="${match.id || match.match_id}">
                 <div class="match-summary">
+                    <div class="snapshot-wrapper">
+                        <button class="snapshot-btn" title="Save card as image" data-bg="#0b1220"><i class="fas fa-camera"></i></button>
+                    </div>
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
