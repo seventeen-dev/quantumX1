@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeHeaderBtn = document.getElementById('close-header-btn');
     const snapshotPaddingRange = document.getElementById('snapshot-padding-range');
     const snapshotPaddingValue = document.getElementById('snapshot-padding-value');
+    const snapshotResolutionSelect = document.getElementById('snapshot-resolution-select');
 
     // --- State ---
     let allMatchesData = [];
@@ -58,6 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const v = parseInt(e.target.value, 10) || 0;
             snapshotPaddingPercent = v;
             snapshotPaddingValue.textContent = `${v}%`;
+        });
+    }
+    // Snapshot resolution (default 1080x1920)
+    let snapshotResolution = { w: 1080, h: 1920 };
+    if (snapshotResolutionSelect) {
+        const parseRes = (val) => {
+            const m = String(val || '').split('x');
+            if (m.length === 2) return { w: parseInt(m[0], 10) || 1080, h: parseInt(m[1], 10) || 1920 };
+            return { w: 1080, h: 1920 };
+        };
+        snapshotResolution = parseRes(snapshotResolutionSelect.value);
+        snapshotResolutionSelect.addEventListener('change', (e) => {
+            snapshotResolution = parseRes(e.target.value);
         });
     }
 
@@ -391,8 +405,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!card) return;
                     // Use previous/default background color as requested
                     const defaultBg = '#0b1220';
-                    // Use 1080x1920 for TikTok vertical images
-                    await captureMatchCard(card, defaultBg, 1080, 1920);
+                    // Use selected snapshot resolution
+                    const outW = (snapshotResolution && snapshotResolution.w) ? snapshotResolution.w : 1080;
+                    const outH = (snapshotResolution && snapshotResolution.h) ? snapshotResolution.h : 1920;
+                    await captureMatchCard(card, defaultBg, outW, outH);
                 });
             });
         } catch (err) {
