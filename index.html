@@ -13,6 +13,11 @@
         /* Helper class to hide match-cards when top-percentage filter is active */
         .hidden-by-top { display: none !important; }
         .hidden-by-confidence { display: none !important; }
+        /* Helper class to hide header and match-time when user closes header */
+        .hidden-by-close { display: none !important; }
+        .match-card { position: relative; }
+        /* Make confidence pill indicate it's interactive for snapshot */
+        .confidence-pill { cursor: pointer; }
     </style>
 </head>
 <body>
@@ -46,6 +51,12 @@
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
                     <input type="text" id="team-search" placeholder="Search team...">
+                </div>
+                <!-- Close header button: hides header and match-time until page refresh -->
+                <div class="header-close-wrapper">
+                    <button id="close-header-btn" class="close-header-btn" title="Close header">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -157,6 +168,26 @@
                     </label>
                     <span class="toggle-label">Arată doar meciurile cu cea mai mare valoare afișată în "confidence-pill"</span>
                 </div>
+            </div>
+            <div class="filter-group">
+                <label for="snapshot-padding-range"><i class="fas fa-sliders-h"></i> Snapshot padding</label>
+                <div class="padding-control">
+                    <input type="range" id="snapshot-padding-range" min="2" max="20" step="1" value="8">
+                    <span id="snapshot-padding-value">8%</span>
+                </div>
+                <small class="toggle-label">Setează padding-ul (în %) folosit la generarea imaginii 9:16</small>
+            </div>
+            <div class="filter-group">
+                <label for="snapshot-resolution-select"><i class="fas fa-image"></i> Snapshot resolution</label>
+                <div class="resolution-control">
+                    <select id="snapshot-resolution-select">
+                        <option value="720x1280">720 x 1280 (Low)</option>
+                        <option value="1080x1920" selected>1080 x 1920 (Standard)</option>
+                        <option value="1440x2560">1440 x 2560 (High)</option>
+                        <option value="2160x3840">2160 x 3840 (Ultra)</option>
+                    </select>
+                </div>
+                <small class="toggle-label">Alege rezoluția pentru fișierul exportat (recomandat 1080x1920 pentru TikTok).</small>
             </div>
         </section>
 
@@ -420,6 +451,8 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js?v=42126"></script>
 </body>
 </html> 
+

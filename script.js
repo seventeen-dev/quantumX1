@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const hideStartedToggle = document.getElementById('hide-started-toggle');
     const topPercentToggle = document.getElementById('top-percentage-toggle');
     const topConfidenceToggle = document.getElementById('top-confidence-toggle');
+    const closeHeaderBtn = document.getElementById('close-header-btn');
+    const snapshotPaddingRange = document.getElementById('snapshot-padding-range');
+    const snapshotPaddingValue = document.getElementById('snapshot-padding-value');
+    const snapshotResolutionSelect = document.getElementById('snapshot-resolution-select');
 
     // --- State ---
     let allMatchesData = [];
@@ -41,6 +45,50 @@ document.addEventListener('DOMContentLoaded', () => {
         sortTime: '',
         search: '',
         hideStarted: true
+    };
+    // Header closed flag - when true the header and all .match-time elements are hidden until page refresh
+    let headerHidden = false;
+    // Snapshot padding percentage (default 8%). This controls how much padding is left around the card in the final 9:16 image.
+    let snapshotPaddingPercent = 8;
+
+    // Read UI value if present
+    if (snapshotPaddingRange && snapshotPaddingValue) {
+        snapshotPaddingPercent = parseInt(snapshotPaddingRange.value, 10) || snapshotPaddingPercent;
+        snapshotPaddingValue.textContent = `${snapshotPaddingPercent}%`;
+        snapshotPaddingRange.addEventListener('input', (e) => {
+            const v = parseInt(e.target.value, 10) || 0;
+            snapshotPaddingPercent = v;
+            snapshotPaddingValue.textContent = `${v}%`;
+        });
+    }
+    // Snapshot resolution (default 1080x1920)
+    let snapshotResolution = { w: 1080, h: 1920 };
+    if (snapshotResolutionSelect) {
+        const parseRes = (val) => {
+            const m = String(val || '').split('x');
+            if (m.length === 2) return { w: parseInt(m[0], 10) || 1080, h: parseInt(m[1], 10) || 1920 };
+            return { w: 1080, h: 1920 };
+        };
+        snapshotResolution = parseRes(snapshotResolutionSelect.value);
+        snapshotResolutionSelect.addEventListener('change', (e) => {
+            snapshotResolution = parseRes(e.target.value);
+        });
+    }
+
+    const applyHeaderHiddenState = () => {
+        try {
+            const headerEl = document.querySelector('.main-header');
+            if (headerEl) {
+                if (headerHidden) headerEl.classList.add('hidden-by-close'); else headerEl.classList.remove('hidden-by-close');
+            }
+
+            // Hide/show all match-time elements
+            document.querySelectorAll('.match-time').forEach(el => {
+                if (headerHidden) el.classList.add('hidden-by-close'); else el.classList.remove('hidden-by-close');
+            });
+        } catch (e) {
+            console.warn('applyHeaderHiddenState error', e);
+        }
     };
 
     // --- Date Management ---
@@ -331,6 +379,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (e) {
             console.error('Error applying top confidence filter', e);
+        }
+    };
+
+    // Wire close header button (hide header + match-time until page refresh)
+    if (closeHeaderBtn) {
+        closeHeaderBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            headerHidden = true;
+            applyHeaderHiddenState();
+        });
+    }
+
+    // Snapshot utilities: capture a match-card, place on a colored background and export 9:16 image
+    // Wire snapshot to clicks on the confidence-pill instead of a separate icon
+    const setupSnapshotButtons = () => {
+        try {
+            document.querySelectorAll('.confidence-pill').forEach(pill => {
+                if (pill._snapshotBound) return;
+                pill._snapshotBound = true;
+                pill.addEventListener('click', async (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    const card = pill.closest('.match-card');
+                    if (!card) return;
+                    // Use previous/default background color as requested
+                    const defaultBg = '#0b1220';
+                    // Use selected snapshot resolution
+                    const outW = (snapshotResolution && snapshotResolution.w) ? snapshotResolution.w : 1080;
+                    const outH = (snapshotResolution && snapshotResolution.h) ? snapshotResolution.h : 1920;
+                    await captureMatchCard(card, defaultBg, outW, outH);
+                });
+            });
+        } catch (err) {
+            console.warn('setupSnapshotButtons error', err);
+        }
+    };
+
+    const captureMatchCard = async (cardEl, backgroundColor = '#0b1220', outW = 1080, outH = 1920) => {
+        try {
+            // Use html2canvas to rasterize the card
+            const opts = { backgroundColor: null, useCORS: true, scale: Math.max(1, window.devicePixelRatio || 2) };
+            const h2c = (window.html2canvas || window.html2canvas || (typeof html2canvas !== 'undefined' && html2canvas));
+            if (!h2c) throw new Error('html2canvas library not loaded');
+            const cardCanvas = await h2c(cardEl, opts);
+
+            // Create output canvas with desired 9:16 ratio
+            const outCanvas = document.createElement('canvas');
+            outCanvas.width = outW;
+            outCanvas.height = outH;
+            const ctx = outCanvas.getContext('2d');
+
+            // Fill background - support special 'tiktok-gradient' flag
+            // Fill with requested background color (default previous color)
+            ctx.fillStyle = backgroundColor || '#0b1220';
+            ctx.fillRect(0, 0, outCanvas.width, outCanvas.height);
+
+            // Compute scaling to fit cardCanvas into outCanvas with padding
+            const padding = Math.round(Math.min(outW, outH) * (snapshotPaddingPercent / 100)); // user-controlled padding
+            const maxW = outCanvas.width - padding * 2;
+            const maxH = outCanvas.height - padding * 2;
+            // Do NOT upscale: ensure the whole card fits inside the output canvas
+            const scale = Math.min(maxW / cardCanvas.width, maxH / cardCanvas.height, 1);
+            const targetW = Math.round(cardCanvas.width * scale);
+            const targetH = Math.round(cardCanvas.height * scale);
+            const dx = Math.round((outCanvas.width - targetW) / 2);
+            const dy = Math.round((outCanvas.height - targetH) / 2);
+
+            // Draw the card (centred)
+            ctx.drawImage(cardCanvas, 0, 0, cardCanvas.width, cardCanvas.height, dx, dy, targetW, targetH);
+
+            // Convert to data URL and trigger download
+            const dataUrl = outCanvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = dataUrl;
+            const id = cardEl.getAttribute('data-match-id') || `card-${Date.now()}`;
+            a.download = `${id}.png`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        } catch (err) {
+            console.error('captureMatchCard error', err);
+            alert('Failed to create snapshot. See console for details.');
         }
     };
 
@@ -3030,6 +3160,10 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTopPercentageFilter();
         // Apply top-confidence filter as well (if toggled)
         applyTopConfidenceFilter();
+        // Apply header hidden state so header and match-time remain hidden after re-renders
+        applyHeaderHiddenState();
+    // Wire snapshot handler after rendering — clicking the confidence-pill will create the snapshot
+    if (typeof setupSnapshotButtons === 'function') setupSnapshotButtons();
     };
 
     // Create time-sorted list of matches without competition groups
@@ -3203,6 +3337,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="combined-odds-text">Combined Odds: ${combinedOdds.toFixed(2)}</span>
                 </div>
                 
+                
                 <!-- First Match -->
                 <div class="match-summary">
                     <div class="team-display home">
@@ -3255,6 +3390,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card x-brothers-match" data-no-details="true">
                 <div class="match-summary">
+                    
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
@@ -3313,6 +3449,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="match-card${openClass}" data-match-id="${match.id || match.match_id}">
                 <div class="match-summary">
+                    
                     <div class="team-display home">
                         <img src="${homeLogo}" class="team-logo" alt="${match.home_team}" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='">
                         <div class="team-value">${match.predictions?.team_values ? match.predictions.team_values.home_team_value : 'N/A'}</div>
