@@ -1,0 +1,6218 @@
+[
+  {
+    "name": "Premier League",
+    "country": "ENGLAND",
+    "flag_icon_local": "images/competitions/premier_league_flag.png",
+    "matches": [
+      {
+        "time": "22:00",
+        "odds": [
+          "4.75",
+          "4.00",
+          "1.70"
+        ],
+        "home_team": "Brentford",
+        "home_team_logo_local": "images/teams/brentford_logo.png",
+        "home_id": "team_20250816_132506208_brentford_0f84b85d",
+        "away_team": "Arsenal",
+        "away_team_logo_local": "images/teams/arsenal_logo.png",
+        "away_id": "team_20250808_011234637_arsenal_c3995334",
+        "id": "match_20260211_000308253_brentford_arsenal_2200_981711",
+        "status": "PREVIEW",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 20.5
+            },
+            {
+              "score": "0-0",
+              "percentage": 14.27
+            },
+            {
+              "score": "0-2",
+              "percentage": 12.27
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 25.71
+          },
+          "goals_markets": {
+            "over_1_5": 59.83,
+            "over_2_5": 36.02,
+            "under_2_5": 63.98,
+            "under_3_5": 80.98
+          },
+          "teams_markets": {
+            "both_teams_score": 37.87
+          },
+          "market_analysis": {
+            "home_win_prob": 0.2007380073800738,
+            "draw_prob": 0.23837638376383766,
+            "away_win_prob": 0.5608856088560886,
+            "market_efficiency": 0.9535055350553506,
+            "goal_expectancy": -0.06,
+            "overround": 0.04876160990712064,
+            "odds_strength_ratio": 0.35789473684210527
+          },
+          "team_values": {
+            "home_team_value": 56.1,
+            "away_team_value": 80
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Copa Argentina",
+    "country": "ARGENTINA",
+    "flag_icon_local": "images/competitions/copa_argentina_flag.png",
+    "matches": [
+      {
+        "time": "00:00",
+        "odds": [
+          "1.19",
+          "4.70",
+          "21.00"
+        ],
+        "home_team": "Rosario Central",
+        "home_team_logo_local": "images/teams/rosario_central_logo.png",
+        "home_id": "team_20250711_000258782_rosariocentral_4eebed43",
+        "away_team": "Sportivo Belgrano",
+        "away_team_logo_local": "images/teams/sportivo_belgrano_logo.png",
+        "away_id": "team_20250628_033017553_sportivobelgrano_08413420",
+        "id": "match_20260211_000338649_rosariocentral_sportivobelgrano_0000_7b1c99",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 13.96
+            },
+            {
+              "score": "0-0",
+              "percentage": 13.15
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.36
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 21.5
+          },
+          "goals_markets": {
+            "over_1_5": 63.51,
+            "over_2_5": 39.76,
+            "under_2_5": 60.24,
+            "under_3_5": 78.27
+          },
+          "teams_markets": {
+            "both_teams_score": 47.1
+          },
+          "market_analysis": {
+            "home_win_prob": 0.763441442417023,
+            "draw_prob": 0.19329687584601224,
+            "away_win_prob": 0.04326168173696464,
+            "market_efficiency": 0.9084953164762575,
+            "goal_expectancy": -0.12,
+            "overround": 0.10072113951963768,
+            "odds_strength_ratio": 17.647058823529413
+          },
+          "team_values": {
+            "home_team_value": 68.9,
+            "away_team_value": 64.1
+          }
+        }
+      },
+      {
+        "time": "02:15",
+        "odds": [
+          "2.25",
+          "2.81",
+          "3.34"
+        ],
+        "home_team": "Central Cordoba",
+        "home_team_logo_local": "images/teams/central_cordoba_logo.png",
+        "home_id": "team_20250629_000308589_centralcordoba_88032df3",
+        "away_team": "Gimnasia Jujuy",
+        "away_team_logo_local": "images/teams/gimnasia_jujuy_logo.png",
+        "away_id": "team_20250705_000422300_gimnasiajujuy_0e8daef2",
+        "id": "match_20260211_000348737_centralcordoba_gimnasiajujuy_0215_1013b0",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 17.72
+            },
+            {
+              "score": "0-1",
+              "percentage": 15.92
+            },
+            {
+              "score": "1-0",
+              "percentage": 12.32
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 27.05
+          },
+          "goals_markets": {
+            "over_1_5": 57.12,
+            "over_2_5": 33.18,
+            "under_2_5": 66.81,
+            "under_3_5": 83.11
+          },
+          "teams_markets": {
+            "both_teams_score": 41.0
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4041441852654062,
+            "draw_prob": 0.32360299531927544,
+            "away_win_prob": 0.27225281941531854,
+            "market_efficiency": 0.9093244168471639,
+            "goal_expectancy": 0.08279999999999998,
+            "overround": 0.09971752817023116,
+            "odds_strength_ratio": 1.4844444444444445
+          },
+          "team_values": {
+            "home_team_value": 55.7,
+            "away_team_value": 62.1
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Reserve League - Apertura",
+    "country": "ARGENTINA",
+    "flag_icon_local": "images/competitions/reserve_league_-_apertura_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "02:00",
+        "odds": [
+          "2.35",
+          "3.13",
+          "2.73"
+        ],
+        "home_team": "Atl. Tucuman 2",
+        "home_team_logo_local": "images/teams/atl._tucuman_2_logo.png",
+        "home_id": "team_20250722_000404958_atltucuman2_74a72de9",
+        "away_team": "Argentinos Jrs 2",
+        "away_team_logo_local": "images/teams/argentinos_jrs_2_logo.png",
+        "away_id": "team_20250723_001207455_argentinosjrs2_de4d0dda",
+        "id": "match_20260211_000429105_atltucuman2_argentinosjrs2_0200_8edfc8",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 14.75
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.49
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.95
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 22.65
+          },
+          "goals_markets": {
+            "over_1_5": 60.69,
+            "over_2_5": 37.19,
+            "under_2_5": 62.81,
+            "under_3_5": 79.97
+          },
+          "teams_markets": {
+            "both_teams_score": 45.34
+          },
+          "market_analysis": {
+            "home_win_prob": 0.38290635824681063,
+            "draw_prob": 0.2874856044345063,
+            "away_win_prob": 0.3296080373186831,
+            "market_efficiency": 0.8998299418800049,
+            "goal_expectancy": 0.04440000000000001,
+            "overround": 0.11132109908535703,
+            "odds_strength_ratio": 1.1617021276595745
+          },
+          "team_values": {
+            "home_team_value": 68.7,
+            "away_team_value": 69.7
+          }
+        }
+      },
+      {
+        "time": "02:00",
+        "odds": [
+          "2.73",
+          "3.10",
+          "2.36"
+        ],
+        "home_team": "Talleres Cordoba 2",
+        "home_team_logo_local": "images/teams/talleres_cordoba_2_logo.png",
+        "home_id": "team_20250729_000453491_tallerescordoba2_8aecd8db",
+        "away_team": "Velez Sarsfield 2",
+        "away_team_logo_local": "images/teams/velez_sarsfield_2_logo.png",
+        "away_id": "team_20251211_000708555_velezsarsfield2_7d665181",
+        "id": "match_20260211_000439236_tallerescordoba2_velezsarsfield2_0200_9052f1",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 18.6
+            },
+            {
+              "score": "1-0",
+              "percentage": 16.55
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.96
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 28.93
+          },
+          "goals_markets": {
+            "over_1_5": 57.42,
+            "over_2_5": 33.89,
+            "under_2_5": 66.11,
+            "under_3_5": 82.22
+          },
+          "teams_markets": {
+            "both_teams_score": 40.84
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3292262552988507,
+            "draw_prob": 0.2899315086986653,
+            "away_win_prob": 0.3808422360024841,
+            "market_efficiency": 0.8987876769658624,
+            "goal_expectancy": 0.04799999999999999,
+            "overround": 0.1126098250209786,
+            "odds_strength_ratio": 0.8644688644688644
+          },
+          "team_values": {
+            "home_team_value": 61.4,
+            "away_team_value": 59.3
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "AFC Champions League 2 - Play Offs",
+    "country": "ASIA",
+    "flag_icon_local": "images/competitions/usl_championship_flag.png",
+    "matches": [
+      {
+        "time": "14:15",
+        "odds": [
+          "2.52",
+          "3.55",
+          "2.52"
+        ],
+        "home_team": "Bangkok Utd",
+        "home_team_logo_local": "images/teams/bangkok_utd_logo.png",
+        "home_id": "team_20251025_054230972_bangkokutd_895e61d5",
+        "away_team": "Macarthur FC",
+        "away_team_logo_local": "images/teams/macarthur_fc_logo.png",
+        "away_id": "team_20250810_000342834_macarthurfc_69336bb4",
+        "id": "match_20260211_000619894_bangkokutd_macarthurfc_1415_2987ef",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 9.99
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.73
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.67
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.74
+          },
+          "goals_markets": {
+            "over_1_5": 75.52,
+            "over_2_5": 54.46,
+            "under_2_5": 45.54,
+            "under_3_5": 65.03
+          },
+          "teams_markets": {
+            "both_teams_score": 58.38
+          },
+          "market_analysis": {
+            "home_win_prob": 0.369022869022869,
+            "draw_prob": 0.26195426195426197,
+            "away_win_prob": 0.369022869022869,
+            "market_efficiency": 0.92993762993763,
+            "goal_expectancy": -0.0059999999999999784,
+            "overround": 0.07534093449586399,
+            "odds_strength_ratio": 1.0
+          },
+          "team_values": {
+            "home_team_value": 71.8,
+            "away_team_value": 71.0
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "I Liqa",
+    "country": "AZERBAIJAN",
+    "flag_icon_local": "",
+    "matches": [
+      {
+        "time": "12:30",
+        "odds": [
+          "1.65",
+          "3.44",
+          "4.89"
+        ],
+        "home_team": "Baku Sporting",
+        "home_team_logo_local": "images/teams/baku_sporting_logo.png",
+        "home_id": "team_20251021_001317641_bakusporting_5f2cf8da",
+        "away_team": "MOIK Baku",
+        "away_team_logo_local": "images/teams/moik_baku_logo.png",
+        "away_id": "team_20251021_001317546_moikbaku_1676efc5",
+        "id": "match_20260211_000700182_bakusporting_moikbaku_1230_f0e834",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.27
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.78
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.96
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.75
+          },
+          "goals_markets": {
+            "over_1_5": 73.77,
+            "over_2_5": 51.45,
+            "under_2_5": 48.55,
+            "under_3_5": 68.53
+          },
+          "teams_markets": {
+            "both_teams_score": 53.45
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5503351752431616,
+            "draw_prob": 0.26396890673000484,
+            "away_win_prob": 0.18569591802683366,
+            "market_efficiency": 0.9080530391512166,
+            "goal_expectancy": 0.007200000000000006,
+            "overround": 0.10125725798432317,
+            "odds_strength_ratio": 2.9636363636363634
+          },
+          "team_values": {
+            "home_team_value": 68.4,
+            "away_team_value": 59.3
+          }
+        }
+      },
+      {
+        "time": "12:30",
+        "odds": [
+          "2.13",
+          "3.44",
+          "2.93"
+        ],
+        "home_team": "Sahdag Qusar",
+        "home_team_logo_local": "images/teams/sahdag_qusar_logo.png",
+        "home_id": "team_20251022_001023302_sahdagqusar_596e8c98",
+        "away_team": "Cebrayil",
+        "away_team_logo_local": "images/teams/cebrayil_logo.png",
+        "away_id": "team_20251022_001023175_cebrayil_c39dd593",
+        "id": "match_20260211_000710293_sahdagqusar_cebrayil_1230_a8c075",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 9.6
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.01
+            },
+            {
+              "score": "1-2",
+              "percentage": 7.77
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.85
+          },
+          "goals_markets": {
+            "over_1_5": 77.69,
+            "over_2_5": 57.04,
+            "under_2_5": 42.96,
+            "under_3_5": 62.79
+          },
+          "teams_markets": {
+            "both_teams_score": 60.46
+          },
+          "market_analysis": {
+            "home_win_prob": 0.42623047874387354,
+            "draw_prob": 0.26391596503617754,
+            "away_win_prob": 0.309853556219949,
+            "market_efficiency": 0.9078709197244507,
+            "goal_expectancy": 0.007200000000000006,
+            "overround": 0.10147817082136701,
+            "odds_strength_ratio": 1.375586854460094
+          },
+          "team_values": {
+            "home_team_value": 65.1,
+            "away_team_value": 61.9
+          }
+        }
+      },
+      {
+        "time": "15:00",
+        "odds": [
+          "3.19",
+          "3.35",
+          "2.04"
+        ],
+        "home_team": "Sabail",
+        "home_team_logo_local": "images/teams/sabail_logo.png",
+        "home_id": "team_20251022_001033702_sabail_ebb69ce5",
+        "away_team": "Safa Baku",
+        "away_team_logo_local": "images/teams/safa_baku_logo.png",
+        "away_id": "team_20251022_001033584_safabaku_afbeca37",
+        "id": "match_20260211_000720464_sabail_safabaku_1500_6ba5b3",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 14.91
+            },
+            {
+              "score": "1-0",
+              "percentage": 12.67
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.38
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 22.0
+          },
+          "goals_markets": {
+            "over_1_5": 60.43,
+            "over_2_5": 36.67,
+            "under_2_5": 63.33,
+            "under_3_5": 80.64
+          },
+          "teams_markets": {
+            "both_teams_score": 45.15
+          },
+          "market_analysis": {
+            "home_win_prob": 0.2844169951015686,
+            "draw_prob": 0.2708328998131354,
+            "away_win_prob": 0.4447501050852959,
+            "market_efficiency": 0.9072902143740037,
+            "goal_expectancy": 0.017999999999999988,
+            "overround": 0.10218316494239121,
+            "odds_strength_ratio": 0.6394984326018809
+          },
+          "team_values": {
+            "home_team_value": 64.3,
+            "away_team_value": 70.2
+          }
+        }
+      }
+    ],
+    "total_matches": 3
+  },
+  {
+    "name": "Premier League",
+    "country": "BAHRAIN",
+    "flag_icon_local": "images/competitions/premier_league_flag.png",
+    "matches": [
+      {
+        "time": "18:00",
+        "odds": [
+          "2.20",
+          "3.04",
+          "3.15"
+        ],
+        "home_team": "Al-Ahli Manama",
+        "home_team_logo_local": "images/teams/al-ahli_manama_logo.png",
+        "home_id": "team_20251029_000943169_alahlimanama_7a458531",
+        "away_team": "Aali Club",
+        "away_team_logo_local": "images/teams/aali_club_logo.png",
+        "away_id": "team_20251029_000932842_aaliclub_c7ab612f",
+        "id": "match_20260211_000800772_alahlimanama_aaliclub_1800_3bc492",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 15.89
+            },
+            {
+              "score": "0-0",
+              "percentage": 11.34
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.83
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 24.3
+          },
+          "goals_markets": {
+            "over_1_5": 63.46,
+            "over_2_5": 40.26,
+            "under_2_5": 59.74,
+            "under_3_5": 77.61
+          },
+          "teams_markets": {
+            "both_teams_score": 45.45
+          },
+          "market_analysis": {
+            "home_win_prob": 0.41286539622316115,
+            "draw_prob": 0.298784168319393,
+            "away_win_prob": 0.2883504354574459,
+            "market_efficiency": 0.9083038716909545,
+            "goal_expectancy": 0.05519999999999999,
+            "overround": 0.10095314042682468,
+            "odds_strength_ratio": 1.4318181818181817
+          },
+          "team_values": {
+            "home_team_value": 59.4,
+            "away_team_value": 59.6
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Belgian Cup",
+    "country": "BELGIUM",
+    "flag_icon_local": "images/competitions/landspokal_cup_flag.png",
+    "matches": [
+      {
+        "time": "21:30",
+        "odds": [
+          "2.63",
+          "3.20",
+          "2.75"
+        ],
+        "home_team": "Antwerp",
+        "home_team_logo_local": "images/teams/antwerp_logo.png",
+        "home_id": "team_20250724_000803881_antwerp_0240587c",
+        "away_team": "Anderlecht",
+        "away_team_logo_local": "images/teams/anderlecht_logo.png",
+        "away_id": "team_20250726_001114807_anderlecht_9c37b13e",
+        "id": "match_20260211_000841293_antwerp_anderlecht_2130_ed651d",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.72
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.62
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.3
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 18.05
+          },
+          "goals_markets": {
+            "over_1_5": 68.9,
+            "over_2_5": 45.94,
+            "under_2_5": 54.06,
+            "under_3_5": 73.21
+          },
+          "teams_markets": {
+            "both_teams_score": 51.27
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3599402826349265,
+            "draw_prob": 0.2958259197905802,
+            "away_win_prob": 0.3442337975744933,
+            "market_efficiency": 0.9466429433298565,
+            "goal_expectancy": 0.035999999999999976,
+            "overround": 0.056364500518492955,
+            "odds_strength_ratio": 1.0456273764258555
+          },
+          "team_values": {
+            "home_team_value": 65.7,
+            "away_team_value": 63.8
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Bosnia and Herzegovina Cup",
+    "country": "BOSNIA AND HERZEGOVINA",
+    "flag_icon_local": "images/competitions/division_2_-_norra_svealand_flag.png",
+    "matches": [
+      {
+        "time": "14:00",
+        "odds": [
+          "5.63",
+          "4.30",
+          "1.47"
+        ],
+        "home_team": "Famos Hrasnica",
+        "home_team_logo_local": "images/teams/famos_hrasnica_logo.png",
+        "home_id": "team_20260211_001002430_famoshrasnica_1f8f6f9c",
+        "away_team": "Laktasi",
+        "away_team_logo_local": "images/teams/laktasi_logo.png",
+        "away_id": "team_20251124_000912309_laktasi_3834b2ab",
+        "id": "match_20260211_001002447_famoshrasnica_laktasi_1400_84a7bb",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 12.04
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.42
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.18
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.5
+          },
+          "goals_markets": {
+            "over_1_5": 71.21,
+            "over_2_5": 48.78,
+            "under_2_5": 51.22,
+            "under_3_5": 70.3
+          },
+          "teams_markets": {
+            "both_teams_score": 53.65
+          },
+          "market_analysis": {
+            "home_win_prob": 0.1628867626481404,
+            "draw_prob": 0.21326801714163499,
+            "away_win_prob": 0.6238452202102247,
+            "market_efficiency": 0.9170524737090304,
+            "goal_expectancy": -0.12,
+            "overround": 0.09045014180648492,
+            "odds_strength_ratio": 0.261101243339254
+          },
+          "team_values": {
+            "home_team_value": 60.2,
+            "away_team_value": 71.5
+          }
+        }
+      },
+      {
+        "time": "19:00",
+        "odds": [
+          "1.39",
+          "4.80",
+          "6.14"
+        ],
+        "home_team": "Zeljeznicar",
+        "home_team_logo_local": "images/teams/zeljeznicar_logo.png",
+        "home_id": "team_20250802_214122881_zeljeznicar_9f07e89e",
+        "away_team": "Slavija",
+        "away_team_logo_local": "images/teams/slavija_logo.png",
+        "away_id": "team_20251021_001631678_slavija_371dd4df",
+        "id": "match_20260211_001012675_zeljeznicar_slavija_1900_797996",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 14.08
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.81
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.74
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 18.49
+          },
+          "goals_markets": {
+            "over_1_5": 65.28,
+            "over_2_5": 41.24,
+            "under_2_5": 58.76,
+            "under_3_5": 77.17
+          },
+          "teams_markets": {
+            "both_teams_score": 47.85
+          },
+          "market_analysis": {
+            "home_win_prob": 0.659644662097738,
+            "draw_prob": 0.19102210006580328,
+            "away_win_prob": 0.1493332378364586,
+            "market_efficiency": 0.9169060803158557,
+            "goal_expectancy": -0.12,
+            "overround": 0.09062424327638885,
+            "odds_strength_ratio": 4.41726618705036
+          },
+          "team_values": {
+            "home_team_value": 55.0,
+            "away_team_value": 67.0
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Serie A Betano",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/serie_a_betano_flag.png",
+    "matches": [
+      {
+        "time": "00:00",
+        "odds": [
+          "2.45",
+          "3.00",
+          "3.10"
+        ],
+        "home_team": "Chapecoense-SC",
+        "home_team_logo_local": "images/teams/chapecoense-sc_logo.png",
+        "home_id": "team_20250629_000410282_chapecoensesc_b6a12e0d",
+        "away_team": "Coritiba",
+        "away_team_logo_local": "images/teams/coritiba_logo.png",
+        "away_id": "team_20250628_033441274_coritiba_bc0ba2ba",
+        "id": "match_20260211_001053316_chapecoensesc_coritiba_0000_6b92d8",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.94
+            },
+            {
+              "score": "1-2",
+              "percentage": 9.39
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.6
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.41
+          },
+          "goals_markets": {
+            "over_1_5": 73.37,
+            "over_2_5": 51.28,
+            "under_2_5": 48.72,
+            "under_3_5": 68.61
+          },
+          "teams_markets": {
+            "both_teams_score": 56.66
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3835842441740565,
+            "draw_prob": 0.3132604660754795,
+            "away_win_prob": 0.303155289750464,
+            "market_efficiency": 0.9397813982264386,
+            "goal_expectancy": 0.06,
+            "overround": 0.06407724380074598,
+            "odds_strength_ratio": 1.2653061224489794
+          },
+          "team_values": {
+            "home_team_value": 76.3,
+            "away_team_value": 72.5
+          }
+        }
+      },
+      {
+        "time": "00:00",
+        "odds": [
+          "2.32",
+          "3.00",
+          "3.30"
+        ],
+        "home_team": "Mirassol",
+        "home_team_logo_local": "images/teams/mirassol_logo.png",
+        "home_id": "team_20250716_000904764_mirassol_cdd863df",
+        "away_team": "Cruzeiro",
+        "away_team_logo_local": "images/teams/cruzeiro_logo.png",
+        "away_id": "team_20250713_000350437_cruzeiro_54c9e721",
+        "id": "match_20260211_001103392_mirassol_cruzeiro_0000_5fa964",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 14.81
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.94
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.53
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 21.62
+          },
+          "goals_markets": {
+            "over_1_5": 63.44,
+            "over_2_5": 39.5,
+            "under_2_5": 60.5,
+            "under_3_5": 78.49
+          },
+          "teams_markets": {
+            "both_teams_score": 46.3
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4038179148311307,
+            "draw_prob": 0.3122858541360744,
+            "away_win_prob": 0.28389623103279493,
+            "market_efficiency": 0.9368575624082233,
+            "goal_expectancy": 0.06,
+            "overround": 0.06739811912225702,
+            "odds_strength_ratio": 1.4224137931034484
+          },
+          "team_values": {
+            "home_team_value": 69.5,
+            "away_team_value": 64.8
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "1.46",
+          "4.00",
+          "7.50"
+        ],
+        "home_team": "Atletico-MG",
+        "home_team_logo_local": "images/teams/atletico-mg_logo.png",
+        "home_id": "team_20250712_001246115_atleticomg_243f1db0",
+        "away_team": "Remo",
+        "away_team_logo_local": "images/teams/remo_logo.png",
+        "away_id": "team_20250628_033451407_remo_801a5d98",
+        "id": "match_20260211_001113607_atleticomg_remo_0100_bb2c67",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 15.07
+            },
+            {
+              "score": "0-0",
+              "percentage": 14.49
+            },
+            {
+              "score": "0-1",
+              "percentage": 10.71
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 22.1
+          },
+          "goals_markets": {
+            "over_1_5": 60.52,
+            "over_2_5": 36.75,
+            "under_2_5": 63.25,
+            "under_3_5": 80.25
+          },
+          "teams_markets": {
+            "both_teams_score": 44.49
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6411626415900833,
+            "draw_prob": 0.23402436418038042,
+            "away_win_prob": 0.12481299422953622,
+            "market_efficiency": 0.9360974567215217,
+            "goal_expectancy": -0.06,
+            "overround": 0.06826484018264845,
+            "odds_strength_ratio": 5.136986301369864
+          },
+          "team_values": {
+            "home_team_value": 58.2,
+            "away_team_value": 64.5
+          }
+        }
+      },
+      {
+        "time": "02:30",
+        "odds": [
+          "2.10",
+          "3.10",
+          "3.75"
+        ],
+        "home_team": "Sao Paulo",
+        "home_team_logo_local": "images/teams/sao_paulo_logo.png",
+        "home_id": "team_20250711_001439656_saopaulo_0169fb29",
+        "away_team": "Gremio",
+        "away_team_logo_local": "images/teams/gremio_logo.png",
+        "away_id": "team_20250708_000742864_gremio_a3e3ff9b",
+        "id": "match_20260211_001123783_saopaulo_gremio_0230_99ff77",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 9.4
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.39
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.27
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 14.85
+          },
+          "goals_markets": {
+            "over_1_5": 76.59,
+            "over_2_5": 56.2,
+            "under_2_5": 43.8,
+            "under_3_5": 63.07
+          },
+          "teams_markets": {
+            "both_teams_score": 58.08
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4469434832756632,
+            "draw_prob": 0.3027681660899654,
+            "away_win_prob": 0.2502883506343714,
+            "market_efficiency": 0.9385813148788927,
+            "goal_expectancy": 0.04799999999999999,
+            "overround": 0.06543778801843314,
+            "odds_strength_ratio": 1.7857142857142856
+          },
+          "team_values": {
+            "home_team_value": 71.1,
+            "away_team_value": 61.8
+          }
+        }
+      },
+      {
+        "time": "02:30",
+        "odds": [
+          "2.20",
+          "3.30",
+          "3.20"
+        ],
+        "home_team": "Vasco",
+        "home_team_logo_local": "images/teams/vasco_logo.png",
+        "home_id": "team_20250712_001235800_vasco_8ad6f229",
+        "away_team": "Bahia",
+        "away_team_logo_local": "images/teams/bahia_logo.png",
+        "away_id": "team_20250709_000903498_bahia_ec9bc7d6",
+        "id": "match_20260211_001133985_vasco_bahia_0230_1d3f8d",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 18.36
+            },
+            {
+              "score": "0-0",
+              "percentage": 16.45
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.85
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 24.21
+          },
+          "goals_markets": {
+            "over_1_5": 58.29,
+            "over_2_5": 34.71,
+            "under_2_5": 65.29,
+            "under_3_5": 81.82
+          },
+          "teams_markets": {
+            "both_teams_score": 39.6
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4247787610619469,
+            "draw_prob": 0.2831858407079646,
+            "away_win_prob": 0.2920353982300885,
+            "market_efficiency": 0.9345132743362832,
+            "goal_expectancy": 0.02400000000000002,
+            "overround": 0.07007575757575757,
+            "odds_strength_ratio": 1.4545454545454546
+          },
+          "team_values": {
+            "home_team_value": 47.4,
+            "away_team_value": 70.3
+          }
+        }
+      }
+    ],
+    "total_matches": 5
+  },
+  {
+    "name": "Baiano",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/baiano_u20_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "00:15",
+        "odds": [
+          "2.11",
+          "2.93",
+          "3.50"
+        ],
+        "home_team": "Bahia de Feira",
+        "home_team_logo_local": "images/teams/bahia_de_feira_logo.png",
+        "home_id": "team_20260114_000832461_bahiadefeira_dbee7ddb",
+        "away_team": "Barcelona",
+        "away_team_logo_local": "images/teams/barcelona_logo.png",
+        "away_id": "team_20250628_033703141_barcelona_19179110",
+        "id": "match_20260211_001335365_bahiadefeira_barcelona_0015_de55ee",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 13.64
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.97
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.39
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 21.0
+          },
+          "goals_markets": {
+            "over_1_5": 64.99,
+            "over_2_5": 41.46,
+            "under_2_5": 58.54,
+            "under_3_5": 76.63
+          },
+          "teams_markets": {
+            "both_teams_score": 48.33
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4304790049659353,
+            "draw_prob": 0.3100036520403151,
+            "away_win_prob": 0.2595173429937495,
+            "market_efficiency": 0.9083107004781233,
+            "goal_expectancy": 0.06839999999999997,
+            "overround": 0.10094486333103037,
+            "odds_strength_ratio": 1.6587677725118484
+          },
+          "team_values": {
+            "home_team_value": 62.6,
+            "away_team_value": 78.0
+          }
+        }
+      },
+      {
+        "time": "02:30",
+        "odds": [
+          "3.54",
+          "3.16",
+          "1.99"
+        ],
+        "home_team": "Galicia",
+        "home_team_logo_local": "images/teams/galicia_logo.png",
+        "home_id": "team_20250705_001433534_galicia_d1ea3895",
+        "away_team": "Jequie",
+        "away_team_logo_local": "images/teams/jequie_logo.png",
+        "away_id": "team_20250628_033703720_jequie_6d88e039",
+        "id": "match_20260211_001345476_galicia_jequie_0230_24733c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 10.11
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.9
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.98
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.02
+          },
+          "goals_markets": {
+            "over_1_5": 75.88,
+            "over_2_5": 54.83,
+            "under_2_5": 45.17,
+            "under_3_5": 64.87
+          },
+          "teams_markets": {
+            "both_teams_score": 57.04
+          },
+          "market_analysis": {
+            "home_win_prob": 0.2564663083109701,
+            "draw_prob": 0.2873071934876057,
+            "away_win_prob": 0.4562264982014242,
+            "market_efficiency": 0.9078907314208342,
+            "goal_expectancy": 0.04079999999999998,
+            "overround": 0.10145413472281661,
+            "odds_strength_ratio": 0.5621468926553672
+          },
+          "team_values": {
+            "home_team_value": 60.5,
+            "away_team_value": 64.8
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Brasiliense",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/brasiliense_u20_flag.png",
+    "matches": [
+      {
+        "time": "01:30",
+        "odds": [
+          "1.68",
+          "3.22",
+          "5.11"
+        ],
+        "home_team": "Gama",
+        "home_team_logo_local": "images/teams/gama_logo.png",
+        "home_id": "team_20260110_001850550_gama_4a3c64b2",
+        "away_team": "Ceilandia",
+        "away_team_logo_local": "images/teams/ceilandia_logo.png",
+        "away_id": "team_20250704_005319237_ceilandia_8e4c3dca",
+        "id": "match_20260211_001425808_gama_ceilandia_0130_49a76f",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.96
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.02
+            },
+            {
+              "score": "1-0",
+              "percentage": 7.65
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 13.53
+          },
+          "goals_markets": {
+            "over_1_5": 79.11,
+            "over_2_5": 59.14,
+            "under_2_5": 40.86,
+            "under_3_5": 60.66
+          },
+          "teams_markets": {
+            "both_teams_score": 58.77
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5403926617315739,
+            "draw_prob": 0.28194399742516896,
+            "away_win_prob": 0.17766334084325716,
+            "market_efficiency": 0.9078596717090441,
+            "goal_expectancy": 0.03359999999999998,
+            "overround": 0.10149181769193683,
+            "odds_strength_ratio": 3.041666666666667
+          },
+          "team_values": {
+            "home_team_value": 72.6,
+            "away_team_value": 64.5
+          }
+        }
+      },
+      {
+        "time": "15:00",
+        "odds": [
+          "7.95",
+          "4.33",
+          "1.34"
+        ],
+        "home_team": "Brasilia",
+        "home_team_logo_local": "images/teams/brasilia_logo.png",
+        "home_id": "team_20260206_004121744_brasilia_cd52f554",
+        "away_team": "Capital",
+        "away_team_logo_local": "images/teams/capital_logo.png",
+        "away_id": "team_20250628_033602455_capital_9ed557cc",
+        "id": "match_20260211_001435947_brasilia_capital_1500_cd9a4f",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.09
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.39
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.91
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.72
+          },
+          "goals_markets": {
+            "over_1_5": 76.57,
+            "over_2_5": 55.91,
+            "under_2_5": 44.09,
+            "under_3_5": 63.74
+          },
+          "teams_markets": {
+            "both_teams_score": 57.05
+          },
+          "market_analysis": {
+            "home_win_prob": 0.11403986343990707,
+            "draw_prob": 0.20938034973377856,
+            "away_win_prob": 0.6765797868263143,
+            "market_efficiency": 0.9066169143472612,
+            "goal_expectancy": -0.12,
+            "overround": 0.10300170245552054,
+            "odds_strength_ratio": 0.16855345911949687
+          },
+          "team_values": {
+            "home_team_value": 60.4,
+            "away_team_value": 60.1
+          }
+        }
+      },
+      {
+        "time": "21:00",
+        "odds": [
+          "10.00",
+          "4.40",
+          "1.31"
+        ],
+        "home_team": "ARUC",
+        "home_team_logo_local": "images/teams/aruc_logo.png",
+        "home_id": "team_20260121_000733132_aruc_ac02a87d",
+        "away_team": "Samambaia",
+        "away_team_logo_local": "images/teams/samambaia_logo.png",
+        "away_id": "team_20260121_000753452_samambaia_959a110d",
+        "id": "match_20260211_001446759_aruc_samambaia_2100_5cbcf4",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 16.91
+            },
+            {
+              "score": "0-0",
+              "percentage": 13.76
+            },
+            {
+              "score": "0-2",
+              "percentage": 10.32
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 23.86
+          },
+          "goals_markets": {
+            "over_1_5": 61.53,
+            "over_2_5": 37.41,
+            "under_2_5": 62.59,
+            "under_3_5": 80.28
+          },
+          "teams_markets": {
+            "both_teams_score": 42.14
+          },
+          "market_analysis": {
+            "home_win_prob": 0.09168999745482313,
+            "draw_prob": 0.20838635785187073,
+            "away_win_prob": 0.6999236446933063,
+            "market_efficiency": 0.9168999745482312,
+            "goal_expectancy": -0.12,
+            "overround": 0.0906315058986813,
+            "odds_strength_ratio": 0.131
+          },
+          "team_values": {
+            "home_team_value": 52.7,
+            "away_team_value": 64.2
+          }
+        }
+      }
+    ],
+    "total_matches": 3
+  },
+  {
+    "name": "Carioca - Relegation Group",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/carioca_u20_-_taca_guanabara_flag.png",
+    "matches": [
+      {
+        "time": "22:00",
+        "odds": [
+          "2.19",
+          "3.04",
+          "3.19"
+        ],
+        "home_team": "Marica",
+        "home_team_logo_local": "images/teams/marica_logo.png",
+        "home_id": "team_20250704_005359647_marica_a03aa66b",
+        "away_team": "Sampaio Correa FE",
+        "away_team_logo_local": "images/teams/sampaio_correa_fe_logo.png",
+        "away_id": "team_20260114_001034882_sampaiocorreafe_dd944d78",
+        "id": "match_20260211_001526442_marica_sampaiocorreafe_2200_f04236",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 9.66
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.46
+            },
+            {
+              "score": "1-0",
+              "percentage": 7.03
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 14.64
+          },
+          "goals_markets": {
+            "over_1_5": 79.81,
+            "over_2_5": 59.98,
+            "under_2_5": 40.02,
+            "under_3_5": 59.73
+          },
+          "teams_markets": {
+            "both_teams_score": 61.1
+          },
+          "market_analysis": {
+            "home_win_prob": 0.41546957538783186,
+            "draw_prob": 0.29930209542741837,
+            "away_win_prob": 0.2852283291847498,
+            "market_efficiency": 0.9098783700993517,
+            "goal_expectancy": 0.05519999999999999,
+            "overround": 0.09904799681171417,
+            "odds_strength_ratio": 1.45662100456621
+          },
+          "team_values": {
+            "home_team_value": 52.9,
+            "away_team_value": 46.0
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Cearense - 5th-6th places",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/cearense_u20_flag.png",
+    "matches": [
+      {
+        "time": "00:00",
+        "odds": [
+          "4.63",
+          "3.32",
+          "1.72"
+        ],
+        "home_team": "Horizonte",
+        "home_team_logo_local": "images/teams/horizonte_logo.png",
+        "home_id": "team_20250629_000501856_horizonte_a150e487",
+        "away_team": "Iguatu",
+        "away_team_logo_local": "images/teams/iguatu_logo.png",
+        "away_id": "team_20250711_001734148_iguatu_b6c4d529",
+        "id": "match_20260211_001606884_horizonte_iguatu_0000_eb64d5",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 11.47
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.37
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.23
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.5
+          },
+          "goals_markets": {
+            "over_1_5": 68.49,
+            "over_2_5": 45.26,
+            "under_2_5": 54.74,
+            "under_3_5": 73.63
+          },
+          "teams_markets": {
+            "both_teams_score": 51.26
+          },
+          "market_analysis": {
+            "home_win_prob": 0.1966012063789352,
+            "draw_prob": 0.27417577877544275,
+            "away_win_prob": 0.5292230148456221,
+            "market_efficiency": 0.9102635855344698,
+            "goal_expectancy": 0.02160000000000002,
+            "overround": 0.0985828894966072,
+            "odds_strength_ratio": 0.3714902807775378
+          },
+          "team_values": {
+            "home_team_value": 64.9,
+            "away_team_value": 69.0
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Goiano - Play Offs",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/goiano_2_flag.png",
+    "matches": [
+      {
+        "time": "00:30",
+        "odds": [
+          "2.23",
+          "3.04",
+          "3.11"
+        ],
+        "home_team": "Anapolina",
+        "home_team_logo_local": "images/teams/anapolina_logo.png",
+        "home_id": "team_20250710_000440668_anapolina_259e0352",
+        "away_team": "Jataiense",
+        "away_team_logo_local": "images/teams/jataiense_logo.png",
+        "away_id": "team_20260121_001316803_jataiense_0472ba36",
+        "id": "match_20260211_001647382_anapolina_jataiense_0030_f14ff5",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 21.65
+            },
+            {
+              "score": "1-0",
+              "percentage": 15.34
+            },
+            {
+              "score": "0-1",
+              "percentage": 15.26
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 44.84
+          },
+          "goals_markets": {
+            "over_1_5": 52.13,
+            "over_2_5": 28.47,
+            "under_2_5": 71.53,
+            "under_3_5": 86.59
+          },
+          "teams_markets": {
+            "both_teams_score": 37.26
+          },
+          "market_analysis": {
+            "home_win_prob": 0.40806425855349204,
+            "draw_prob": 0.29933661071522605,
+            "away_win_prob": 0.2925991307312821,
+            "market_efficiency": 0.9099832965742872,
+            "goal_expectancy": 0.05519999999999999,
+            "overround": 0.09892127005472373,
+            "odds_strength_ratio": 1.3946188340807175
+          },
+          "team_values": {
+            "home_team_value": 62.1,
+            "away_team_value": 61.1
+          }
+        }
+      },
+      {
+        "time": "00:30",
+        "odds": [
+          "4.35",
+          "2.92",
+          "1.90"
+        ],
+        "home_team": "CRAC",
+        "home_team_logo_local": "images/teams/crac_logo.png",
+        "home_id": "team_20260115_002047666_crac_5beb72d2",
+        "away_team": "Goias",
+        "away_team_logo_local": "images/teams/goias_logo.png",
+        "away_id": "team_20250629_000410366_goias_f3ee4403",
+        "id": "match_20260211_001657525_crac_goias_0030_2a6fa7",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-2",
+              "percentage": 9.19
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.79
+            },
+            {
+              "score": "1-1",
+              "percentage": 7.61
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 13.33
+          },
+          "goals_markets": {
+            "over_1_5": 79.38,
+            "over_2_5": 59.79,
+            "under_2_5": 40.21,
+            "under_3_5": 59.64
+          },
+          "teams_markets": {
+            "both_teams_score": 63.14
+          },
+          "market_analysis": {
+            "home_win_prob": 0.20924005280030172,
+            "draw_prob": 0.31171035263058644,
+            "away_win_prob": 0.4790495945691118,
+            "market_efficiency": 0.9101942296813124,
+            "goal_expectancy": 0.06960000000000001,
+            "overround": 0.09866660036960617,
+            "odds_strength_ratio": 0.4367816091954023
+          },
+          "team_values": {
+            "home_team_value": 61.6,
+            "away_team_value": 73.0
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Maranhense - Play Offs",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/copa_chile_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "00:30",
+        "odds": [
+          "2.00",
+          "3.13",
+          "3.56"
+        ],
+        "home_team": "Maranhao",
+        "home_team_logo_local": "images/teams/maranhao_logo.png",
+        "home_id": "team_20250704_005419889_maranhao_df173ae4",
+        "away_team": "Sampaio Correa",
+        "away_team_logo_local": "images/teams/sampaio_correa_logo.png",
+        "away_id": "team_20250704_005409776_sampaiocorrea_7e72390a",
+        "id": "match_20260211_001737789_maranhao_sampaiocorrea_0030_0173b4",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 15.65
+            },
+            {
+              "score": "0-0",
+              "percentage": 12.44
+            },
+            {
+              "score": "2-0",
+              "percentage": 9.75
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 25.14
+          },
+          "goals_markets": {
+            "over_1_5": 64.63,
+            "over_2_5": 41.42,
+            "under_2_5": 58.58,
+            "under_3_5": 76.55
+          },
+          "teams_markets": {
+            "both_teams_score": 43.91
+          },
+          "market_analysis": {
+            "home_win_prob": 0.45438530673495686,
+            "draw_prob": 0.2903420490319213,
+            "away_win_prob": 0.25527264423312185,
+            "market_efficiency": 0.9087706134699137,
+            "goal_expectancy": 0.04440000000000001,
+            "overround": 0.10038769429586814,
+            "odds_strength_ratio": 1.78
+          },
+          "team_values": {
+            "home_team_value": 71.7,
+            "away_team_value": 65.7
+          }
+        }
+      },
+      {
+        "time": "00:30",
+        "odds": [
+          "1.73",
+          "3.18",
+          "4.80"
+        ],
+        "home_team": "Moto Club",
+        "home_team_logo_local": "images/teams/moto_club_logo.png",
+        "home_id": "team_20260114_001518869_motoclub_9ce2df52",
+        "away_team": "IAPE",
+        "away_team_logo_local": "images/teams/iape_logo.png",
+        "away_id": "team_20260114_001507680_iape_c4fcdd92",
+        "id": "match_20260211_001747867_motoclub_iape_0030_6bc161",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 16.15
+            },
+            {
+              "score": "1-0",
+              "percentage": 14.67
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.05
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 25.27
+          },
+          "goals_markets": {
+            "over_1_5": 59.43,
+            "over_2_5": 35.74,
+            "under_2_5": 64.26,
+            "under_3_5": 81.15
+          },
+          "teams_markets": {
+            "both_teams_score": 43.39
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5250882371153172,
+            "draw_prob": 0.28566121075770395,
+            "away_win_prob": 0.1892505521269789,
+            "market_efficiency": 0.9084026502094986,
+            "goal_expectancy": 0.03839999999999998,
+            "overround": 0.10083342421928965,
+            "odds_strength_ratio": 2.7745664739884393
+          },
+          "team_values": {
+            "home_team_value": 69.2,
+            "away_team_value": 66.3
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Paraibano",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/paraibano_u20_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "00:30",
+        "odds": [
+          "3.75",
+          "3.30",
+          "1.83"
+        ],
+        "home_team": "Atl. Cajazeirense",
+        "home_team_logo_local": "images/teams/atl._cajazeirense_logo.png",
+        "home_id": "team_20260121_001729652_atlcajazeirense_0a2b0003",
+        "away_team": "Botafogo PB",
+        "away_team_logo_local": "images/teams/botafogo_pb_logo.png",
+        "away_id": "team_20250630_000325415_botafogopb_35f31d6d",
+        "id": "match_20260211_002019102_atlcajazeirense_botafogopb_0030_23fca2",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.71
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.59
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.65
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.18
+          },
+          "goals_markets": {
+            "over_1_5": 68.85,
+            "over_2_5": 45.59,
+            "under_2_5": 54.41,
+            "under_3_5": 73.55
+          },
+          "teams_markets": {
+            "both_teams_score": 50.6
+          },
+          "market_analysis": {
+            "home_win_prob": 0.23891757165746844,
+            "draw_prob": 0.2714972405198505,
+            "away_win_prob": 0.4895851878226812,
+            "market_efficiency": 0.8959408937155067,
+            "goal_expectancy": 0.02400000000000002,
+            "overround": 0.11614505712866352,
+            "odds_strength_ratio": 0.48800000000000004
+          },
+          "team_values": {
+            "home_team_value": 64.6,
+            "away_team_value": 67.4
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Paranaense - Relegation - Play Offs",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/paranaense_u20_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "01:00",
+        "odds": [
+          "1.57",
+          "3.30",
+          "5.75"
+        ],
+        "home_team": "Cascavel",
+        "home_team_logo_local": "images/teams/cascavel_logo.png",
+        "home_id": "team_20250704_005339460_cascavel_cabf231a",
+        "away_team": "Andraus",
+        "away_team_logo_local": "images/teams/andraus_logo.png",
+        "away_id": "team_20260108_001221186_andraus_4041dd46",
+        "id": "match_20260211_002059505_cascavel_andraus_0100_bff0c0",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.29
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.23
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.13
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 14.59
+          },
+          "goals_markets": {
+            "over_1_5": 78.92,
+            "over_2_5": 59.04,
+            "under_2_5": 40.97,
+            "under_3_5": 60.62
+          },
+          "teams_markets": {
+            "both_teams_score": 59.12
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5718203323941116,
+            "draw_prob": 0.2720478551087137,
+            "away_win_prob": 0.1561318124971748,
+            "market_efficiency": 0.8977579218587551,
+            "goal_expectancy": 0.02400000000000002,
+            "overround": 0.11388602166779949,
+            "odds_strength_ratio": 3.662420382165605
+          },
+          "team_values": {
+            "home_team_value": 55.8,
+            "away_team_value": 51.3
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Paulista A2 - First stage",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/copa_paulista_flag.png",
+    "matches": [
+      {
+        "time": "00:00",
+        "odds": [
+          "2.58",
+          "3.00",
+          "2.55"
+        ],
+        "home_team": "Agua Santa",
+        "home_team_logo_local": "images/teams/agua_santa_logo.png",
+        "home_id": "team_20250704_005248940_aguasanta_116ce063",
+        "away_team": "Ferroviaria",
+        "away_team_logo_local": "images/teams/ferroviaria_logo.png",
+        "away_id": "team_20250630_000304400_ferroviaria_e5ae8ee7",
+        "id": "match_20260211_002140368_aguasanta_ferroviaria_0000_6f7f47",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.76
+            },
+            {
+              "score": "1-0",
+              "percentage": 12.64
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.54
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.14
+          },
+          "goals_markets": {
+            "over_1_5": 65.46,
+            "over_2_5": 42.14,
+            "under_2_5": 57.86,
+            "under_3_5": 76.1
+          },
+          "teams_markets": {
+            "both_teams_score": 48.15
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3482179434657927,
+            "draw_prob": 0.29946743138058174,
+            "away_win_prob": 0.35231462515362566,
+            "market_efficiency": 0.8984022941417453,
+            "goal_expectancy": 0.06,
+            "overround": 0.11308709530323746,
+            "odds_strength_ratio": 0.9883720930232557
+          },
+          "team_values": {
+            "home_team_value": 63.6,
+            "away_team_value": 55.4
+          }
+        }
+      },
+      {
+        "time": "00:00",
+        "odds": [
+          "2.02",
+          "3.22",
+          "3.39"
+        ],
+        "home_team": "Ituano",
+        "home_team_logo_local": "images/teams/ituano_logo.png",
+        "home_id": "team_20250629_000430912_ituano_7d6d7f76",
+        "away_team": "Inter de Limeira",
+        "away_team_logo_local": "images/teams/inter_de_limeira_logo.png",
+        "away_id": "team_20250704_005339449_interdelimeira_b12f179c",
+        "id": "match_20260211_002150159_ituano_interdelimeira_0000_4aa63a",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 18.12
+            },
+            {
+              "score": "0-1",
+              "percentage": 15.05
+            },
+            {
+              "score": "1-0",
+              "percentage": 13.14
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 38.94
+          },
+          "goals_markets": {
+            "over_1_5": 54.94,
+            "over_2_5": 31.16,
+            "under_2_5": 68.84,
+            "under_3_5": 84.58
+          },
+          "teams_markets": {
+            "both_teams_score": 40.16
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4498022086698534,
+            "draw_prob": 0.2821740563705291,
+            "away_win_prob": 0.2680237349596176,
+            "market_efficiency": 0.9086004615131038,
+            "goal_expectancy": 0.03359999999999998,
+            "overround": 0.10059376189913816,
+            "odds_strength_ratio": 1.6782178217821782
+          },
+          "team_values": {
+            "home_team_value": 63.7,
+            "away_team_value": 68.9
+          }
+        }
+      },
+      {
+        "time": "00:00",
+        "odds": [
+          "1.87",
+          "3.04",
+          "4.20"
+        ],
+        "home_team": "Sertaozinho",
+        "home_team_logo_local": "images/teams/sertaozinho_logo.png",
+        "home_id": "team_20260110_002950213_sertaozinho_1b098a32",
+        "away_team": "Sao Bento",
+        "away_team_logo_local": "images/teams/sao_bento_logo.png",
+        "away_id": "team_20250718_002448948_saobento_56b608d0",
+        "id": "match_20260211_002200325_sertaozinho_saobento_0000_d49efc",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 14.64
+            },
+            {
+              "score": "2-0",
+              "percentage": 11.88
+            },
+            {
+              "score": "2-1",
+              "percentage": 10.27
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.31
+          },
+          "goals_markets": {
+            "over_1_5": 68.01,
+            "over_2_5": 45.91,
+            "under_2_5": 54.09,
+            "under_3_5": 72.81
+          },
+          "teams_markets": {
+            "both_teams_score": 46.19
+          },
+          "market_analysis": {
+            "home_win_prob": 0.48534979549013935,
+            "draw_prob": 0.29855398604163186,
+            "away_win_prob": 0.21609621846822874,
+            "market_efficiency": 0.9076041175665608,
+            "goal_expectancy": 0.05519999999999999,
+            "overround": 0.10180196480506076,
+            "odds_strength_ratio": 2.2459893048128343
+          },
+          "team_values": {
+            "home_team_value": 67.0,
+            "away_team_value": 53.1
+          }
+        }
+      },
+      {
+        "time": "00:30",
+        "odds": [
+          "1.98",
+          "3.15",
+          "3.58"
+        ],
+        "home_team": "Gremio Prudente",
+        "home_team_logo_local": "images/teams/gremio_prudente_logo.png",
+        "home_id": "team_20250712_001940808_gremioprudente_6191d54b",
+        "away_team": "Monte Azul",
+        "away_team_logo_local": "images/teams/monte_azul_logo.png",
+        "away_id": "team_20250704_005228760_monteazul_1e4e91df",
+        "id": "match_20260211_002210456_gremioprudente_monteazul_0030_e42518",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 16.17
+            },
+            {
+              "score": "0-0",
+              "percentage": 10.97
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.86
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 22.97
+          },
+          "goals_markets": {
+            "over_1_5": 63.14,
+            "over_2_5": 40.41,
+            "under_2_5": 59.59,
+            "under_3_5": 77.54
+          },
+          "teams_markets": {
+            "both_teams_score": 45.85
+          },
+          "market_analysis": {
+            "home_win_prob": 0.45836991513023123,
+            "draw_prob": 0.2881182323675739,
+            "away_win_prob": 0.2535118525021949,
+            "market_efficiency": 0.9075724319578579,
+            "goal_expectancy": 0.04200000000000001,
+            "overround": 0.10184043144936994,
+            "odds_strength_ratio": 1.8080808080808082
+          },
+          "team_values": {
+            "home_team_value": 61.8,
+            "away_team_value": 56.5
+          }
+        }
+      },
+      {
+        "time": "00:30",
+        "odds": [
+          "1.84",
+          "3.28",
+          "3.95"
+        ],
+        "home_team": "Votuporanguense",
+        "home_team_logo_local": "images/teams/votuporanguense_logo.png",
+        "home_id": "team_20260121_002051881_votuporanguense_1a415d60",
+        "away_team": "Taubate",
+        "away_team_logo_local": "images/teams/taubate_logo.png",
+        "away_id": "team_20250630_000448420_taubate_a60d1130",
+        "id": "match_20260211_002220530_votuporanguense_taubate_0030_40657c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.24
+            },
+            {
+              "score": "2-0",
+              "percentage": 10.54
+            },
+            {
+              "score": "2-1",
+              "percentage": 10.06
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.02
+          },
+          "goals_markets": {
+            "over_1_5": 75.41,
+            "over_2_5": 54.74,
+            "under_2_5": 45.26,
+            "under_3_5": 64.42
+          },
+          "teams_markets": {
+            "both_teams_score": 51.12
+          },
+          "market_analysis": {
+            "home_win_prob": 0.49338898367048495,
+            "draw_prob": 0.2767791859614916,
+            "away_win_prob": 0.22983183036802335,
+            "market_efficiency": 0.9078357299536924,
+            "goal_expectancy": 0.026400000000000024,
+            "overround": 0.10152086661207838,
+            "odds_strength_ratio": 2.1467391304347827
+          },
+          "team_values": {
+            "home_team_value": 67.9,
+            "away_team_value": 55.3
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "2.34",
+          "2.97",
+          "2.97"
+        ],
+        "home_team": "Osasco Sporting",
+        "home_team_logo_local": "images/teams/osasco_sporting_logo.png",
+        "home_id": "team_20260114_002122420_osascosporting_deb98774",
+        "away_team": "Santo Andre",
+        "away_team_logo_local": "images/teams/santo_andre_logo.png",
+        "away_id": "team_20250714_000743432_santoandre_1615c196",
+        "id": "match_20260211_002230718_osascosporting_santoandre_0100_c19993",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 14.81
+            },
+            {
+              "score": "1-0",
+              "percentage": 14.63
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.25
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.76
+          },
+          "goals_markets": {
+            "over_1_5": 61.52,
+            "over_2_5": 37.39,
+            "under_2_5": 62.61,
+            "under_3_5": 79.93
+          },
+          "teams_markets": {
+            "both_teams_score": 45.15
+          },
+          "market_analysis": {
+            "home_win_prob": 0.38823529411764707,
+            "draw_prob": 0.30588235294117644,
+            "away_win_prob": 0.30588235294117644,
+            "market_efficiency": 0.908470588235294,
+            "goal_expectancy": 0.06359999999999998,
+            "overround": 0.10075110075110083,
+            "odds_strength_ratio": 1.2692307692307694
+          },
+          "team_values": {
+            "home_team_value": 63.9,
+            "away_team_value": 49.4
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "2.09",
+          "2.88",
+          "3.63"
+        ],
+        "home_team": "Piracicaba",
+        "home_team_logo_local": "images/teams/piracicaba_logo.png",
+        "home_id": "team_20250630_000438533_piracicaba_ecc5acb9",
+        "away_team": "Sao Jose EC",
+        "away_team_logo_local": "images/teams/sao_jose_ec_logo.png",
+        "away_id": "team_20250802_214718782_saojoseec_5e62037d",
+        "id": "match_20260211_002240860_piracicaba_saojoseec_0100_a650f2",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 9.55
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.23
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.38
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.21
+          },
+          "goals_markets": {
+            "over_1_5": 72.86,
+            "over_2_5": 51.3,
+            "under_2_5": 48.7,
+            "under_3_5": 67.74
+          },
+          "teams_markets": {
+            "both_teams_score": 56.79
+          },
+          "market_analysis": {
+            "home_win_prob": 0.43450829790152246,
+            "draw_prob": 0.31532025785214646,
+            "away_win_prob": 0.2501714442463311,
+            "market_efficiency": 0.9081223426141818,
+            "goal_expectancy": 0.07440000000000001,
+            "overround": 0.10117321540766522,
+            "odds_strength_ratio": 1.736842105263158
+          },
+          "team_values": {
+            "home_team_value": 68.7,
+            "away_team_value": 66.1
+          }
+        }
+      }
+    ],
+    "total_matches": 7
+  },
+  {
+    "name": "Paulista A3",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/copa_paulista_flag.png",
+    "matches": [
+      {
+        "time": "00:30",
+        "odds": [
+          "2.27",
+          "2.91",
+          "3.15"
+        ],
+        "home_team": "Uniao Barbarense",
+        "home_team_logo_local": "images/teams/uniao_barbarense_logo.png",
+        "home_id": "team_20260128_001700314_uniaobarbarense_d4a6b37d",
+        "away_team": "Francana",
+        "away_team_logo_local": "images/teams/francana_logo.png",
+        "away_id": "team_20250716_001148656_francana_31929e5d",
+        "id": "match_20260211_002321334_uniaobarbarense_francana_0030_5dad45",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.71
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.13
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.43
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 16.48
+          },
+          "goals_markets": {
+            "over_1_5": 69.87,
+            "over_2_5": 47.23,
+            "under_2_5": 52.77,
+            "under_3_5": 71.66
+          },
+          "teams_markets": {
+            "both_teams_score": 52.28
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3998874478137392,
+            "draw_prob": 0.31193969296810586,
+            "away_win_prob": 0.28817285921815494,
+            "market_efficiency": 0.9077445065371881,
+            "goal_expectancy": 0.07079999999999997,
+            "overround": 0.1016315635053997,
+            "odds_strength_ratio": 1.3876651982378854
+          },
+          "team_values": {
+            "home_team_value": 67.9,
+            "away_team_value": 63.0
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "2.71",
+          "2.91",
+          "2.50"
+        ],
+        "home_team": "Bandeirante",
+        "home_team_logo_local": "images/teams/bandeirante_logo.png",
+        "home_id": "team_20260128_001639871_bandeirante_c2f9c658",
+        "away_team": "XV de Jau",
+        "away_team_logo_local": "images/teams/xv_de_jau_logo.png",
+        "away_id": "team_20260123_004503296_xvdejau_92437fa9",
+        "id": "match_20260211_002331488_bandeirante_xvdejau_0100_ae085b",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 17.49
+            },
+            {
+              "score": "0-0",
+              "percentage": 16.35
+            },
+            {
+              "score": "1-0",
+              "percentage": 12.48
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 25.75
+          },
+          "goals_markets": {
+            "over_1_5": 58.16,
+            "over_2_5": 34.52,
+            "under_2_5": 65.48,
+            "under_3_5": 82.1
+          },
+          "teams_markets": {
+            "both_teams_score": 42.89
+          },
+          "market_analysis": {
+            "home_win_prob": 0.331645096439203,
+            "draw_prob": 0.3088516190207011,
+            "away_win_prob": 0.35950328454009606,
+            "market_efficiency": 0.8987582113502401,
+            "goal_expectancy": 0.07079999999999997,
+            "overround": 0.11264630172074908,
+            "odds_strength_ratio": 0.922509225092251
+          },
+          "team_values": {
+            "home_team_value": 56.4,
+            "away_team_value": 64.2
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "1.70",
+          "3.20",
+          "5.00"
+        ],
+        "home_team": "Paulista",
+        "home_team_logo_local": "images/teams/paulista_logo.png",
+        "home_id": "team_20250802_214708610_paulista_729e9d94",
+        "away_team": "Desportivo",
+        "away_team_logo_local": "images/teams/desportivo_logo.png",
+        "away_id": "team_20260204_001842672_desportivo_cbac0e36",
+        "id": "match_20260211_002341574_paulista_desportivo_0100_383d28",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.74
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.56
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.33
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.85
+          },
+          "goals_markets": {
+            "over_1_5": 76.35,
+            "over_2_5": 55.18,
+            "under_2_5": 44.82,
+            "under_3_5": 64.65
+          },
+          "teams_markets": {
+            "both_teams_score": 58.67
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5344021376085504,
+            "draw_prob": 0.2839011356045424,
+            "away_win_prob": 0.18169672678690715,
+            "market_efficiency": 0.9084836339345357,
+            "goal_expectancy": 0.035999999999999976,
+            "overround": 0.10073529411764715,
+            "odds_strength_ratio": 2.9411764705882355
+          },
+          "team_values": {
+            "home_team_value": 68.5,
+            "away_team_value": 60.8
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "1.75",
+          "3.22",
+          "4.55"
+        ],
+        "home_team": "Portuguesa Santista",
+        "home_team_logo_local": "images/teams/portuguesa_santista_logo.png",
+        "home_id": "team_20250704_005815409_portuguesasantista_13b144bb",
+        "away_team": "Rio Claro",
+        "away_team_logo_local": "images/teams/rio_claro_logo.png",
+        "away_id": "team_20260211_002351811_rioclaro_99d7c773",
+        "id": "match_20260211_002351811_portuguesasantista_rioclaro_0100_222f6f",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 12.51
+            },
+            {
+              "score": "1-1",
+              "percentage": 12.05
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.84
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 21.34
+          },
+          "goals_markets": {
+            "over_1_5": 63.77,
+            "over_2_5": 40.09,
+            "under_2_5": 59.91,
+            "under_3_5": 77.86
+          },
+          "teams_markets": {
+            "both_teams_score": 47.56
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5186470078057243,
+            "draw_prob": 0.28187337380745886,
+            "away_win_prob": 0.19947961838681705,
+            "market_efficiency": 0.9076322636600175,
+            "goal_expectancy": 0.03359999999999998,
+            "overround": 0.1017677974199711,
+            "odds_strength_ratio": 2.6
+          },
+          "team_values": {
+            "home_team_value": 61.5,
+            "away_team_value": 60.0
+          }
+        }
+      }
+    ],
+    "total_matches": 4
+  },
+  {
+    "name": "Paulista A4",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/copa_paulista_flag.png",
+    "matches": [
+      {
+        "time": "01:00",
+        "odds": [
+          "2.27",
+          "2.91",
+          "3.15"
+        ],
+        "home_team": "AEA Aracatuba",
+        "home_team_logo_local": "images/teams/aea_aracatuba_logo.png",
+        "home_id": "team_20250719_002031801_aeaaracatuba_2cdd8bdb",
+        "away_team": "Lemense",
+        "away_team_logo_local": "images/teams/lemense_logo.png",
+        "away_id": "team_20260211_002432410_lemense_5b68c749",
+        "id": "match_20260211_002432410_aeaaracatuba_lemense_0100_179912",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.29
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.64
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.09
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.68
+          },
+          "goals_markets": {
+            "over_1_5": 73.5,
+            "over_2_5": 52.07,
+            "under_2_5": 47.93,
+            "under_3_5": 67.15
+          },
+          "teams_markets": {
+            "both_teams_score": 56.2
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3998874478137392,
+            "draw_prob": 0.31193969296810586,
+            "away_win_prob": 0.28817285921815494,
+            "market_efficiency": 0.9077445065371881,
+            "goal_expectancy": 0.07079999999999997,
+            "overround": 0.1016315635053997,
+            "odds_strength_ratio": 1.3876651982378854
+          },
+          "team_values": {
+            "home_team_value": 57.2,
+            "away_team_value": 60.4
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "1.92",
+          "3.08",
+          "3.91"
+        ],
+        "home_team": "Barretos EC",
+        "home_team_logo_local": "images/teams/barretos_ec_logo.png",
+        "home_id": "team_20260130_004422450_barretosec_2d4cb702",
+        "away_team": "Vocem",
+        "away_team_logo_local": "images/teams/vocem_logo.png",
+        "away_id": "team_20260131_004619139_vocem_489f7af9",
+        "id": "match_20260211_002442572_barretosec_vocem_0100_76cc06",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.7
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.62
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.71
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 18.15
+          },
+          "goals_markets": {
+            "over_1_5": 68.47,
+            "over_2_5": 45.79,
+            "under_2_5": 54.21,
+            "under_3_5": 73.1
+          },
+          "teams_markets": {
+            "both_teams_score": 51.08
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4729417678568623,
+            "draw_prob": 0.2948208423003817,
+            "away_win_prob": 0.23223738984275594,
+            "market_efficiency": 0.9080481942851756,
+            "goal_expectancy": 0.050399999999999986,
+            "overround": 0.10126313371198292,
+            "odds_strength_ratio": 2.0364583333333335
+          },
+          "team_values": {
+            "home_team_value": 64.7,
+            "away_team_value": 64.3
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "2.36",
+          "2.94",
+          "2.96"
+        ],
+        "home_team": "Comercial",
+        "home_team_logo_local": "images/teams/comercial_logo.png",
+        "home_id": "team_20250702_000457371_comercial_51fef235",
+        "away_team": "Taquaritinga",
+        "away_team_logo_local": "images/teams/taquaritinga_logo.png",
+        "away_id": "team_20260131_004619253_taquaritinga_f6676f11",
+        "id": "match_20260211_002452666_comercial_taquaritinga_0100_304baa",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 10.82
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.82
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.06
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 17.33
+          },
+          "goals_markets": {
+            "over_1_5": 74.63,
+            "over_2_5": 53.74,
+            "under_2_5": 46.26,
+            "under_3_5": 65.71
+          },
+          "teams_markets": {
+            "both_teams_score": 56.03
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3846126648516777,
+            "draw_prob": 0.30873669695576844,
+            "away_win_prob": 0.30665063819255384,
+            "market_efficiency": 0.9076858890499593,
+            "goal_expectancy": 0.06720000000000001,
+            "overround": 0.1017027058189286,
+            "odds_strength_ratio": 1.2542372881355932
+          },
+          "team_values": {
+            "home_team_value": 63.5,
+            "away_team_value": 65.4
+          }
+        }
+      },
+      {
+        "time": "01:00",
+        "odds": [
+          "1.51",
+          "3.58",
+          "6.26"
+        ],
+        "home_team": "Inter de Bebedouro",
+        "home_team_logo_local": "images/teams/inter_de_bebedouro_logo.png",
+        "home_id": "team_20260211_002502948_interdebebedouro_6de65fee",
+        "away_team": "Colorado Caieiras",
+        "away_team_logo_local": "images/teams/colorado_caieiras_logo.png",
+        "away_id": "team_20260130_004422529_coloradocaieiras_7fe1993d",
+        "id": "match_20260211_002502965_interdebebedouro_coloradocaieiras_0100_eab990",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 11.77
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.79
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.02
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.68
+          },
+          "goals_markets": {
+            "over_1_5": 70.33,
+            "over_2_5": 47.68,
+            "under_2_5": 52.32,
+            "under_3_5": 71.48
+          },
+          "teams_markets": {
+            "both_teams_score": 53.29
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6013222714734955,
+            "draw_prob": 0.2536303435544631,
+            "away_win_prob": 0.14504738497204123,
+            "market_efficiency": 0.9079966299249781,
+            "goal_expectancy": -0.009600000000000008,
+            "overround": 0.10132567351337363,
+            "odds_strength_ratio": 4.14569536423841
+          },
+          "team_values": {
+            "home_team_value": 65.4,
+            "away_team_value": 64.3
+          }
+        }
+      }
+    ],
+    "total_matches": 4
+  },
+  {
+    "name": "Pernambucano - Play Offs",
+    "country": "BRAZIL",
+    "flag_icon_local": "images/competitions/copa_chile_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "01:00",
+        "odds": [
+          "3.99",
+          "3.25",
+          "1.84"
+        ],
+        "home_team": "Santa Cruz",
+        "home_team_logo_local": "images/teams/santa_cruz_logo.png",
+        "home_id": "team_20250705_001413601_santacruz_e92ee710",
+        "away_team": "Nautico",
+        "away_team_logo_local": "images/teams/nautico_logo.png",
+        "away_id": "team_20250629_000441175_nautico_9756d220",
+        "id": "match_20260211_002543544_santacruz_nautico_0100_65b234",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.58
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.66
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.73
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 15.6
+          },
+          "goals_markets": {
+            "over_1_5": 75.34,
+            "over_2_5": 53.75,
+            "under_2_5": 46.25,
+            "under_3_5": 65.98
+          },
+          "teams_markets": {
+            "both_teams_score": 57.09
+          },
+          "market_analysis": {
+            "home_win_prob": 0.22747070078473589,
+            "draw_prob": 0.27926402957879887,
+            "away_win_prob": 0.4932652696364653,
+            "market_efficiency": 0.9076080961310962,
+            "goal_expectancy": 0.03,
+            "overround": 0.10179713497791298,
+            "odds_strength_ratio": 0.46115288220551376
+          },
+          "team_values": {
+            "home_team_value": 60.6,
+            "away_team_value": 75.1
+          }
+        }
+      },
+      {
+        "time": "22:00",
+        "odds": [
+          "3.60",
+          "3.02",
+          "2.03"
+        ],
+        "home_team": "Retro",
+        "home_team_logo_local": "images/teams/retro_logo.png",
+        "home_id": "team_20250704_005208307_retro_13daa564",
+        "away_team": "Sport Recife",
+        "away_team_logo_local": "images/teams/sport_recife_logo.png",
+        "away_id": "team_20250709_000913363_sportrecife_07b0e962",
+        "id": "match_20260211_002553665_retro_sportrecife_2200_dc8167",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 10.55
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.2
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.28
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.6
+          },
+          "goals_markets": {
+            "over_1_5": 68.93,
+            "over_2_5": 46.41,
+            "under_2_5": 53.59,
+            "under_3_5": 72.4
+          },
+          "teams_markets": {
+            "both_teams_score": 52.93
+          },
+          "market_analysis": {
+            "home_win_prob": 0.25217806224445305,
+            "draw_prob": 0.3006096106225268,
+            "away_win_prob": 0.44721232713302017,
+            "market_efficiency": 0.9078410240800309,
+            "goal_expectancy": 0.0576,
+            "overround": 0.10151444303077106,
+            "odds_strength_ratio": 0.5638888888888888
+          },
+          "team_values": {
+            "home_team_value": 52.9,
+            "away_team_value": 39.0
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Bulgarian Cup",
+    "country": "BULGARIA",
+    "flag_icon_local": "images/competitions/landspokal_cup_flag.png",
+    "matches": [
+      {
+        "time": "18:00",
+        "odds": [
+          "2.70",
+          "3.00",
+          "2.46"
+        ],
+        "home_team": "Lok. Plovdiv",
+        "home_team_logo_local": "images/teams/lok._plovdiv_logo.png",
+        "home_id": "team_20250720_000510406_lokplovdiv_b2345469",
+        "away_team": "Botev Plovdiv",
+        "away_team_logo_local": "images/teams/botev_plovdiv_logo.png",
+        "away_id": "team_20250718_002923468_botevplovdiv_c3fc482f",
+        "id": "match_20260211_002815328_lokplovdiv_botevplovdiv_1800_6eb8d2",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.64
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.88
+            },
+            {
+              "score": "2-0",
+              "percentage": 9.53
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.48
+          },
+          "goals_markets": {
+            "over_1_5": 73.6,
+            "over_2_5": 52.29,
+            "under_2_5": 47.71,
+            "under_3_5": 66.87
+          },
+          "teams_markets": {
+            "both_teams_score": 53.92
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3336045565500407,
+            "draw_prob": 0.3002441008950366,
+            "away_win_prob": 0.3661513425549227,
+            "market_efficiency": 0.9007323026851098,
+            "goal_expectancy": 0.06,
+            "overround": 0.11020776874435412,
+            "odds_strength_ratio": 0.911111111111111
+          },
+          "team_values": {
+            "home_team_value": 68.4,
+            "away_team_value": 48.6
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Primera A - Apertura",
+    "country": "COLOMBIA",
+    "flag_icon_local": "images/competitions/primera_a_-_apertura_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "01:30",
+        "odds": [
+          "1.67",
+          "3.50",
+          "5.50"
+        ],
+        "home_team": "Millonarios",
+        "home_team_logo_local": "images/teams/millonarios_logo.png",
+        "home_id": "team_20250720_000612805_millonarios_47149a1c",
+        "away_team": "Aguilas",
+        "away_team_logo_local": "images/teams/aguilas_logo.png",
+        "away_id": "team_20250713_000633326_aguilas_29e18a14",
+        "id": "match_20260211_002855976_millonarios_aguilas_0130_5e6c9e",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 15.97
+            },
+            {
+              "score": "1-0",
+              "percentage": 14.94
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.06
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 24.9
+          },
+          "goals_markets": {
+            "over_1_5": 62.01,
+            "over_2_5": 38.14,
+            "under_2_5": 61.86,
+            "under_3_5": 79.87
+          },
+          "teams_markets": {
+            "both_teams_score": 44.93
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5615519253208868,
+            "draw_prob": 0.26794049008168025,
+            "away_win_prob": 0.1705075845974329,
+            "market_efficiency": 0.937791715285881,
+            "goal_expectancy": 0.0,
+            "overround": 0.06633486274204836,
+            "odds_strength_ratio": 3.2934131736526946
+          },
+          "team_values": {
+            "home_team_value": 54.3,
+            "away_team_value": 56.6
+          }
+        }
+      },
+      {
+        "time": "03:30",
+        "odds": [
+          "2.63",
+          "2.90",
+          "2.90"
+        ],
+        "home_team": "Inter Bogotá",
+        "home_team_logo_local": "images/teams/inter_bogotá_logo.png",
+        "home_id": "team_20260116_005030392_interbogotá_0638f14a",
+        "away_team": "Dep. Cali",
+        "away_team_logo_local": "images/teams/dep._cali_logo.png",
+        "away_id": "team_20250712_002359998_depcali_5f01fcc4",
+        "id": "match_20260211_002906612_interbogotá_depcali_0330_283f2b",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 11.27
+            },
+            {
+              "score": "2-0",
+              "percentage": 8.49
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.31
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.21
+          },
+          "goals_markets": {
+            "over_1_5": 76.39,
+            "over_2_5": 55.19,
+            "under_2_5": 44.81,
+            "under_3_5": 64.75
+          },
+          "teams_markets": {
+            "both_teams_score": 55.43
+          },
+          "market_analysis": {
+            "home_win_prob": 0.35539215686274506,
+            "draw_prob": 0.3223039215686274,
+            "away_win_prob": 0.3223039215686274,
+            "market_efficiency": 0.9346813725490194,
+            "goal_expectancy": 0.07200000000000001,
+            "overround": 0.06988330929592257,
+            "odds_strength_ratio": 1.102661596958175
+          },
+          "team_values": {
+            "home_team_value": 64.9,
+            "away_team_value": 52.8
+          }
+        }
+      },
+      {
+        "time": "23:10",
+        "odds": [
+          "1.85",
+          "3.20",
+          "4.75"
+        ],
+        "home_team": "Chico",
+        "home_team_logo_local": "images/teams/chico_logo.png",
+        "home_id": "team_20250712_002349696_chico_9660ae8b",
+        "away_team": "Jaguares de Cordoba",
+        "away_team_logo_local": "images/teams/jaguares_de_cordoba_logo.png",
+        "away_id": "team_20250715_000736555_jaguaresdecordoba_5486d84c",
+        "id": "match_20260211_002916252_chico_jaguaresdecordoba_2310_d56dd9",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 16.04
+            },
+            {
+              "score": "0-0",
+              "percentage": 11.65
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.42
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 21.6
+          },
+          "goals_markets": {
+            "over_1_5": 63.83,
+            "over_2_5": 39.85,
+            "under_2_5": 60.15,
+            "under_3_5": 78.16
+          },
+          "teams_markets": {
+            "both_teams_score": 46.0
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5082337206386357,
+            "draw_prob": 0.2938226197442113,
+            "away_win_prob": 0.19794365961715288,
+            "market_efficiency": 0.9402323831814762,
+            "goal_expectancy": 0.035999999999999976,
+            "overround": 0.06356685633001424,
+            "odds_strength_ratio": 2.5675675675675675
+          },
+          "team_values": {
+            "home_team_value": 44.8,
+            "away_team_value": 69.7
+          }
+        }
+      }
+    ],
+    "total_matches": 3
+  },
+  {
+    "name": "Liga de Ascenso - Clausura",
+    "country": "COSTA RICA",
+    "flag_icon_local": "images/competitions/oberliga_bayern_süd_flag.png",
+    "matches": [
+      {
+        "time": "03:00",
+        "odds": [
+          "2.88",
+          "3.36",
+          "2.19"
+        ],
+        "home_team": "CS Uruguay",
+        "home_team_logo_local": "images/teams/cs_uruguay_logo.png",
+        "home_id": "team_20251024_013012595_csuruguay_415b7469",
+        "away_team": "Escorpiones",
+        "away_team_logo_local": "images/teams/escorpiones_logo.png",
+        "away_id": "team_20251024_013032962_escorpiones_bc3bac3a",
+        "id": "match_20260211_002956878_csuruguay_escorpiones_0300_e85e26",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 11.24
+            },
+            {
+              "score": "0-1",
+              "percentage": 10.41
+            },
+            {
+              "score": "1-2",
+              "percentage": 9.78
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 17.22
+          },
+          "goals_markets": {
+            "over_1_5": 69.29,
+            "over_2_5": 46.28,
+            "under_2_5": 53.72,
+            "under_3_5": 72.75
+          },
+          "teams_markets": {
+            "both_teams_score": 49.66
+          },
+          "market_analysis": {
+            "home_win_prob": 0.31523750771128933,
+            "draw_prob": 0.270203578038248,
+            "away_win_prob": 0.41455891425046276,
+            "market_efficiency": 0.9078840222085134,
+            "goal_expectancy": 0.016800000000000013,
+            "overround": 0.10146227440747979,
+            "odds_strength_ratio": 0.7604166666666666
+          },
+          "team_values": {
+            "home_team_value": 59.6,
+            "away_team_value": 71.6
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Copa Costa Rica",
+    "country": "COSTA RICA",
+    "flag_icon_local": "images/competitions/copa_chile_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "02:00",
+        "odds": [
+          "9.00",
+          "3.90",
+          "1.33"
+        ],
+        "home_team": "Carmelita",
+        "home_team_logo_local": "images/teams/carmelita_logo.png",
+        "home_id": "team_20251024_013012523_carmelita_fb8db09f",
+        "away_team": "Saprissa",
+        "away_team_logo_local": "images/teams/saprissa_logo.png",
+        "away_id": "team_20251025_011309430_saprissa_1a4aeef4",
+        "id": "match_20260211_003047546_carmelita_saprissa_0200_3bd7f6",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 18.24
+            },
+            {
+              "score": "0-2",
+              "percentage": 11.62
+            },
+            {
+              "score": "0-0",
+              "percentage": 11.03
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 24.1
+          },
+          "goals_markets": {
+            "over_1_5": 60.85,
+            "over_2_5": 37.48,
+            "under_2_5": 62.52,
+            "under_3_5": 79.62
+          },
+          "teams_markets": {
+            "both_teams_score": 41.34
+          },
+          "market_analysis": {
+            "home_win_prob": 0.0992594293587462,
+            "draw_prob": 0.22906022159710665,
+            "away_win_prob": 0.6716803490441472,
+            "market_efficiency": 0.8933348642287158,
+            "goal_expectancy": -0.04799999999999999,
+            "overround": 0.11940106676948781,
+            "odds_strength_ratio": 0.14777777777777779
+          },
+          "team_values": {
+            "home_team_value": 47.7,
+            "away_team_value": 72.8
+          }
+        }
+      },
+      {
+        "time": "04:15",
+        "odds": [
+          "1.91",
+          "3.40",
+          "3.60"
+        ],
+        "home_team": "Cartagines",
+        "home_team_logo_local": "images/teams/cartagines_logo.png",
+        "home_id": "team_20251025_011259201_cartagines_53c9e707",
+        "away_team": "Sporting FC",
+        "away_team_logo_local": "images/teams/sporting_fc_logo.png",
+        "away_id": "team_20260114_002515112_sportingfc_9cb3a3ac",
+        "id": "match_20260211_003057665_cartagines_sportingfc_0415_4a4b0a",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 9.71
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.43
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.47
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 16.23
+          },
+          "goals_markets": {
+            "over_1_5": 77.29,
+            "over_2_5": 56.56,
+            "under_2_5": 43.44,
+            "under_3_5": 63.11
+          },
+          "teams_markets": {
+            "both_teams_score": 58.39
+          },
+          "market_analysis": {
+            "home_win_prob": 0.47793830534947285,
+            "draw_prob": 0.2684888715345568,
+            "away_win_prob": 0.2535728231159703,
+            "market_efficiency": 0.9128621632174931,
+            "goal_expectancy": 0.01200000000000001,
+            "overround": 0.09545563426068515,
+            "odds_strength_ratio": 1.8848167539267018
+          },
+          "team_values": {
+            "home_team_value": 59.4,
+            "away_team_value": 60.0
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Landspokal Cup",
+    "country": "DENMARK",
+    "flag_icon_local": "images/competitions/landspokal_cup_flag.png",
+    "matches": [
+      {
+        "time": "20:00",
+        "odds": [
+          "2.57",
+          "3.40",
+          "2.50"
+        ],
+        "home_team": "Aarhus",
+        "home_team_logo_local": "images/teams/aarhus_logo.png",
+        "home_id": "team_20250719_002831439_aarhus_76916bb7",
+        "away_team": "Midtjylland",
+        "away_team_logo_local": "images/teams/midtjylland_logo.png",
+        "away_id": "team_20250719_002841666_midtjylland_668d82ec",
+        "id": "match_20260211_003138190_aarhus_midtjylland_2000_4f38b8",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-2",
+              "percentage": 9.93
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.05
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.28
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 13.57
+          },
+          "goals_markets": {
+            "over_1_5": 75.09,
+            "over_2_5": 54.01,
+            "under_2_5": 45.99,
+            "under_3_5": 65.28
+          },
+          "teams_markets": {
+            "both_teams_score": 59.07
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3592105819211427,
+            "draw_prob": 0.27152093986392256,
+            "away_win_prob": 0.3692684782149347,
+            "market_efficiency": 0.9231711955373366,
+            "goal_expectancy": 0.01200000000000001,
+            "overround": 0.08322270542458243,
+            "odds_strength_ratio": 0.972762645914397
+          },
+          "team_values": {
+            "home_team_value": 66.7,
+            "away_team_value": 80
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Division 2 A",
+    "country": "EGYPT",
+    "flag_icon_local": "images/competitions/division_2_-_norra_svealand_flag.png",
+    "matches": [
+      {
+        "time": "14:30",
+        "odds": [
+          "2.85",
+          "2.75",
+          "2.50"
+        ],
+        "home_team": "Al-Sekka",
+        "home_team_logo_local": "images/teams/al-sekka_logo.png",
+        "home_id": "team_20251022_002117616_alsekka_23e41c3e",
+        "away_team": "Abu Qir Semad",
+        "away_team_logo_local": "images/teams/abu_qir_semad_logo.png",
+        "away_id": "team_20251022_002106698_abuqirsemad_1f743c86",
+        "id": "match_20260211_003259162_alsekka_abuqirsemad_1430_260a54",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 11.35
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.15
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.14
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.25
+          },
+          "goals_markets": {
+            "over_1_5": 73.29,
+            "over_2_5": 51.37,
+            "under_2_5": 48.63,
+            "under_3_5": 67.78
+          },
+          "teams_markets": {
+            "both_teams_score": 56.27
+          },
+          "market_analysis": {
+            "home_win_prob": 0.31482541499713795,
+            "draw_prob": 0.3262736119061248,
+            "away_win_prob": 0.3589009730967373,
+            "market_efficiency": 0.8972524327418432,
+            "goal_expectancy": 0.09,
+            "overround": 0.11451355661881979,
+            "odds_strength_ratio": 0.8771929824561403
+          },
+          "team_values": {
+            "home_team_value": 64.5,
+            "away_team_value": 62.3
+          }
+        }
+      },
+      {
+        "time": "14:30",
+        "odds": [
+          "2.70",
+          "2.55",
+          "2.85"
+        ],
+        "home_team": "Aswan SC",
+        "home_team_logo_local": "images/teams/aswan_sc_logo.png",
+        "home_id": "team_20251022_002158643_aswansc_7b87f1fe",
+        "away_team": "Tersana",
+        "away_team_logo_local": "images/teams/tersana_logo.png",
+        "away_id": "team_20251023_004942257_tersana_83ac0436",
+        "id": "match_20260211_003309284_aswansc_tersana_1430_e99c1a",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.4
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.97
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.98
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.78
+          },
+          "goals_markets": {
+            "over_1_5": 70.44,
+            "over_2_5": 47.73,
+            "under_2_5": 52.27,
+            "under_3_5": 71.57
+          },
+          "teams_markets": {
+            "both_teams_score": 53.26
+          },
+          "market_analysis": {
+            "home_win_prob": 0.33264675592173015,
+            "draw_prob": 0.3522142121524202,
+            "away_win_prob": 0.31513903192584963,
+            "market_efficiency": 0.8981462409886715,
+            "goal_expectancy": 0.11400000000000002,
+            "overround": 0.11340442609792456,
+            "odds_strength_ratio": 1.0555555555555556
+          },
+          "team_values": {
+            "home_team_value": 55.0,
+            "away_team_value": 65.5
+          }
+        }
+      },
+      {
+        "time": "14:30",
+        "odds": [
+          "1.55",
+          "3.35",
+          "6.00"
+        ],
+        "home_team": "Masar",
+        "home_team_logo_local": "images/teams/masar_logo.png",
+        "home_id": "team_20251022_002137916_masar_864ed61b",
+        "away_team": "Tanta",
+        "away_team_logo_local": "images/teams/tanta_logo.png",
+        "away_id": "team_20251022_002158538_tanta_62924210",
+        "id": "match_20260211_003329696_masar_tanta_1430_98becb",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 12.22
+            },
+            {
+              "score": "2-0",
+              "percentage": 12.14
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.57
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "2-0",
+            "percentage": 18.12
+          },
+          "goals_markets": {
+            "over_1_5": 76.61,
+            "over_2_5": 55.93,
+            "under_2_5": 44.07,
+            "under_3_5": 63.52
+          },
+          "teams_markets": {
+            "both_teams_score": 46.65
+          },
+          "market_analysis": {
+            "home_win_prob": 0.581050805810508,
+            "draw_prob": 0.268844402688444,
+            "away_win_prob": 0.1501047915010479,
+            "market_efficiency": 0.9006287490062875,
+            "goal_expectancy": 0.017999999999999988,
+            "overround": 0.1103354196758144,
+            "odds_strength_ratio": 3.8709677419354835
+          },
+          "team_values": {
+            "home_team_value": 73.8,
+            "away_team_value": 57.2
+          }
+        }
+      },
+      {
+        "time": "14:30",
+        "odds": [
+          "2.33",
+          "2.75",
+          "3.15"
+        ],
+        "home_team": "Proxy",
+        "home_team_logo_local": "images/teams/proxy_logo.png",
+        "home_id": "team_20251022_002127504_proxy_ba678811",
+        "away_team": "La Viena",
+        "away_team_logo_local": "images/teams/la_viena_logo.png",
+        "away_id": "team_20251023_004942349_laviena_89959a06",
+        "id": "match_20260211_003339949_proxy_laviena_1430_fdba08",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 9.83
+            },
+            {
+              "score": "2-0",
+              "percentage": 8.64
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.35
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.21
+          },
+          "goals_markets": {
+            "over_1_5": 79.48,
+            "over_2_5": 59.88,
+            "under_2_5": 40.12,
+            "under_3_5": 59.67
+          },
+          "teams_markets": {
+            "both_teams_score": 55.89
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3865548093442513,
+            "draw_prob": 0.32751734755349293,
+            "away_win_prob": 0.2859278431022557,
+            "market_efficiency": 0.9006727057721055,
+            "goal_expectancy": 0.09,
+            "overround": 0.11028123045290439,
+            "odds_strength_ratio": 1.351931330472103
+          },
+          "team_values": {
+            "home_team_value": 68.1,
+            "away_team_value": 60.1
+          }
+        }
+      }
+    ],
+    "total_matches": 4
+  },
+  {
+    "name": "Champions League Women - Play Offs",
+    "country": "EUROPE",
+    "flag_icon_local": "images/competitions/usl_championship_flag.png",
+    "matches": [
+      {
+        "time": "19:45",
+        "odds": [
+          "1.48",
+          "4.10",
+          "5.50"
+        ],
+        "home_team": "Wolfsburg W",
+        "home_team_logo_local": "images/teams/wolfsburg_w_logo.png",
+        "home_id": "team_20251031_111403921_wolfsburgw_7e9814a8",
+        "away_team": "Juventus W",
+        "away_team_logo_local": "images/teams/juventus_w_logo.png",
+        "away_id": "team_20251101_031020553_juventusw_857f875a",
+        "id": "match_20260211_003602224_wolfsburgw_juventusw_1945_04dc4e",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 9.01
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.18
+            },
+            {
+              "score": "1-1",
+              "percentage": 7.75
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 13.62
+          },
+          "goals_markets": {
+            "over_1_5": 79.16,
+            "over_2_5": 59.58,
+            "under_2_5": 40.42,
+            "under_3_5": 59.98
+          },
+          "teams_markets": {
+            "both_teams_score": 62.94
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6134718972740627,
+            "draw_prob": 0.22144839218673487,
+            "away_win_prob": 0.16507971053920234,
+            "market_efficiency": 0.9079384079656129,
+            "goal_expectancy": -0.12,
+            "overround": 0.10139629651824777,
+            "odds_strength_ratio": 3.7162162162162162
+          },
+          "team_values": {
+            "home_team_value": 67.7,
+            "away_team_value": 75.1
+          }
+        }
+      },
+      {
+        "time": "22:00",
+        "odds": [
+          "2.90",
+          "3.60",
+          "2.05"
+        ],
+        "home_team": "Atl. Madrid W",
+        "home_team_logo_local": "images/teams/atl._madrid_w_logo.png",
+        "home_id": "team_20251031_134440897_atlmadridw_ca87cdf5",
+        "away_team": "Manchester Utd W",
+        "away_team_logo_local": "images/teams/manchester_utd_w_logo.png",
+        "away_id": "team_20251101_014821287_manchesterutdw_257d1609",
+        "id": "match_20260211_003612102_atlmadridw_manchesterutdw_2200_fd698e",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 12.54
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.75
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.8
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 16.91
+          },
+          "goals_markets": {
+            "over_1_5": 72.04,
+            "over_2_5": 49.62,
+            "under_2_5": 50.38,
+            "under_3_5": 70.07
+          },
+          "teams_markets": {
+            "both_teams_score": 53.29
+          },
+          "market_analysis": {
+            "home_win_prob": 0.31054071112981274,
+            "draw_prob": 0.2501577950767936,
+            "away_win_prob": 0.4393014937933936,
+            "market_efficiency": 0.9005680622764569,
+            "goal_expectancy": -0.01200000000000001,
+            "overround": 0.11041024203345495,
+            "odds_strength_ratio": 0.7068965517241379
+          },
+          "team_values": {
+            "home_team_value": 53.7,
+            "away_team_value": 67.9
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "National",
+    "country": "FRANCE",
+    "flag_icon_local": "images/competitions/national_2_-_group_a_flag.png",
+    "matches": [
+      {
+        "time": "20:00",
+        "odds": [
+          "3.31",
+          "2.91",
+          "2.20"
+        ],
+        "home_team": "Quevilly Rouen",
+        "home_team_logo_local": "images/teams/quevilly_rouen_logo.png",
+        "home_id": "team_20250807_001552234_quevillyrouen_cddf3ed5",
+        "away_team": "Concarneau",
+        "away_team_logo_local": "images/teams/concarneau_logo.png",
+        "away_id": "team_20250807_001622817_concarneau_5cf5bf7d",
+        "id": "match_20260211_003652605_quevillyrouen_concarneau_2000_3de5a8",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-2",
+              "percentage": 10.02
+            },
+            {
+              "score": "1-1",
+              "percentage": 8.13
+            },
+            {
+              "score": "1-3",
+              "percentage": 6.39
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 13.62
+          },
+          "goals_markets": {
+            "over_1_5": 80.94,
+            "over_2_5": 61.64,
+            "under_2_5": 38.36,
+            "under_3_5": 58.23
+          },
+          "teams_markets": {
+            "both_teams_score": 62.8
+          },
+          "market_analysis": {
+            "home_win_prob": 0.2745742212462633,
+            "draw_prob": 0.31231638224231323,
+            "away_win_prob": 0.4131093965114234,
+            "market_efficiency": 0.9088406723251315,
+            "goal_expectancy": 0.07079999999999997,
+            "overround": 0.10030286985468106,
+            "odds_strength_ratio": 0.6646525679758308
+          },
+          "team_values": {
+            "home_team_value": 48.6,
+            "away_team_value": 66.0
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Liga Nacional - Clausura",
+    "country": "HONDURAS",
+    "flag_icon_local": "images/competitions/oberliga_bayern_süd_flag.png",
+    "matches": [
+      {
+        "time": "01:15",
+        "odds": [
+          "4.32",
+          "3.74",
+          "1.66"
+        ],
+        "home_team": "Choloma",
+        "home_team_logo_local": "images/teams/choloma_logo.png",
+        "home_id": "team_20251025_021612627_choloma_ed9b5ff1",
+        "away_team": "Olancho",
+        "away_team_logo_local": "images/teams/olancho_logo.png",
+        "away_id": "team_20251026_003939322_olancho_548657ae",
+        "id": "match_20260211_003944324_choloma_olancho_0115_820281",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 13.06
+            },
+            {
+              "score": "0-2",
+              "percentage": 11.38
+            },
+            {
+              "score": "1-2",
+              "percentage": 10.32
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 18.43
+          },
+          "goals_markets": {
+            "over_1_5": 70.97,
+            "over_2_5": 48.68,
+            "under_2_5": 51.32,
+            "under_3_5": 70.42
+          },
+          "teams_markets": {
+            "both_teams_score": 48.99
+          },
+          "market_analysis": {
+            "home_win_prob": 0.21019487818420657,
+            "draw_prob": 0.24279194485448458,
+            "away_win_prob": 0.5470131769613088,
+            "market_efficiency": 0.9080418737557725,
+            "goal_expectancy": -0.028800000000000023,
+            "overround": 0.10127079918008342,
+            "odds_strength_ratio": 0.3842592592592592
+          },
+          "team_values": {
+            "home_team_value": 45.1,
+            "away_team_value": 58.4
+          }
+        }
+      },
+      {
+        "time": "03:30",
+        "odds": [
+          "4.69",
+          "3.50",
+          "1.66"
+        ],
+        "home_team": "Juticalpa",
+        "home_team_logo_local": "images/teams/juticalpa_logo.png",
+        "home_id": "team_20251025_021612726_juticalpa_80babf5a",
+        "away_team": "Real Espana",
+        "away_team_logo_local": "images/teams/real_espana_logo.png",
+        "away_id": "team_20251026_003949689_realespana_e85ac8db",
+        "id": "match_20260211_003954404_juticalpa_realespana_0330_6b6a0f",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.68
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.45
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.07
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.2
+          },
+          "goals_markets": {
+            "over_1_5": 77.69,
+            "over_2_5": 56.76,
+            "under_2_5": 43.24,
+            "under_3_5": 63.21
+          },
+          "teams_markets": {
+            "both_teams_score": 60.13
+          },
+          "market_analysis": {
+            "home_win_prob": 0.19359955215525282,
+            "draw_prob": 0.25942339988803875,
+            "away_win_prob": 0.5469770479567083,
+            "market_efficiency": 0.9079818996081358,
+            "goal_expectancy": 0.0,
+            "overround": 0.1013435404731935,
+            "odds_strength_ratio": 0.3539445628997867
+          },
+          "team_values": {
+            "home_team_value": 51.2,
+            "away_team_value": 62.9
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Serie C - Group B",
+    "country": "ITALY",
+    "flag_icon_local": "images/competitions/serie_b_superbet_flag.png",
+    "matches": [
+      {
+        "time": "19:00",
+        "odds": [
+          "1.70",
+          "3.40",
+          "4.59"
+        ],
+        "home_team": "Forli",
+        "home_team_logo_local": "images/teams/forli_logo.png",
+        "home_id": "team_20251024_033020774_forli_6d7142ec",
+        "away_team": "Pontedera",
+        "away_team_logo_local": "images/teams/pontedera_logo.png",
+        "away_id": "team_20251024_032939562_pontedera_16736359",
+        "id": "match_20260211_004337410_forli_pontedera_1900_111223",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 17.69
+            },
+            {
+              "score": "0-0",
+              "percentage": 13.62
+            },
+            {
+              "score": "2-0",
+              "percentage": 10.05
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 24.06
+          },
+          "goals_markets": {
+            "over_1_5": 59.58,
+            "over_2_5": 35.98,
+            "under_2_5": 64.03,
+            "under_3_5": 81.01
+          },
+          "teams_markets": {
+            "both_teams_score": 41.87
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5346534653465347,
+            "draw_prob": 0.26732673267326734,
+            "away_win_prob": 0.19801980198019803,
+            "market_efficiency": 0.9089108910891089,
+            "goal_expectancy": 0.01200000000000001,
+            "overround": 0.10021786492374729,
+            "odds_strength_ratio": 2.7
+          },
+          "team_values": {
+            "home_team_value": 51.5,
+            "away_team_value": 48.0
+          }
+        }
+      },
+      {
+        "time": "19:00",
+        "odds": [
+          "1.85",
+          "3.10",
+          "4.20"
+        ],
+        "home_team": "Guidonia",
+        "home_team_logo_local": "images/teams/guidonia_logo.png",
+        "home_id": "team_20251024_032929138_guidonia_a062739d",
+        "away_team": "Bra",
+        "away_team_logo_local": "images/teams/bra_logo.png",
+        "away_id": "team_20251025_023751649_bra_91c3ea56",
+        "id": "match_20260211_004347642_guidonia_bra_1900_cbe159",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 19.59
+            },
+            {
+              "score": "0-0",
+              "percentage": 17.32
+            },
+            {
+              "score": "2-0",
+              "percentage": 10.17
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 26.96
+          },
+          "goals_markets": {
+            "over_1_5": 58.76,
+            "over_2_5": 34.51,
+            "under_2_5": 65.49,
+            "under_3_5": 82.41
+          },
+          "teams_markets": {
+            "both_teams_score": 39.33
+          },
+          "market_analysis": {
+            "home_win_prob": 0.49085768143261066,
+            "draw_prob": 0.29293119698397735,
+            "away_win_prob": 0.21621112158341185,
+            "market_efficiency": 0.9080867106503299,
+            "goal_expectancy": 0.04799999999999999,
+            "overround": 0.10121642379706897,
+            "odds_strength_ratio": 2.27027027027027
+          },
+          "team_values": {
+            "home_team_value": 64.8,
+            "away_team_value": 60.2
+          }
+        }
+      },
+      {
+        "time": "19:00",
+        "odds": [
+          "2.29",
+          "2.83",
+          "3.22"
+        ],
+        "home_team": "Juventus U23",
+        "home_team_logo_local": "images/teams/juventus_u23_logo.png",
+        "home_id": "team_20250816_141959723_juventusu23_ae36a8b7",
+        "away_team": "Sambenedettese",
+        "away_team_logo_local": "images/teams/sambenedettese_logo.png",
+        "away_id": "team_20251025_023741310_sambenedettese_d7582a91",
+        "id": "match_20260211_004357741_juventusu23_sambenedettese_1900_479dab",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 15.73
+            },
+            {
+              "score": "0-0",
+              "percentage": 11.04
+            },
+            {
+              "score": "2-0",
+              "percentage": 10.79
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 22.76
+          },
+          "goals_markets": {
+            "over_1_5": 64.85,
+            "over_2_5": 41.4,
+            "under_2_5": 58.6,
+            "under_3_5": 76.7
+          },
+          "teams_markets": {
+            "both_teams_score": 43.03
+          },
+          "market_analysis": {
+            "home_win_prob": 0.39676755010427966,
+            "draw_prob": 0.3210592543246645,
+            "away_win_prob": 0.28217319557105597,
+            "market_efficiency": 0.9085976897388004,
+            "goal_expectancy": 0.08039999999999999,
+            "overround": 0.10059711937796756,
+            "odds_strength_ratio": 1.406113537117904
+          },
+          "team_values": {
+            "home_team_value": 71.3,
+            "away_team_value": 50.2
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "1.55",
+          "3.44",
+          "6.00"
+        ],
+        "home_team": "Ascoli",
+        "home_team_logo_local": "images/teams/ascoli_logo.png",
+        "home_id": "team_20251025_023741226_ascoli_4ade46c6",
+        "away_team": "Torres",
+        "away_team_logo_local": "images/teams/torres_logo.png",
+        "away_id": "team_20251024_032929225_torres_6ee29880",
+        "id": "match_20260211_004407944_ascoli_torres_2130_6eece9",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 13.93
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.96
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.6
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 19.5
+          },
+          "goals_markets": {
+            "over_1_5": 67.82,
+            "over_2_5": 44.86,
+            "under_2_5": 55.14,
+            "under_3_5": 73.65
+          },
+          "teams_markets": {
+            "both_teams_score": 50.75
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5851667044681333,
+            "draw_prob": 0.2636652302109322,
+            "away_win_prob": 0.15116806532093444,
+            "market_efficiency": 0.9070083919256067,
+            "goal_expectancy": 0.007200000000000006,
+            "overround": 0.10252563140785198,
+            "odds_strength_ratio": 3.8709677419354835
+          },
+          "team_values": {
+            "home_team_value": 65.5,
+            "away_team_value": 53.8
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "2.26",
+          "2.94",
+          "3.13"
+        ],
+        "home_team": "Campobasso",
+        "home_team_logo_local": "images/teams/campobasso_logo.png",
+        "home_id": "team_20251021_005341672_campobasso_953e956c",
+        "away_team": "Livorno",
+        "away_team_logo_local": "images/teams/livorno_logo.png",
+        "away_id": "team_20251026_004554894_livorno_1435bba1",
+        "id": "match_20260211_004418138_campobasso_livorno_2130_e1f6ab",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.46
+            },
+            {
+              "score": "3-1",
+              "percentage": 7.53
+            },
+            {
+              "score": "1-1",
+              "percentage": 6.31
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 11.45
+          },
+          "goals_markets": {
+            "over_1_5": 81.51,
+            "over_2_5": 63.05,
+            "under_2_5": 36.95,
+            "under_3_5": 56.01
+          },
+          "teams_markets": {
+            "both_teams_score": 62.58
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4014851398753949,
+            "draw_prob": 0.30862463133278656,
+            "away_win_prob": 0.28989022879181864,
+            "market_efficiency": 0.9073564161183925,
+            "goal_expectancy": 0.06720000000000001,
+            "overround": 0.10210274841933709,
+            "odds_strength_ratio": 1.3849557522123894
+          },
+          "team_values": {
+            "home_team_value": 66.7,
+            "away_team_value": 53.2
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "5.26",
+          "3.24",
+          "1.66"
+        ],
+        "home_team": "Carpi",
+        "home_team_logo_local": "images/teams/carpi_logo.png",
+        "home_id": "team_20251024_033010407_carpi_25e573de",
+        "away_team": "Arezzo",
+        "away_team_logo_local": "images/teams/arezzo_logo.png",
+        "away_id": "team_20251024_032949790_arezzo_92f9c917",
+        "id": "match_20260211_004428229_carpi_arezzo_2130_a12c0e",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 16.23
+            },
+            {
+              "score": "1-2",
+              "percentage": 10.05
+            },
+            {
+              "score": "0-2",
+              "percentage": 9.95
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 20.0
+          },
+          "goals_markets": {
+            "over_1_5": 65.28,
+            "over_2_5": 42.06,
+            "under_2_5": 57.94,
+            "under_3_5": 76.02
+          },
+          "teams_markets": {
+            "both_teams_score": 47.87
+          },
+          "market_analysis": {
+            "home_win_prob": 0.17264801427819365,
+            "draw_prob": 0.28028659108126497,
+            "away_win_prob": 0.5470653946405414,
+            "market_efficiency": 0.9081285551032986,
+            "goal_expectancy": 0.031199999999999974,
+            "overround": 0.10116568230392353,
+            "odds_strength_ratio": 0.3155893536121673
+          },
+          "team_values": {
+            "home_team_value": 51.3,
+            "away_team_value": 75.5
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "2.28",
+          "2.77",
+          "3.32"
+        ],
+        "home_team": "Gubbio",
+        "home_team_logo_local": "images/teams/gubbio_logo.png",
+        "home_id": "team_20250816_142010579_gubbio_71901102",
+        "away_team": "Vis Pesaro",
+        "away_team_logo_local": "images/teams/vis_pesaro_logo.png",
+        "away_id": "team_20251025_023751761_vispesaro_bd33e357",
+        "id": "match_20260211_004438402_gubbio_vispesaro_2130_ee3797",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 13.75
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.85
+            },
+            {
+              "score": "0-0",
+              "percentage": 11.46
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 22.82
+          },
+          "goals_markets": {
+            "over_1_5": 63.81,
+            "over_2_5": 40.41,
+            "under_2_5": 59.59,
+            "under_3_5": 77.53
+          },
+          "teams_markets": {
+            "both_teams_score": 47.56
+          },
+          "market_analysis": {
+            "home_win_prob": 0.39842991820324414,
+            "draw_prob": 0.32794953556079304,
+            "away_win_prob": 0.2736205462359629,
+            "market_efficiency": 0.9084202135033966,
+            "goal_expectancy": 0.0876,
+            "overround": 0.10081214083008838,
+            "odds_strength_ratio": 1.456140350877193
+          },
+          "team_values": {
+            "home_team_value": 60.2,
+            "away_team_value": 62.0
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "2.73",
+          "2.72",
+          "2.64"
+        ],
+        "home_team": "Pianese",
+        "home_team_logo_local": "images/teams/pianese_logo.png",
+        "home_id": "team_20251025_023802740_pianese_79cfed48",
+        "away_team": "Perugia",
+        "away_team_logo_local": "images/teams/perugia_logo.png",
+        "away_id": "team_20251026_004554824_perugia_f6617ee2",
+        "id": "match_20260211_004448618_pianese_perugia_2130_d67481",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.65
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.61
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.8
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 18.24
+          },
+          "goals_markets": {
+            "over_1_5": 67.76,
+            "over_2_5": 44.55,
+            "under_2_5": 55.45,
+            "under_3_5": 74.43
+          },
+          "teams_markets": {
+            "both_teams_score": 50.52
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3291891297172406,
+            "draw_prob": 0.3303993838706128,
+            "away_win_prob": 0.3404114864121466,
+            "market_efficiency": 0.8986863241280669,
+            "goal_expectancy": 0.09359999999999997,
+            "overround": 0.11273530391177444,
+            "odds_strength_ratio": 0.967032967032967
+          },
+          "team_values": {
+            "home_team_value": 65.0,
+            "away_team_value": 66.7
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "2.33",
+          "2.89",
+          "3.06"
+        ],
+        "home_team": "Ternana",
+        "home_team_logo_local": "images/teams/ternana_logo.png",
+        "home_id": "team_20251024_032949700_ternana_ac10dbeb",
+        "away_team": "Ravenna",
+        "away_team_logo_local": "images/teams/ravenna_logo.png",
+        "away_id": "team_20251025_023802182_ravenna_d229090d",
+        "id": "match_20260211_004458879_ternana_ravenna_2130_7e4a5c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.02
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.6
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.62
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 16.54
+          },
+          "goals_markets": {
+            "over_1_5": 72.2,
+            "over_2_5": 50.29,
+            "under_2_5": 49.71,
+            "under_3_5": 68.68
+          },
+          "teams_markets": {
+            "both_teams_score": 55.02
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3894587107883507,
+            "draw_prob": 0.31399266302313394,
+            "away_win_prob": 0.2965486261885154,
+            "market_efficiency": 0.9074387961368572,
+            "goal_expectancy": 0.07319999999999999,
+            "overround": 0.10200269622281288,
+            "odds_strength_ratio": 1.3133047210300428
+          },
+          "team_values": {
+            "home_team_value": 68.1,
+            "away_team_value": 66.6
+          }
+        }
+      }
+    ],
+    "total_matches": 9
+  },
+  {
+    "name": "Premier League",
+    "country": "JAMAICA",
+    "flag_icon_local": "images/competitions/premier_league_flag.png",
+    "matches": [
+      {
+        "time": "22:00",
+        "odds": [
+          "3.55",
+          "3.20",
+          "2.02"
+        ],
+        "home_team": "Dunbeholden",
+        "home_team_logo_local": "images/teams/dunbeholden_logo.png",
+        "home_id": "team_20260107_002150310_dunbeholden_0dd694b7",
+        "away_team": "Arnett Gardens",
+        "away_team_logo_local": "images/teams/arnett_gardens_logo.png",
+        "away_id": "team_20251020_151252216_arnettgardens_847d5216",
+        "id": "match_20260211_004539549_dunbeholden_arnettgardens_2200_2e97ce",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 9.74
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.43
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.22
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 14.43
+          },
+          "goals_markets": {
+            "over_1_5": 72.44,
+            "over_2_5": 50.67,
+            "under_2_5": 49.33,
+            "under_3_5": 68.39
+          },
+          "teams_markets": {
+            "both_teams_score": 55.96
+          },
+          "market_analysis": {
+            "home_win_prob": 0.2586117223444689,
+            "draw_prob": 0.28689737947589516,
+            "away_win_prob": 0.4544908981796359,
+            "market_efficiency": 0.9180716143228645,
+            "goal_expectancy": 0.035999999999999976,
+            "overround": 0.08923964579556554,
+            "odds_strength_ratio": 0.5690140845070423
+          },
+          "team_values": {
+            "home_team_value": 65.9,
+            "away_team_value": 71.5
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Eerste Divisie",
+    "country": "NETHERLANDS",
+    "flag_icon_local": "images/competitions/eerste_divisie_flag.png",
+    "matches": [
+      {
+        "time": "21:00",
+        "odds": [
+          "1.86",
+          "3.80",
+          "3.60"
+        ],
+        "home_team": "Den Bosch",
+        "home_team_logo_local": "images/teams/den_bosch_logo.png",
+        "home_id": "team_20250807_002635197_denbosch_da7e3bd4",
+        "away_team": "Eindhoven FC",
+        "away_team_logo_local": "images/teams/eindhoven_fc_logo.png",
+        "away_id": "team_20250807_002655925_eindhovenfc_bdfad11c",
+        "id": "match_20260211_004901884_denbosch_eindhovenfc_2100_2014f1",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 15.93
+            },
+            {
+              "score": "0-0",
+              "percentage": 9.61
+            },
+            {
+              "score": "1-2",
+              "percentage": 9.04
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 23.86
+          },
+          "goals_markets": {
+            "over_1_5": 66.36,
+            "over_2_5": 42.9,
+            "under_2_5": 57.1,
+            "under_3_5": 75.52
+          },
+          "teams_markets": {
+            "both_teams_score": 47.82
+          },
+          "market_analysis": {
+            "home_win_prob": 0.49846961084390035,
+            "draw_prob": 0.24398775688675123,
+            "away_win_prob": 0.25754263226934854,
+            "market_efficiency": 0.9271534761696547,
+            "goal_expectancy": -0.035999999999999976,
+            "overround": 0.07857008111677022,
+            "odds_strength_ratio": 1.9354838709677418
+          },
+          "team_values": {
+            "home_team_value": 54.7,
+            "away_team_value": 69.5
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Liga Primera - Clausura",
+    "country": "NICARAGUA",
+    "flag_icon_local": "images/competitions/oberliga_bayern_süd_flag.png",
+    "matches": [
+      {
+        "time": "03:00",
+        "odds": [
+          "2.10",
+          "3.40",
+          "3.10"
+        ],
+        "home_team": "Esteli",
+        "home_team_logo_local": "images/teams/esteli_logo.png",
+        "home_id": "team_20251022_003837933_esteli_984fc4bc",
+        "away_team": "Diriangen",
+        "away_team_logo_local": "images/teams/diriangen_logo.png",
+        "away_id": "team_20251022_003827484_diriangen_e715926a",
+        "id": "match_20260211_005023434_esteli_diriangen_0300_a6736d",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 13.06
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.66
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.51
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.02
+          },
+          "goals_markets": {
+            "over_1_5": 69.37,
+            "over_2_5": 46.88,
+            "under_2_5": 53.12,
+            "under_3_5": 72.06
+          },
+          "teams_markets": {
+            "both_teams_score": 51.04
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4357172385283175,
+            "draw_prob": 0.2691194708557256,
+            "away_win_prob": 0.29516329061595703,
+            "market_efficiency": 0.9150062009094668,
+            "goal_expectancy": 0.01200000000000001,
+            "overround": 0.0928887684105899,
+            "odds_strength_ratio": 1.4761904761904763
+          },
+          "team_values": {
+            "home_team_value": 71.1,
+            "away_team_value": 71.9
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "CONCACAF Champions Cup",
+    "country": "NORTH & CENTRAL AMERICA",
+    "flag_icon_local": "images/competitions/usl_championship_flag.png",
+    "matches": [
+      {
+        "time": "03:00",
+        "odds": [
+          "1.25",
+          "6.00",
+          "9.00"
+        ],
+        "home_team": "Club America",
+        "home_team_logo_local": "images/teams/club_america_logo.png",
+        "home_id": "team_20250711_004105136_clubamerica_27000c61",
+        "away_team": "Olimpia",
+        "away_team_logo_local": "images/teams/olimpia_logo.png",
+        "away_id": "team_20251026_003949572_olimpia_dc744003",
+        "id": "match_20260211_005113627_clubamerica_olimpia_0300_83969b",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.96
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.96
+            },
+            {
+              "score": "2-0",
+              "percentage": 9.76
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.88
+          },
+          "goals_markets": {
+            "over_1_5": 74.99,
+            "over_2_5": 53.56,
+            "under_2_5": 46.43,
+            "under_3_5": 65.85
+          },
+          "teams_markets": {
+            "both_teams_score": 53.51
+          },
+          "market_analysis": {
+            "home_win_prob": 0.7422680412371134,
+            "draw_prob": 0.15463917525773196,
+            "away_win_prob": 0.10309278350515463,
+            "market_efficiency": 0.9278350515463918,
+            "goal_expectancy": -0.12,
+            "overround": 0.07777777777777772,
+            "odds_strength_ratio": 7.2
+          },
+          "team_values": {
+            "home_team_value": 76.7,
+            "away_team_value": 66.3
+          }
+        }
+      },
+      {
+        "time": "05:00",
+        "odds": [
+          "1.11",
+          "9.00",
+          "19.00"
+        ],
+        "home_team": "Monterrey",
+        "home_team_logo_local": "images/teams/monterrey_logo.png",
+        "home_id": "team_20250626_010855554_monterrey_d3865e4f",
+        "away_team": "Xelaju",
+        "away_team_logo_local": "images/teams/xelaju_logo.png",
+        "away_id": "team_20251026_003828291_xelaju_7d829d56",
+        "id": "match_20260211_005123705_monterrey_xelaju_0500_5a10de",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.43
+            },
+            {
+              "score": "2-1",
+              "percentage": 10.05
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.02
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 16.06
+          },
+          "goals_markets": {
+            "over_1_5": 77.07,
+            "over_2_5": 55.76,
+            "under_2_5": 44.24,
+            "under_3_5": 64.45
+          },
+          "teams_markets": {
+            "both_teams_score": 57.36
+          },
+          "market_analysis": {
+            "home_win_prob": 0.8461995249406176,
+            "draw_prob": 0.1043646080760095,
+            "away_win_prob": 0.04943586698337293,
+            "market_efficiency": 0.9392814726840856,
+            "goal_expectancy": -0.12,
+            "overround": 0.06464359095938033,
+            "odds_strength_ratio": 17.117117117117115
+          },
+          "team_values": {
+            "home_team_value": 62.6,
+            "away_team_value": 59.5
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "LPF - Clausura",
+    "country": "PANAMA",
+    "flag_icon_local": "images/competitions/liga_auf_uruguaya_-_clausura_flag.png",
+    "matches": [
+      {
+        "time": "01:15",
+        "odds": [
+          "2.51",
+          "2.74",
+          "2.86"
+        ],
+        "home_team": "Deportivo Universitario",
+        "home_team_logo_local": "images/teams/deportivo_universitario_logo.png",
+        "home_id": "team_20251026_005533494_deportivouniversitario_bb1cbfb7",
+        "away_team": "San Francisco",
+        "away_team_logo_local": "images/teams/san_francisco_logo.png",
+        "away_id": "team_20251024_043343682_sanfrancisco_e58ba0a7",
+        "id": "match_20260211_005335377_deportivouniversitario_sanfrancisco_0115_219861",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 12.63
+            },
+            {
+              "score": "1-1",
+              "percentage": 12.11
+            },
+            {
+              "score": "0-1",
+              "percentage": 8.89
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.42
+          },
+          "goals_markets": {
+            "over_1_5": 69.19,
+            "over_2_5": 46.02,
+            "under_2_5": 53.98,
+            "under_3_5": 73.3
+          },
+          "teams_markets": {
+            "both_teams_score": 50.3
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3579507043540224,
+            "draw_prob": 0.32790374741919565,
+            "away_win_prob": 0.31414554822678187,
+            "market_efficiency": 0.898456267928596,
+            "goal_expectancy": 0.09119999999999998,
+            "overround": 0.11302022780197696,
+            "odds_strength_ratio": 1.1394422310756973
+          },
+          "team_values": {
+            "home_team_value": 58.8,
+            "away_team_value": 61.3
+          }
+        }
+      },
+      {
+        "time": "03:30",
+        "odds": [
+          "2.18",
+          "2.73",
+          "3.61"
+        ],
+        "home_team": "Tauro",
+        "home_team_logo_local": "images/teams/tauro_logo.png",
+        "home_id": "team_20251027_012509621_tauro_f999752d",
+        "away_team": "UMECIT",
+        "away_team_logo_local": "images/teams/umecit_logo.png",
+        "away_id": "team_20251027_012509527_umecit_6e2922b2",
+        "id": "match_20260211_005345463_tauro_umecit_0330_9e6454",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 12.3
+            },
+            {
+              "score": "0-1",
+              "percentage": 10.46
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.32
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 17.12
+          },
+          "goals_markets": {
+            "over_1_5": 69.05,
+            "over_2_5": 46.2,
+            "under_2_5": 53.8,
+            "under_3_5": 72.89
+          },
+          "teams_markets": {
+            "both_teams_score": 51.85
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4162481785736912,
+            "draw_prob": 0.33238865541781937,
+            "away_win_prob": 0.25136316600848946,
+            "market_efficiency": 0.9074210292906468,
+            "goal_expectancy": 0.0924,
+            "overround": 0.10202427287994897,
+            "odds_strength_ratio": 1.6559633027522933
+          },
+          "team_values": {
+            "home_team_value": 61.8,
+            "away_team_value": 62.1
+          }
+        }
+      },
+      {
+        "time": "23:00",
+        "odds": [
+          "2.75",
+          "2.82",
+          "2.53"
+        ],
+        "home_team": "Herrera",
+        "home_team_logo_local": "images/teams/herrera_logo.png",
+        "home_id": "team_20251024_043343775_herrera_a91b4db6",
+        "away_team": "Union Cocle",
+        "away_team_logo_local": "images/teams/union_cocle_logo.png",
+        "away_id": "team_20260117_020709292_unioncocle_2ab7be57",
+        "id": "match_20260211_005355596_herrera_unioncocle_2300_ba88ec",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 13.09
+            },
+            {
+              "score": "0-1",
+              "percentage": 10.9
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.11
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 16.95
+          },
+          "goals_markets": {
+            "over_1_5": 67.36,
+            "over_2_5": 43.93,
+            "under_2_5": 56.07,
+            "under_3_5": 74.66
+          },
+          "teams_markets": {
+            "both_teams_score": 49.51
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3265696591309602,
+            "draw_prob": 0.31846332007451794,
+            "away_win_prob": 0.354967020794522,
+            "market_efficiency": 0.8980665626101405,
+            "goal_expectancy": 0.08160000000000002,
+            "overround": 0.11350320971042516,
+            "odds_strength_ratio": 0.9199999999999999
+          },
+          "team_values": {
+            "home_team_value": 58.5,
+            "away_team_value": 63.0
+          }
+        }
+      }
+    ],
+    "total_matches": 3
+  },
+  {
+    "name": "Romanian Cup",
+    "country": "ROMANIA",
+    "flag_icon_local": "images/competitions/romanian_cup_-_qualification_flag.png",
+    "matches": [
+      {
+        "time": "18:00",
+        "odds": [
+          "2.86",
+          "3.20",
+          "2.29"
+        ],
+        "home_team": "Concordia",
+        "home_team_logo_local": "images/teams/concordia_logo.png",
+        "home_id": "team_20250801_012527252_concordia_e4b548d7",
+        "away_team": "FC Botosani",
+        "away_team_logo_local": "images/teams/fc_botosani_logo.png",
+        "away_id": "team_20250713_001038305_fcbotosani_a49134d6",
+        "id": "match_20260211_005526558_concordia_fcbotosani_1800_4b96c0",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 20.07
+            },
+            {
+              "score": "1-0",
+              "percentage": 16.21
+            },
+            {
+              "score": "0-1",
+              "percentage": 12.96
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 39.46
+          },
+          "goals_markets": {
+            "over_1_5": 54.89,
+            "over_2_5": 30.86,
+            "under_2_5": 69.14,
+            "under_3_5": 85.01
+          },
+          "teams_markets": {
+            "both_teams_score": 39.21
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3182019505501663,
+            "draw_prob": 0.28439299330421114,
+            "away_win_prob": 0.39740505614562255,
+            "market_efficiency": 0.9100575785734756,
+            "goal_expectancy": 0.035999999999999976,
+            "overround": 0.09883157235777329,
+            "odds_strength_ratio": 0.8006993006993007
+          },
+          "team_values": {
+            "home_team_value": 67.7,
+            "away_team_value": 56.4
+          }
+        }
+      },
+      {
+        "time": "18:00",
+        "odds": [
+          "8.60",
+          "5.25",
+          "1.26"
+        ],
+        "home_team": "CS Din. Bucuresti",
+        "home_team_logo_local": "images/teams/cs_din._bucuresti_logo.png",
+        "home_id": "team_20250801_012537516_csdinbucuresti_ef53c4d4",
+        "away_team": "Farul Constanta",
+        "away_team_logo_local": "images/teams/farul_constanta_logo.png",
+        "away_id": "team_20250713_001038366_farulconstanta_3b84e207",
+        "id": "match_20260211_005536705_csdinbucuresti_farulconstanta_1800_61b8b1",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 12.13
+            },
+            {
+              "score": "1-2",
+              "percentage": 10.58
+            },
+            {
+              "score": "0-2",
+              "percentage": 9.97
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 15.5
+          },
+          "goals_markets": {
+            "over_1_5": 75.53,
+            "over_2_5": 54.35,
+            "under_2_5": 45.65,
+            "under_3_5": 65.1
+          },
+          "teams_markets": {
+            "both_teams_score": 55.22
+          },
+          "market_analysis": {
+            "home_win_prob": 0.10566923851056693,
+            "draw_prob": 0.17309627641730965,
+            "away_win_prob": 0.7212344850721235,
+            "market_efficiency": 0.9087554511908756,
+            "goal_expectancy": -0.12,
+            "overround": 0.1004060538944258,
+            "odds_strength_ratio": 0.14651162790697675
+          },
+          "team_values": {
+            "home_team_value": 44.9,
+            "away_team_value": 63.7
+          }
+        }
+      },
+      {
+        "time": "18:00",
+        "odds": [
+          "1.60",
+          "3.44",
+          "5.44"
+        ],
+        "home_team": "Din. Bucuresti",
+        "home_team_logo_local": "images/teams/din._bucuresti_logo.png",
+        "home_id": "team_20250713_001048581_dinbucuresti_49525648",
+        "away_team": "FC Hermannstadt",
+        "away_team_logo_local": "images/teams/fc_hermannstadt_logo.png",
+        "away_id": "team_20250711_004509797_fchermannstadt_9169df68",
+        "id": "match_20260211_005546798_dinbucuresti_fchermannstadt_1800_3be2c2",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-0",
+              "percentage": 11.46
+            },
+            {
+              "score": "1-0",
+              "percentage": 10.33
+            },
+            {
+              "score": "2-1",
+              "percentage": 10.1
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "2-0",
+            "percentage": 16.6
+          },
+          "goals_markets": {
+            "over_1_5": 78.36,
+            "over_2_5": 58.23,
+            "under_2_5": 41.77,
+            "under_3_5": 61.36
+          },
+          "teams_markets": {
+            "both_teams_score": 48.49
+          },
+          "market_analysis": {
+            "home_win_prob": 0.5684292379471229,
+            "draw_prob": 0.2643856920684292,
+            "away_win_prob": 0.16718506998444788,
+            "market_efficiency": 0.9094867807153965,
+            "goal_expectancy": 0.007200000000000006,
+            "overround": 0.09952120383036944,
+            "odds_strength_ratio": 3.4
+          },
+          "team_values": {
+            "home_team_value": 73.3,
+            "away_team_value": 45.2
+          }
+        }
+      },
+      {
+        "time": "20:30",
+        "odds": [
+          "5.22",
+          "3.68",
+          "1.57"
+        ],
+        "home_team": "Gloria Bistrita",
+        "home_team_logo_local": "images/teams/gloria_bistrita_logo.png",
+        "home_id": "team_20250801_012558199_gloriabistrita_258d348d",
+        "away_team": "UTA Arad",
+        "away_team_logo_local": "images/teams/uta_arad_logo.png",
+        "away_id": "team_20250711_004459494_utaarad_a1a465af",
+        "id": "match_20260211_005556887_gloriabistrita_utaarad_2030_497c41",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 9.64
+            },
+            {
+              "score": "1-2",
+              "percentage": 8.59
+            },
+            {
+              "score": "2-2",
+              "percentage": 6.43
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 11.96
+          },
+          "goals_markets": {
+            "over_1_5": 82.44,
+            "over_2_5": 64.43,
+            "under_2_5": 35.57,
+            "under_3_5": 54.5
+          },
+          "teams_markets": {
+            "both_teams_score": 66.1
+          },
+          "market_analysis": {
+            "home_win_prob": 0.1741153496109407,
+            "draw_prob": 0.24697883830682343,
+            "away_win_prob": 0.5789058120822358,
+            "market_efficiency": 0.9088821249691102,
+            "goal_expectancy": -0.02160000000000002,
+            "overround": 0.10025268682007193,
+            "odds_strength_ratio": 0.30076628352490425
+          },
+          "team_values": {
+            "home_team_value": 61.6,
+            "away_team_value": 69.2
+          }
+        }
+      },
+      {
+        "time": "20:30",
+        "odds": [
+          "2.21",
+          "3.13",
+          "3.06"
+        ],
+        "home_team": "Univ. Craiova",
+        "home_team_logo_local": "images/teams/univ._craiova_logo.png",
+        "home_id": "team_20250711_004459567_univcraiova_fc365f39",
+        "away_team": "FCSB",
+        "away_team_logo_local": "images/teams/fcsb_logo.png",
+        "away_id": "team_20250704_012230478_fcsb_f6af7708",
+        "id": "match_20260211_005607346_univcraiova_fcsb_2030_4be32c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 10.38
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.9
+            },
+            {
+              "score": "2-0",
+              "percentage": 8.75
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 15.02
+          },
+          "goals_markets": {
+            "over_1_5": 76.34,
+            "over_2_5": 55.61,
+            "under_2_5": 44.39,
+            "under_3_5": 63.88
+          },
+          "teams_markets": {
+            "both_teams_score": 54.38
+          },
+          "market_analysis": {
+            "home_win_prob": 0.411812002046634,
+            "draw_prob": 0.2907682186974636,
+            "away_win_prob": 0.29741977925590235,
+            "market_efficiency": 0.9101045245230611,
+            "goal_expectancy": 0.04440000000000001,
+            "overround": 0.09877489129509431,
+            "odds_strength_ratio": 1.3846153846153846
+          },
+          "team_values": {
+            "home_team_value": 79.5,
+            "away_team_value": 64.2
+          }
+        }
+      }
+    ],
+    "total_matches": 5
+  },
+  {
+    "name": "Saudi Professional League",
+    "country": "SAUDI ARABIA",
+    "flag_icon_local": "images/competitions/professional_development_league_flag.png",
+    "matches": [
+      {
+        "time": "17:45",
+        "odds": [
+          "3.60",
+          "3.10",
+          "1.91"
+        ],
+        "home_team": "Damac",
+        "home_team_logo_local": "images/teams/damac_logo.png",
+        "home_id": "team_20251024_051554199_damac_d7eed75a",
+        "away_team": "Al Taawon",
+        "away_team_logo_local": "images/teams/al_taawon_logo.png",
+        "away_id": "team_20251022_004305200_altaawon_685a28ab",
+        "id": "match_20260211_005647389_damac_altaawon_1745_1995e3",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 10.27
+            },
+            {
+              "score": "1-2",
+              "percentage": 9.71
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.62
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 13.88
+          },
+          "goals_markets": {
+            "over_1_5": 76.66,
+            "over_2_5": 55.44,
+            "under_2_5": 44.56,
+            "under_3_5": 64.48
+          },
+          "teams_markets": {
+            "both_teams_score": 56.71
+          },
+          "market_analysis": {
+            "home_win_prob": 0.24715114580289688,
+            "draw_prob": 0.2870142338356222,
+            "away_win_prob": 0.465834620361481,
+            "market_efficiency": 0.8897441248904288,
+            "goal_expectancy": 0.04799999999999999,
+            "overround": 0.12391863236315181,
+            "odds_strength_ratio": 0.5305555555555556
+          },
+          "team_values": {
+            "home_team_value": 44.0,
+            "away_team_value": 69.5
+          }
+        }
+      },
+      {
+        "time": "19:30",
+        "odds": [
+          "1.95",
+          "3.10",
+          "3.50"
+        ],
+        "home_team": "Al Hazem",
+        "home_team_logo_local": "images/teams/al_hazem_logo.png",
+        "home_id": "team_20251024_051604526_alhazem_30ed5447",
+        "away_team": "Al Okhdood",
+        "away_team_logo_local": "images/teams/al_okhdood_logo.png",
+        "away_id": "team_20251024_051543861_alokhdood_5626ea5a",
+        "id": "match_20260211_005657628_alhazem_alokhdood_1930_ccbac2",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-0",
+              "percentage": 13.51
+            },
+            {
+              "score": "1-0",
+              "percentage": 12.05
+            },
+            {
+              "score": "0-1",
+              "percentage": 11.79
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-0",
+            "percentage": 20.57
+          },
+          "goals_markets": {
+            "over_1_5": 62.23,
+            "over_2_5": 38.57,
+            "under_2_5": 61.43,
+            "under_3_5": 79.17
+          },
+          "teams_markets": {
+            "both_teams_score": 46.31
+          },
+          "market_analysis": {
+            "home_win_prob": 0.45741989881956163,
+            "draw_prob": 0.2877318718381113,
+            "away_win_prob": 0.25484822934232715,
+            "market_efficiency": 0.891968802698145,
+            "goal_expectancy": 0.04799999999999999,
+            "overround": 0.12111544369608884,
+            "odds_strength_ratio": 1.794871794871795
+          },
+          "team_values": {
+            "home_team_value": 50.6,
+            "away_team_value": 44.7
+          }
+        }
+      },
+      {
+        "time": "19:30",
+        "odds": [
+          "1.48",
+          "3.90",
+          "5.50"
+        ],
+        "home_team": "Al Qadsiah",
+        "home_team_logo_local": "images/teams/al_qadsiah_logo.png",
+        "home_id": "team_20251230_001614604_alqadsiah_8936b7d9",
+        "away_team": "Neom SC",
+        "away_team_logo_local": "images/teams/neom_sc_logo.png",
+        "away_id": "team_20251023_020850650_neomsc_1f2f55e9",
+        "id": "match_20260211_005707885_alqadsiah_neomsc_1930_56735c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 22.44
+            },
+            {
+              "score": "0-0",
+              "percentage": 17.86
+            },
+            {
+              "score": "2-0",
+              "percentage": 12.92
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 27.46
+          },
+          "goals_markets": {
+            "over_1_5": 54.36,
+            "over_2_5": 31.22,
+            "under_2_5": 68.78,
+            "under_3_5": 84.28
+          },
+          "teams_markets": {
+            "both_teams_score": 33.24
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6065833380464906,
+            "draw_prob": 0.23019060007918107,
+            "away_win_prob": 0.16322606187432837,
+            "market_efficiency": 0.8977433403088061,
+            "goal_expectancy": -0.04799999999999999,
+            "overround": 0.11390411390411392,
+            "odds_strength_ratio": 3.7162162162162162
+          },
+          "team_values": {
+            "home_team_value": 75.1,
+            "away_team_value": 52.7
+          }
+        }
+      }
+    ],
+    "total_matches": 3
+  },
+  {
+    "name": "Copa Libertadores - Qualification",
+    "country": "SOUTH AMERICA",
+    "flag_icon_local": "images/competitions/copa_chile_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "02:30",
+        "odds": [
+          "1.33",
+          "4.50",
+          "8.00"
+        ],
+        "home_team": "Alianza Lima (Per)",
+        "home_team_logo_local": "images/teams/alianza_lima_per_logo.png",
+        "home_id": "team_20260204_005155543_alianzalimaper_0840214e",
+        "away_team": "2 de Mayo (Par)",
+        "away_team_logo_local": "images/teams/2_de_mayo_par_logo.png",
+        "away_id": "team_20260204_005155132_2demayopar_bbdf02b3",
+        "id": "match_20260211_010041148_alianzalimaper_2demayopar_0230_c0fd9d",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-1",
+              "percentage": 11.82
+            },
+            {
+              "score": "1-0",
+              "percentage": 11.66
+            },
+            {
+              "score": "0-1",
+              "percentage": 10.79
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 18.46
+          },
+          "goals_markets": {
+            "over_1_5": 65.29,
+            "over_2_5": 41.48,
+            "under_2_5": 58.52,
+            "under_3_5": 76.57
+          },
+          "teams_markets": {
+            "both_teams_score": 49.06
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6840855106888362,
+            "draw_prob": 0.20218527315914492,
+            "away_win_prob": 0.11372921615201902,
+            "market_efficiency": 0.9098337292161521,
+            "goal_expectancy": -0.12,
+            "overround": 0.09910192147034236,
+            "odds_strength_ratio": 6.015037593984962
+          },
+          "team_values": {
+            "home_team_value": 61.0,
+            "away_team_value": 61.8
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Copa del Rey",
+    "country": "SPAIN",
+    "flag_icon_local": "images/competitions/copa_chile_-_play_offs_flag.png",
+    "matches": [
+      {
+        "time": "22:00",
+        "odds": [
+          "3.10",
+          "3.90",
+          "2.05"
+        ],
+        "home_team": "Atl. Madrid",
+        "home_team_logo_local": "images/teams/atl._madrid_logo.png",
+        "home_id": "team_20250816_132558386_atlmadrid_3cb355e6",
+        "away_team": "Barcelona",
+        "away_team_logo_local": "images/teams/barcelona_logo.png",
+        "away_id": "team_20250628_033703141_barcelona_19179110",
+        "id": "match_20260211_010253316_atlmadrid_barcelona_2200_ed19d8",
+        "status": "PREVIEW",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "0-1",
+              "percentage": 14.13
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.4
+            },
+            {
+              "score": "1-0",
+              "percentage": 9.02
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "0-1",
+            "percentage": 21.81
+          },
+          "goals_markets": {
+            "over_1_5": 63.82,
+            "over_2_5": 40.46,
+            "under_2_5": 59.54,
+            "under_3_5": 77.21
+          },
+          "teams_markets": {
+            "both_teams_score": 47.39
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3023827534039334,
+            "draw_prob": 0.2403555219364599,
+            "away_win_prob": 0.4572617246596066,
+            "market_efficiency": 0.9373865355521935,
+            "goal_expectancy": -0.04799999999999999,
+            "overround": 0.06679577962032734,
+            "odds_strength_ratio": 0.6612903225806451
+          },
+          "team_values": {
+            "home_team_value": 70.6,
+            "away_team_value": 80
+          }
+        }
+      }
+    ],
+    "total_matches": 1
+  },
+  {
+    "name": "Super League",
+    "country": "SWITZERLAND",
+    "flag_icon_local": "images/competitions/super_league_women_flag.png",
+    "matches": [
+      {
+        "time": "21:30",
+        "odds": [
+          "2.57",
+          "3.50",
+          "2.45"
+        ],
+        "home_team": "Sion",
+        "home_team_logo_local": "images/teams/sion_logo.png",
+        "home_id": "team_20250724_002628567_sion_3f327238",
+        "away_team": "Basel",
+        "away_team_logo_local": "images/teams/basel_logo.png",
+        "away_id": "team_20250801_014156928_basel_7aade284",
+        "id": "match_20260211_010354262_sion_basel_2130_6550e6",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 15.01
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.41
+            },
+            {
+              "score": "2-0",
+              "percentage": 9.34
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 21.86
+          },
+          "goals_markets": {
+            "over_1_5": 63.76,
+            "over_2_5": 40.35,
+            "under_2_5": 59.65,
+            "under_3_5": 77.68
+          },
+          "teams_markets": {
+            "both_teams_score": 44.54
+          },
+          "market_analysis": {
+            "home_win_prob": 0.35929021850711246,
+            "draw_prob": 0.2638216747323654,
+            "away_win_prob": 0.37688810676052203,
+            "market_efficiency": 0.923375861563279,
+            "goal_expectancy": 0.0,
+            "overround": 0.08298260938616697,
+            "odds_strength_ratio": 0.9533073929961091
+          },
+          "team_values": {
+            "home_team_value": 69.5,
+            "away_team_value": 51.0
+          }
+        }
+      },
+      {
+        "time": "21:30",
+        "odds": [
+          "2.01",
+          "3.50",
+          "3.50"
+        ],
+        "home_team": "Thun",
+        "home_team_logo_local": "images/teams/thun_logo.png",
+        "home_id": "team_20250726_005831655_thun_f1627bca",
+        "away_team": "Lausanne",
+        "away_team_logo_local": "images/teams/lausanne_logo.png",
+        "away_id": "team_20250726_005821299_lausanne_eb40bb0e",
+        "id": "match_20260211_010404371_thun_lausanne_2130_a93757",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 11.83
+            },
+            {
+              "score": "1-1",
+              "percentage": 10.04
+            },
+            {
+              "score": "2-1",
+              "percentage": 9.29
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 16.24
+          },
+          "goals_markets": {
+            "over_1_5": 71.03,
+            "over_2_5": 48.94,
+            "under_2_5": 51.06,
+            "under_3_5": 70.16
+          },
+          "teams_markets": {
+            "both_teams_score": 52.73
+          },
+          "market_analysis": {
+            "home_win_prob": 0.4654255319148936,
+            "draw_prob": 0.2672872340425531,
+            "away_win_prob": 0.2672872340425531,
+            "market_efficiency": 0.9355053191489361,
+            "goal_expectancy": 0.0,
+            "overround": 0.06894100923951685,
+            "odds_strength_ratio": 1.7412935323383087
+          },
+          "team_values": {
+            "home_team_value": 80,
+            "away_team_value": 65.1
+          }
+        }
+      }
+    ],
+    "total_matches": 2
+  },
+  {
+    "name": "Club Friendly",
+    "country": "WORLD",
+    "flag_icon_local": "images/competitions/club_friendly_flag.png",
+    "matches": [
+      {
+        "time": "13:00",
+        "odds": [
+          "2.83",
+          "3.80",
+          "2.12"
+        ],
+        "home_team": "Sogndal (Nor)",
+        "home_team_logo_local": "images/teams/sogndal_nor_logo.png",
+        "home_id": "team_20260211_010827582_sogndalnor_d7bf79b8",
+        "away_team": "Kryvbas (Ukr)",
+        "away_team_logo_local": "images/teams/kryvbas_ukr_logo.png",
+        "away_id": "team_20260211_010827666_kryvbasukr_cd4f57a1",
+        "id": "match_20260211_010827666_sogndalnor_kryvbasukr_1300_e73f5c",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 12.57
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.3
+            },
+            {
+              "score": "2-1",
+              "percentage": 8.5
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 21.24
+          },
+          "goals_markets": {
+            "over_1_5": 72.27,
+            "over_2_5": 49.72,
+            "under_2_5": 50.28,
+            "under_3_5": 69.97
+          },
+          "teams_markets": {
+            "both_teams_score": 52.41
+          },
+          "market_analysis": {
+            "home_win_prob": 0.3247130143170386,
+            "draw_prob": 0.24182574487295241,
+            "away_win_prob": 0.43346124081000903,
+            "market_efficiency": 0.9189378305172192,
+            "goal_expectancy": -0.035999999999999976,
+            "overround": 0.08821289840375313,
+            "odds_strength_ratio": 0.7491166077738516
+          },
+          "team_values": {
+            "home_team_value": 64.0,
+            "away_team_value": 64.1
+          }
+        }
+      },
+      {
+        "time": "14:00",
+        "odds": [
+          "3.05",
+          "4.00",
+          "1.93"
+        ],
+        "home_team": "Brattvag (Nor)",
+        "home_team_logo_local": "images/teams/brattvag_nor_logo.png",
+        "home_id": "team_20260211_010848106_brattvagnor_7750989e",
+        "away_team": "Sparta Prague B (Cze)",
+        "away_team_logo_local": "images/teams/sparta_prague_b_cze_logo.png",
+        "away_id": "team_20260211_010848891_spartapraguebcze_628a6432",
+        "id": "match_20260211_010848892_brattvagnor_spartapraguebcze_1400_7da703",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 13.24
+            },
+            {
+              "score": "1-1",
+              "percentage": 11.47
+            },
+            {
+              "score": "0-1",
+              "percentage": 9.9
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 21.54
+          },
+          "goals_markets": {
+            "over_1_5": 66.6,
+            "over_2_5": 43.16,
+            "under_2_5": 56.84,
+            "under_3_5": 75.52
+          },
+          "teams_markets": {
+            "both_teams_score": 48.44
+          },
+          "market_analysis": {
+            "home_win_prob": 0.29914943909480174,
+            "draw_prob": 0.2281014473097863,
+            "away_win_prob": 0.47274911359541205,
+            "market_efficiency": 0.9124057892391452,
+            "goal_expectancy": -0.06,
+            "overround": 0.09600356748492311,
+            "odds_strength_ratio": 0.6327868852459017
+          },
+          "team_values": {
+            "home_team_value": 64.7,
+            "away_team_value": 67.1
+          }
+        }
+      },
+      {
+        "time": "16:00",
+        "odds": [
+          "1.51",
+          "4.50",
+          "4.64"
+        ],
+        "home_team": "Hillerod (Den)",
+        "home_team_logo_local": "images/teams/hillerod_den_logo.png",
+        "home_id": "team_20260211_011049182_hillerodden_988aa460",
+        "away_team": "Naestved (Den)",
+        "away_team_logo_local": "images/teams/naestved_den_logo.png",
+        "away_id": "team_20260211_011049276_naestvedden_a3f2b74a",
+        "id": "match_20260211_011049276_hillerodden_naestvedden_1600_256bee",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "2-1",
+              "percentage": 9.95
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.01
+            },
+            {
+              "score": "1-0",
+              "percentage": 8.53
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-1",
+            "percentage": 14.87
+          },
+          "goals_markets": {
+            "over_1_5": 75.76,
+            "over_2_5": 54.85,
+            "under_2_5": 45.15,
+            "under_3_5": 64.62
+          },
+          "teams_markets": {
+            "both_teams_score": 59.03
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6020518202840716,
+            "draw_prob": 0.2020218330286551,
+            "away_win_prob": 0.1959263466872733,
+            "market_efficiency": 0.9090982486289481,
+            "goal_expectancy": -0.12,
+            "overround": 0.09999111923067172,
+            "odds_strength_ratio": 3.072847682119205
+          },
+          "team_values": {
+            "home_team_value": 68.5,
+            "away_team_value": 64.2
+          }
+        }
+      },
+      {
+        "time": "17:00",
+        "odds": [
+          "1.45",
+          "4.50",
+          "5.18"
+        ],
+        "home_team": "Molde (Nor)",
+        "home_team_logo_local": "images/teams/molde_nor_logo.png",
+        "home_id": "team_20260211_011109525_moldenor_3259b1e6",
+        "away_team": "Metalist 1925 (Ukr)",
+        "away_team_logo_local": "images/teams/metalist_1925_ukr_logo.png",
+        "away_id": "team_20260211_011109615_metalist1925ukr_c4fd548e",
+        "id": "match_20260211_011109615_moldenor_metalist1925ukr_1700_f074c3",
+        "status": "scheduled",
+        "predictions": {
+          "algorithm_version": "FINAL_BIVARIATE_POISSON_v2.0",
+          "simulation_count": 100000,
+          "top_3_correct_scores": [
+            {
+              "score": "1-0",
+              "percentage": 13.65
+            },
+            {
+              "score": "2-1",
+              "percentage": 10.29
+            },
+            {
+              "score": "1-1",
+              "percentage": 9.68
+            }
+          ],
+          "most_likely_halftime_score": {
+            "score": "1-0",
+            "percentage": 20.21
+          },
+          "goals_markets": {
+            "over_1_5": 71.18,
+            "over_2_5": 48.73,
+            "under_2_5": 51.27,
+            "under_3_5": 70.7
+          },
+          "teams_markets": {
+            "both_teams_score": 51.73
+          },
+          "market_analysis": {
+            "home_win_prob": 0.6241632303325658,
+            "draw_prob": 0.20111926310716005,
+            "away_win_prob": 0.1747175065602742,
+            "market_efficiency": 0.9050366839822204,
+            "goal_expectancy": -0.12,
+            "overround": 0.10492758768620836,
+            "odds_strength_ratio": 3.5724137931034483
+          },
+          "team_values": {
+            "home_team_value": 66.7,
+            "away_team_value": 65.5
+          }
+        }
+      }
+    ],
+    "total_matches": 4
+  }
+]
