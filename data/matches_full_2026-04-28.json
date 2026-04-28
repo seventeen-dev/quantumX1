@@ -62,7 +62,10 @@
             "home_team_value": 76.8,
             "away_team_value": 79.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -130,7 +133,10 @@
             "home_team_value": 55.7,
             "away_team_value": 67.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -198,7 +204,10 @@
             "home_team_value": 61.1,
             "away_team_value": 61.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -266,7 +275,10 @@
             "home_team_value": 59.8,
             "away_team_value": 49.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -326,7 +338,10 @@
             "home_team_value": 62.1,
             "away_team_value": 70.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -386,7 +401,10 @@
             "home_team_value": 65.3,
             "away_team_value": 54.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -446,7 +464,10 @@
             "home_team_value": 65.1,
             "away_team_value": 51.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -506,7 +527,10 @@
             "home_team_value": 63.8,
             "away_team_value": 35.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -566,7 +590,10 @@
             "home_team_value": 58.1,
             "away_team_value": 69.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 6
@@ -634,7 +661,10 @@
             "home_team_value": 52.4,
             "away_team_value": 74.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -702,7 +732,10 @@
             "home_team_value": 56.7,
             "away_team_value": 63.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:30",
@@ -762,7 +795,10 @@
             "home_team_value": 68.4,
             "away_team_value": 55.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -830,7 +866,10 @@
             "home_team_value": 52.9,
             "away_team_value": 74.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "19:00",
@@ -890,7 +929,10 @@
             "home_team_value": 76.2,
             "away_team_value": 57.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -958,7 +1000,10 @@
             "home_team_value": 65.5,
             "away_team_value": 70.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "20:00",
@@ -1018,7 +1063,10 @@
             "home_team_value": 72.2,
             "away_team_value": 77.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -1086,7 +1134,10 @@
             "home_team_value": 68.0,
             "away_team_value": 60.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -1117,29 +1168,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-1",
-              "percentage": 11.16
+              "percentage": 11.16,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 8.67
+              "percentage": 8.67,
+              "status": false
             },
             {
               "score": "1-2",
-              "percentage": 7.99
+              "percentage": 7.99,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 16.01
+            "percentage": 16.01,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 74.33,
             "over_2_5": 52.37,
             "under_2_5": 47.63,
-            "under_3_5": 67.34
+            "under_3_5": 67.34,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 56.56
+            "both_teams_score": 56.56,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.31649612311284636,
@@ -1148,13 +1208,19 @@
             "market_efficiency": 0.9083438733338692,
             "goal_expectancy": 0.002400000000000002,
             "overround": 0.10090465665797677,
-            "odds_strength_ratio": 0.7491289198606271
+            "odds_strength_ratio": 0.7491289198606271,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": true
           },
           "team_values": {
             "home_team_value": 64.5,
             "away_team_value": 79.9
           }
-        }
+        },
+        "full-score": "0-1",
+        "first-half-score": "0-1",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:00",
@@ -1214,7 +1280,10 @@
             "home_team_value": 59.4,
             "away_team_value": 62.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -1274,7 +1343,10 @@
             "home_team_value": 49.3,
             "away_team_value": 60.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -1334,7 +1406,10 @@
             "home_team_value": 68.1,
             "away_team_value": 71.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -1394,7 +1469,10 @@
             "home_team_value": 51.3,
             "away_team_value": 52.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -1454,7 +1532,10 @@
             "home_team_value": 80,
             "away_team_value": 64.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 6
@@ -1522,7 +1603,10 @@
             "home_team_value": 65.9,
             "away_team_value": 60.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -1553,29 +1637,38 @@
           "top_3_correct_scores": [
             {
               "score": "2-1",
-              "percentage": 9.55
+              "percentage": 9.55,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 8.16
+              "percentage": 8.16,
+              "status": false
             },
             {
               "score": "1-2",
-              "percentage": 7.89
+              "percentage": 7.89,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 14.85
+            "percentage": 14.85,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 79.36,
             "over_2_5": 59.74,
             "under_2_5": 40.26,
-            "under_3_5": 59.76
+            "under_3_5": 59.76,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 62.2
+            "both_teams_score": 62.2,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.46538671188904374,
@@ -1584,13 +1677,19 @@
             "market_efficiency": 0.9075040881836351,
             "goal_expectancy": 0.01200000000000001,
             "overround": 0.10192341061679944,
-            "odds_strength_ratio": 1.7384615384615385
+            "odds_strength_ratio": 1.7384615384615385,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 56.0,
             "away_team_value": 59.4
           }
-        }
+        },
+        "full-score": "0-1",
+        "first-half-score": "0-1",
+        "second-half-score": "0-0"
       }
     ],
     "total_matches": 1
@@ -1658,7 +1757,10 @@
             "home_team_value": 80,
             "away_team_value": 75.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -1726,7 +1828,10 @@
             "home_team_value": 52.2,
             "away_team_value": 67.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -1786,7 +1891,10 @@
             "home_team_value": 59.5,
             "away_team_value": 41.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -1846,7 +1954,10 @@
             "home_team_value": 42.4,
             "away_team_value": 52.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -1906,7 +2017,10 @@
             "home_team_value": 74.3,
             "away_team_value": 48.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -1966,7 +2080,10 @@
             "home_team_value": 48.0,
             "away_team_value": 63.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -2026,7 +2143,10 @@
             "home_team_value": 59.5,
             "away_team_value": 48.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -2086,7 +2206,10 @@
             "home_team_value": 52.9,
             "away_team_value": 51.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -2146,7 +2269,10 @@
             "home_team_value": 77.2,
             "away_team_value": 62.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -2206,7 +2332,10 @@
             "home_team_value": 61.1,
             "away_team_value": 80
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -2266,7 +2395,10 @@
             "home_team_value": 67.9,
             "away_team_value": 63.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 10
@@ -2334,7 +2466,10 @@
             "home_team_value": 60.6,
             "away_team_value": 78.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -2402,7 +2537,10 @@
             "home_team_value": 77.7,
             "away_team_value": 64.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -2470,7 +2608,10 @@
             "home_team_value": 68.9,
             "away_team_value": 49.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "20:00",
@@ -2530,7 +2671,10 @@
             "home_team_value": 63.4,
             "away_team_value": 56.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "20:00",
@@ -2590,7 +2734,10 @@
             "home_team_value": 66.6,
             "away_team_value": 44.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -2658,7 +2805,10 @@
             "home_team_value": 68.2,
             "away_team_value": 71.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -2726,7 +2876,10 @@
             "home_team_value": 76.4,
             "away_team_value": 45.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -2794,7 +2947,10 @@
             "home_team_value": 80,
             "away_team_value": 67.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -2862,7 +3018,10 @@
             "home_team_value": 80,
             "away_team_value": 68.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:45",
@@ -2922,7 +3081,10 @@
             "home_team_value": 78.0,
             "away_team_value": 65.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -2990,7 +3152,10 @@
             "home_team_value": 80,
             "away_team_value": 64.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:45",
@@ -3050,7 +3215,10 @@
             "home_team_value": 77.7,
             "away_team_value": 68.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -3118,7 +3286,10 @@
             "home_team_value": 79.5,
             "away_team_value": 47.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:45",
@@ -3178,7 +3349,10 @@
             "home_team_value": 75.4,
             "away_team_value": 78.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -3246,7 +3420,10 @@
             "home_team_value": 80,
             "away_team_value": 37.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3314,7 +3491,10 @@
             "home_team_value": 61.2,
             "away_team_value": 64.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:00",
@@ -3374,7 +3554,10 @@
             "home_team_value": 53.9,
             "away_team_value": 65.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "16:00",
@@ -3434,7 +3617,10 @@
             "home_team_value": 63.1,
             "away_team_value": 67.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -3502,7 +3688,10 @@
             "home_team_value": 69.0,
             "away_team_value": 65.6
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3570,7 +3759,10 @@
             "home_team_value": 69.3,
             "away_team_value": 78.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3638,7 +3830,10 @@
             "home_team_value": 72.8,
             "away_team_value": 37.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3706,7 +3901,10 @@
             "home_team_value": 34.4,
             "away_team_value": 65.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "20:30",
@@ -3766,7 +3964,10 @@
             "home_team_value": 59.2,
             "away_team_value": 59.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -3834,7 +4035,10 @@
             "home_team_value": 64.9,
             "away_team_value": 80
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3902,7 +4106,10 @@
             "home_team_value": 69.7,
             "away_team_value": 63.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -3970,7 +4177,10 @@
             "home_team_value": 41.7,
             "away_team_value": 70.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "11:30",
@@ -4030,7 +4240,10 @@
             "home_team_value": 52.8,
             "away_team_value": 42.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:00",
@@ -4090,7 +4303,10 @@
             "home_team_value": 65.2,
             "away_team_value": 39.6
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -4158,7 +4374,10 @@
             "home_team_value": 47.8,
             "away_team_value": 46.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "19:00",
@@ -4218,7 +4437,10 @@
             "home_team_value": 48.7,
             "away_team_value": 43.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "19:00",
@@ -4278,7 +4500,10 @@
             "home_team_value": 35.4,
             "away_team_value": 57.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -4346,7 +4571,10 @@
             "home_team_value": 73.7,
             "away_team_value": 73.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -4414,7 +4642,10 @@
             "home_team_value": 49.7,
             "away_team_value": 66.6
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "07:00",
@@ -4474,7 +4705,10 @@
             "home_team_value": 55.4,
             "away_team_value": 73.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -4534,7 +4768,10 @@
             "home_team_value": 59.4,
             "away_team_value": 67.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -4594,7 +4831,10 @@
             "home_team_value": 70.1,
             "away_team_value": 66.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -4654,7 +4894,10 @@
             "home_team_value": 68.6,
             "away_team_value": 46.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "09:00",
@@ -4714,7 +4957,10 @@
             "home_team_value": 71.5,
             "away_team_value": 63.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "09:00",
@@ -4774,7 +5020,10 @@
             "home_team_value": 50.5,
             "away_team_value": 51.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "09:00",
@@ -4834,7 +5083,10 @@
             "home_team_value": 68.8,
             "away_team_value": 43.6
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "10:00",
@@ -4894,7 +5146,10 @@
             "home_team_value": 70.5,
             "away_team_value": 63.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "10:00",
@@ -4954,7 +5209,10 @@
             "home_team_value": 58.9,
             "away_team_value": 75.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 10
@@ -5022,7 +5280,10 @@
             "home_team_value": 74.7,
             "away_team_value": 59.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5082,7 +5343,10 @@
             "home_team_value": 63.7,
             "away_team_value": 57.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5142,7 +5406,10 @@
             "home_team_value": 55.5,
             "away_team_value": 51.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5202,7 +5469,10 @@
             "home_team_value": 70.5,
             "away_team_value": 60.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5262,7 +5532,10 @@
             "home_team_value": 55.4,
             "away_team_value": 48.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5322,7 +5595,10 @@
             "home_team_value": 67.2,
             "away_team_value": 61.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5382,7 +5658,10 @@
             "home_team_value": 56.2,
             "away_team_value": 54.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5442,7 +5721,10 @@
             "home_team_value": 46.3,
             "away_team_value": 56.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5502,7 +5784,10 @@
             "home_team_value": 62.3,
             "away_team_value": 66.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5562,7 +5847,10 @@
             "home_team_value": 57.9,
             "away_team_value": 68.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5622,7 +5910,10 @@
             "home_team_value": 66.3,
             "away_team_value": 57.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5682,7 +5973,10 @@
             "home_team_value": 61.1,
             "away_team_value": 46.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5742,7 +6036,10 @@
             "home_team_value": 59.2,
             "away_team_value": 63.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5802,7 +6099,10 @@
             "home_team_value": 73.5,
             "away_team_value": 50.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5862,7 +6162,10 @@
             "home_team_value": 48.5,
             "away_team_value": 59.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5922,7 +6225,10 @@
             "home_team_value": 64.3,
             "away_team_value": 42.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "08:00",
@@ -5982,7 +6288,10 @@
             "home_team_value": 55.1,
             "away_team_value": 61.3
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "11:00",
@@ -6042,7 +6351,10 @@
             "home_team_value": 35.8,
             "away_team_value": 61.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "12:00",
@@ -6102,7 +6414,10 @@
             "home_team_value": 42.2,
             "away_team_value": 54.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "12:00",
@@ -6162,7 +6477,10 @@
             "home_team_value": 46.7,
             "away_team_value": 57.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 20
@@ -6230,7 +6548,10 @@
             "home_team_value": 67.7,
             "away_team_value": 63.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "13:00",
@@ -6290,7 +6611,10 @@
             "home_team_value": 62.6,
             "away_team_value": 64.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "14:00",
@@ -6350,7 +6674,10 @@
             "home_team_value": 65.3,
             "away_team_value": 53.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "16:00",
@@ -6410,7 +6737,10 @@
             "home_team_value": 71.2,
             "away_team_value": 60.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "18:00",
@@ -6470,7 +6800,10 @@
             "home_team_value": 62.4,
             "away_team_value": 50.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 5
@@ -6538,7 +6871,10 @@
             "home_team_value": 61.7,
             "away_team_value": 67.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "23:00",
@@ -6598,7 +6934,10 @@
             "home_team_value": 61.8,
             "away_team_value": 60.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -6666,7 +7005,10 @@
             "home_team_value": 69.6,
             "away_team_value": 56.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -6734,7 +7076,10 @@
             "home_team_value": 80,
             "away_team_value": 75.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -6802,7 +7147,10 @@
             "home_team_value": 78.4,
             "away_team_value": 57.6
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -6870,7 +7218,10 @@
             "home_team_value": 66.4,
             "away_team_value": 65.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "19:00",
@@ -6930,7 +7281,10 @@
             "home_team_value": 69.0,
             "away_team_value": 66.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -6998,7 +7352,10 @@
             "home_team_value": 69.1,
             "away_team_value": 77.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -7066,7 +7423,10 @@
             "home_team_value": 80,
             "away_team_value": 41.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -7134,7 +7494,10 @@
             "home_team_value": 63.8,
             "away_team_value": 69.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "13:00",
@@ -7194,7 +7557,10 @@
             "home_team_value": 64.1,
             "away_team_value": 69.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "14:00",
@@ -7254,7 +7620,10 @@
             "home_team_value": 67.8,
             "away_team_value": 65.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:00",
@@ -7314,7 +7683,10 @@
             "home_team_value": 68.3,
             "away_team_value": 64.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:00",
@@ -7374,7 +7746,10 @@
             "home_team_value": 66.4,
             "away_team_value": 66.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "17:00",
@@ -7434,7 +7809,10 @@
             "home_team_value": 65.9,
             "away_team_value": 68.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 6
@@ -7502,7 +7880,10 @@
             "home_team_value": 43.7,
             "away_team_value": 79.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "19:10",
@@ -7562,7 +7943,10 @@
             "home_team_value": 60.8,
             "away_team_value": 51.7
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "21:00",
@@ -7622,7 +8006,10 @@
             "home_team_value": 80,
             "away_team_value": 76.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -7690,7 +8077,10 @@
             "home_team_value": 65.9,
             "away_team_value": 60.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "22:00",
@@ -7750,7 +8140,10 @@
             "home_team_value": 69.0,
             "away_team_value": 67.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -7818,7 +8211,10 @@
             "home_team_value": 55.3,
             "away_team_value": 76.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -7886,7 +8282,10 @@
             "home_team_value": 59.6,
             "away_team_value": 78.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "20:30",
@@ -7946,7 +8345,10 @@
             "home_team_value": 67.3,
             "away_team_value": 67.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
@@ -7977,29 +8379,38 @@
           "top_3_correct_scores": [
             {
               "score": "2-1",
-              "percentage": 11.07
+              "percentage": 11.07,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 8.17
+              "percentage": 8.17,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 8.05
+              "percentage": 8.05,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 14.41
+            "percentage": 14.41,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 78.19,
             "over_2_5": 57.86,
             "under_2_5": 42.14,
-            "under_3_5": 61.93
+            "under_3_5": 61.93,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 60.05
+            "both_teams_score": 60.05,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.5689677299756157,
@@ -8008,13 +8419,19 @@
             "market_efficiency": 0.9501761090592782,
             "goal_expectancy": -0.035999999999999976,
             "overround": 0.052436480422613396,
-            "odds_strength_ratio": 3.1437125748502996
+            "odds_strength_ratio": 3.1437125748502996,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 68.3,
             "away_team_value": 64.3
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": ""
       },
       {
         "time": "01:00",
@@ -8037,29 +8454,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 11.95
+              "percentage": 11.95,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 11.69
+              "percentage": 11.69,
+              "status": true
             },
             {
               "score": "0-1",
-              "percentage": 9.49
+              "percentage": 9.49,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 18.53
+            "percentage": 18.53,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 68.8,
             "over_2_5": 45.96,
             "under_2_5": 54.04,
-            "under_3_5": 72.75
+            "under_3_5": 72.75,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 51.73
+            "both_teams_score": 51.73,
+            "both_teams_score_status": true
           },
           "market_analysis": {
             "home_win_prob": 0.34010564811052413,
@@ -8068,13 +8494,19 @@
             "market_efficiency": 0.9522958147094677,
             "goal_expectancy": 0.04799999999999999,
             "overround": 0.050093872674517925,
-            "odds_strength_ratio": 0.9642857142857144
+            "odds_strength_ratio": 0.9642857142857144,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 60.0,
             "away_team_value": 62.0
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "1-1",
+        "second-half-score": ""
       },
       {
         "time": "03:00",
@@ -8134,7 +8566,10 @@
             "home_team_value": 63.9,
             "away_team_value": 66.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "03:30",
@@ -8194,7 +8629,10 @@
             "home_team_value": 62.5,
             "away_team_value": 65.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "05:00",
@@ -8254,7 +8692,10 @@
             "home_team_value": 67.9,
             "away_team_value": 65.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "05:00",
@@ -8314,7 +8755,10 @@
             "home_team_value": 62.9,
             "away_team_value": 62.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 6
@@ -8345,29 +8789,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 16.34
+              "percentage": 16.34,
+              "status": true
             },
             {
               "score": "2-1",
-              "percentage": 10.0
+              "percentage": 10.0,
+              "status": false
             },
             {
               "score": "2-0",
-              "percentage": 9.71
+              "percentage": 9.71,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 21.82
+            "percentage": 21.82,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 63.15,
             "over_2_5": 40.05,
             "under_2_5": 59.95,
-            "under_3_5": 77.54
+            "under_3_5": 77.54,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 46.41
+            "both_teams_score": 46.41,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.8549206145143664,
@@ -8376,13 +8829,19 @@
             "market_efficiency": 0.9489618821109468,
             "goal_expectancy": -0.12,
             "overround": 0.05378310641468542,
-            "odds_strength_ratio": 18.918918918918916
+            "odds_strength_ratio": 18.918918918918916,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 69.9,
             "away_team_value": 55.5
           }
-        }
+        },
+        "full-score": "1-0",
+        "first-half-score": "1-0",
+        "second-half-score": ""
       },
       {
         "time": "01:00",
@@ -8405,29 +8864,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 13.6
+              "percentage": 13.6,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 11.64
+              "percentage": 11.64,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 11.35
+              "percentage": 11.35,
+              "status": true
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 20.34
+            "percentage": 20.34,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 64.29,
             "over_2_5": 40.75,
             "under_2_5": 59.25,
-            "under_3_5": 77.3
+            "under_3_5": 77.3,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 48.48
+            "both_teams_score": 48.48,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.4041204437400951,
@@ -8436,13 +8904,19 @@
             "market_efficiency": 0.9496830427892236,
             "goal_expectancy": 0.06,
             "overround": 0.05298289528577382,
-            "odds_strength_ratio": 1.4468085106382977
+            "odds_strength_ratio": 1.4468085106382977,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 70.3,
             "away_team_value": 62.3
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "1-1",
+        "second-half-score": ""
       },
       {
         "time": "03:00",
@@ -8502,7 +8976,10 @@
             "home_team_value": 66.8,
             "away_team_value": 61.9
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "03:30",
@@ -8562,7 +9039,10 @@
             "home_team_value": 63.7,
             "away_team_value": 65.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "03:30",
@@ -8622,7 +9102,10 @@
             "home_team_value": 62.5,
             "away_team_value": 61.0
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "05:00",
@@ -8682,7 +9165,10 @@
             "home_team_value": 57.6,
             "away_team_value": 60.4
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 6
@@ -8750,7 +9236,10 @@
             "home_team_value": 64.7,
             "away_team_value": 60.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -8818,7 +9307,10 @@
             "home_team_value": 44.4,
             "away_team_value": 71.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "14:30",
@@ -8878,7 +9370,10 @@
             "home_team_value": 67.4,
             "away_team_value": 75.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "15:00",
@@ -8938,7 +9433,10 @@
             "home_team_value": 56.9,
             "away_team_value": 80
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -9006,7 +9504,10 @@
             "home_team_value": 69.4,
             "away_team_value": 53.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "17:30",
@@ -9066,7 +9567,10 @@
             "home_team_value": 55.4,
             "away_team_value": 73.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "17:30",
@@ -9126,7 +9630,10 @@
             "home_team_value": 70.7,
             "away_team_value": 55.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 3
@@ -9194,7 +9701,10 @@
             "home_team_value": 76.5,
             "away_team_value": 51.5
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -9262,7 +9772,10 @@
             "home_team_value": 70.0,
             "away_team_value": 66.1
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 1
@@ -9330,7 +9843,10 @@
             "home_team_value": 71.1,
             "away_team_value": 48.8
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       },
       {
         "time": "05:00",
@@ -9390,7 +9906,10 @@
             "home_team_value": 63.6,
             "away_team_value": 55.2
           }
-        }
+        },
+        "full-score": "",
+        "first-half-score": "",
+        "second-half-score": ""
       }
     ],
     "total_matches": 2
