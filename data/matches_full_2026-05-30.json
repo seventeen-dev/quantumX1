@@ -25,29 +25,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-1",
-              "percentage": 12.04
+              "percentage": 12.04,
+              "status": true
             },
             {
               "score": "1-0",
-              "percentage": 11.68
+              "percentage": 11.68,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 8.48
+              "percentage": 8.48,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 18.48
+            "percentage": 18.48,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 68.02,
             "over_2_5": 44.83,
             "under_2_5": 55.17,
-            "under_3_5": 73.86
+            "under_3_5": 73.86,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 50.43
+            "both_teams_score": 50.43,
+            "both_teams_score_status": true
           },
           "market_analysis": {
             "home_win_prob": 0.39768618944323936,
@@ -56,13 +65,19 @@
             "market_efficiency": 0.9464931308749097,
             "goal_expectancy": 0.02400000000000002,
             "overround": 0.05653170359052706,
-            "odds_strength_ratio": 1.2605042016806722
+            "odds_strength_ratio": 1.2605042016806722,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 80,
             "away_team_value": 75.0
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "0-1",
+        "second-half-score": "1-0"
       }
     ],
     "total_matches": 1
@@ -93,29 +108,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-2",
-              "percentage": 9.63
+              "percentage": 9.63,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 8.84
+              "percentage": 8.84,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 7.24
+              "percentage": 7.24,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 14.69
+            "percentage": 14.69,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 78.2,
             "over_2_5": 57.9,
             "under_2_5": 42.1,
-            "under_3_5": 61.69
+            "under_3_5": 61.69,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 61.18
+            "both_teams_score": 61.18,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.3103448275862069,
@@ -124,13 +148,19 @@
             "market_efficiency": 0.9310344827586208,
             "goal_expectancy": 0.09599999999999997,
             "overround": 0.07407407407407396,
-            "odds_strength_ratio": 0.9
+            "odds_strength_ratio": 0.9,
+            "home_win_status": false,
+            "draw_status": true,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 56.3,
             "away_team_value": 62.7
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:00",
@@ -153,29 +183,38 @@
           "top_3_correct_scores": [
             {
               "score": "0-0",
-              "percentage": 16.73
+              "percentage": 16.73,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 12.44
+              "percentage": 12.44,
+              "status": true
             },
             {
               "score": "0-1",
-              "percentage": 11.78
+              "percentage": 11.78,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-0",
-            "percentage": 22.83
+            "percentage": 22.83,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 59.35,
             "over_2_5": 35.51,
             "under_2_5": 64.49,
-            "under_3_5": 81.46
+            "under_3_5": 81.46,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 43.38
+            "both_teams_score": 43.38,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.36167082453783667,
@@ -184,13 +223,19 @@
             "market_efficiency": 0.9222606025714833,
             "goal_expectancy": 0.11160000000000002,
             "overround": 0.08429222414115989,
-            "odds_strength_ratio": 1.2941176470588236
+            "odds_strength_ratio": 1.2941176470588236,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 50.7,
             "away_team_value": 53.9
           }
-        }
+        },
+        "full-score": "1-0",
+        "first-half-score": "0-0",
+        "second-half-score": "1-0"
       },
       {
         "time": "21:00",
@@ -213,29 +258,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 12.28
+              "percentage": 12.28,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 11.4
+              "percentage": 11.4,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 8.88
+              "percentage": 8.88,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 17.94
+            "percentage": 17.94,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 71.56,
             "over_2_5": 49.27,
             "under_2_5": 50.73,
-            "under_3_5": 69.98
+            "under_3_5": 69.98,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 52.09
+            "both_teams_score": 52.09,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.516683889462982,
@@ -244,13 +298,19 @@
             "market_efficiency": 0.924864162138738,
             "goal_expectancy": 0.04799999999999999,
             "overround": 0.08123986303838526,
-            "odds_strength_ratio": 2.793296089385475
+            "odds_strength_ratio": 2.793296089385475,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 56.4,
             "away_team_value": 52.4
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:30",
@@ -273,29 +333,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 13.15
+              "percentage": 13.15,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 11.57
+              "percentage": 11.57,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 11.21
+              "percentage": 11.21,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-0",
-            "percentage": 21.73
+            "percentage": 21.73,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 63.42,
             "over_2_5": 40.3,
             "under_2_5": 59.7,
-            "under_3_5": 77.51
+            "under_3_5": 77.51,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 47.34
+            "both_teams_score": 47.34,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.41901408450704225,
@@ -304,13 +373,19 @@
             "market_efficiency": 0.921830985915493,
             "goal_expectancy": 0.11400000000000002,
             "overround": 0.0847975553857907,
-            "odds_strength_ratio": 1.909090909090909
+            "odds_strength_ratio": 1.909090909090909,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 61.5,
             "away_team_value": 62.0
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:30",
@@ -333,29 +408,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 14.86
+              "percentage": 14.86,
+              "status": false
             },
             {
               "score": "0-0",
-              "percentage": 13.61
+              "percentage": 13.61,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 12.23
+              "percentage": 12.23,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-0",
-            "percentage": 24.09
+            "percentage": 24.09,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 61.17,
             "over_2_5": 38.2,
             "under_2_5": 61.8,
-            "under_3_5": 78.87
+            "under_3_5": 78.87,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 46.3
+            "both_teams_score": 46.3,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.33847791378392766,
@@ -364,13 +448,19 @@
             "market_efficiency": 0.9308142629058009,
             "goal_expectancy": 0.10200000000000001,
             "overround": 0.07432818753573467,
-            "odds_strength_ratio": 1.0909090909090908
+            "odds_strength_ratio": 1.0909090909090908,
+            "home_win_status": false,
+            "draw_status": true,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 57.4,
             "away_team_value": 52.7
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "1-0",
+        "second-half-score": "0-1"
       },
       {
         "time": "21:30",
@@ -393,29 +483,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 12.21
+              "percentage": 12.21,
+              "status": true
             },
             {
               "score": "2-1",
-              "percentage": 9.6
+              "percentage": 9.6,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 9.49
+              "percentage": 9.49,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 17.7
+            "percentage": 17.7,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 73.22,
             "over_2_5": 51.79,
             "under_2_5": 48.21,
-            "under_3_5": 67.17
+            "under_3_5": 67.17,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 53.52
+            "both_teams_score": 53.52,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.5257623554153522,
@@ -424,13 +523,19 @@
             "market_efficiency": 0.9253417455310199,
             "goal_expectancy": 0.035999999999999976,
             "overround": 0.0806818181818183,
-            "odds_strength_ratio": 2.840909090909091
+            "odds_strength_ratio": 2.840909090909091,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 54.4,
             "away_team_value": 50.3
           }
-        }
+        },
+        "full-score": "1-0",
+        "first-half-score": "1-0",
+        "second-half-score": "0-0"
       }
     ],
     "total_matches": 6
@@ -461,29 +566,38 @@
           "top_3_correct_scores": [
             {
               "score": "2-1",
-              "percentage": 11.02
+              "percentage": 11.02,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 10.57
+              "percentage": 10.57,
+              "status": false
             },
             {
               "score": "2-0",
-              "percentage": 9.75
+              "percentage": 9.75,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 14.96
+            "percentage": 14.96,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 74.03,
             "over_2_5": 53.02,
             "under_2_5": 46.98,
-            "under_3_5": 66.33
+            "under_3_5": 66.33,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 53.07
+            "both_teams_score": 53.07,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.450391896007309,
@@ -492,13 +606,19 @@
             "market_efficiency": 0.9097916299347641,
             "goal_expectancy": 0.07680000000000001,
             "overround": 0.09915278080949608,
-            "odds_strength_ratio": 1.9455445544554455
+            "odds_strength_ratio": 1.9455445544554455,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 66.3,
             "away_team_value": 47.6
           }
-        }
+        },
+        "full-score": "0-1",
+        "first-half-score": "0-0",
+        "second-half-score": "0-1"
       },
       {
         "time": "20:30",
@@ -521,29 +641,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 10.21
+              "percentage": 10.21,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 10.05
+              "percentage": 10.05,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 9.79
+              "percentage": 9.79,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 17.38
+            "percentage": 17.38,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 71.84,
             "over_2_5": 49.72,
             "under_2_5": 50.28,
-            "under_3_5": 69.47
+            "under_3_5": 69.47,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 53.74
+            "both_teams_score": 53.74,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.3668744898490822,
@@ -552,13 +681,19 @@
             "market_efficiency": 0.9098487348257238,
             "goal_expectancy": 0.12,
             "overround": 0.09908379461729333,
-            "odds_strength_ratio": 1.3629032258064515
+            "odds_strength_ratio": 1.3629032258064515,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 53.2,
             "away_team_value": 48.3
           }
-        }
+        },
+        "full-score": "0-1",
+        "first-half-score": "0-1",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:30",
@@ -581,29 +716,38 @@
           "top_3_correct_scores": [
             {
               "score": "2-0",
-              "percentage": 11.47
+              "percentage": 11.47,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 10.92
+              "percentage": 10.92,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 9.75
+              "percentage": 9.75,
+              "status": true
             }
           ],
           "most_likely_halftime_score": {
             "score": "2-0",
-            "percentage": 16.1
+            "percentage": 16.1,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 78.14,
             "over_2_5": 57.77,
             "under_2_5": 42.23,
-            "under_3_5": 61.92
+            "under_3_5": 61.92,
+            "over_1_5_status": true,
+            "over_2_5_status": true,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 51.7
+            "both_teams_score": 51.7,
+            "both_teams_score_status": true
           },
           "market_analysis": {
             "home_win_prob": 0.4946524064171123,
@@ -612,13 +756,19 @@
             "market_efficiency": 0.9101604278074867,
             "goal_expectancy": 0.0648,
             "overround": 0.09870740305522907,
-            "odds_strength_ratio": 2.4999999999999996
+            "odds_strength_ratio": 2.4999999999999996,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 69.5,
             "away_team_value": 51.6
           }
-        }
+        },
+        "full-score": "2-1",
+        "first-half-score": "1-0",
+        "second-half-score": "1-1"
       }
     ],
     "total_matches": 3
@@ -649,29 +799,38 @@
           "top_3_correct_scores": [
             {
               "score": "2-1",
-              "percentage": 8.74
+              "percentage": 8.74,
+              "status": false
             },
             {
               "score": "1-2",
-              "percentage": 8.63
+              "percentage": 8.63,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 7.83
+              "percentage": 7.83,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 13.89
+            "percentage": 13.89,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 80.09,
             "over_2_5": 61.03,
             "under_2_5": 38.97,
-            "under_3_5": 58.47
+            "under_3_5": 58.47,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 63.05
+            "both_teams_score": 63.05,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.3026368625351358,
@@ -680,13 +839,19 @@
             "market_efficiency": 0.9079105876054074,
             "goal_expectancy": 0.10079999999999997,
             "overround": 0.1014300457024917,
-            "odds_strength_ratio": 0.85
+            "odds_strength_ratio": 0.85,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 50.8,
             "away_team_value": 63.0
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": "0-0"
       },
       {
         "time": "20:30",
@@ -709,29 +874,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 17.6
+              "percentage": 17.6,
+              "status": false
             },
             {
               "score": "2-0",
-              "percentage": 12.25
+              "percentage": 12.25,
+              "status": false
             },
             {
               "score": "0-0",
-              "percentage": 10.58
+              "percentage": 10.58,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 24.61
+            "percentage": 24.61,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 63.41,
             "over_2_5": 40.48,
             "under_2_5": 59.52,
-            "under_3_5": 77.11
+            "under_3_5": 77.11,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": false
           },
           "teams_markets": {
-            "both_teams_score": 41.53
+            "both_teams_score": 41.53,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.322180384046997,
@@ -740,13 +914,19 @@
             "market_efficiency": 0.8988832714911217,
             "goal_expectancy": 0.09119999999999998,
             "overround": 0.11249150108349415,
-            "odds_strength_ratio": 0.9211469534050178
+            "odds_strength_ratio": 0.9211469534050178,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 65.4,
             "away_team_value": 43.7
           }
-        }
+        },
+        "full-score": "2-2",
+        "first-half-score": "2-1",
+        "second-half-score": "0-1"
       },
       {
         "time": "20:30",
@@ -769,29 +949,38 @@
           "top_3_correct_scores": [
             {
               "score": "0-0",
-              "percentage": 16.32
+              "percentage": 16.32,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 16.0
+              "percentage": 16.0,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 10.86
+              "percentage": 10.86,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-0",
-            "percentage": 24.12
+            "percentage": 24.12,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 60.24,
             "over_2_5": 35.99,
             "under_2_5": 64.01,
-            "under_3_5": 81.32
+            "under_3_5": 81.32,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 42.99
+            "both_teams_score": 42.99,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.4933110306819718,
@@ -800,13 +989,19 @@
             "market_efficiency": 0.9076922964548281,
             "goal_expectancy": 0.06839999999999997,
             "overround": 0.1016949288935225,
-            "odds_strength_ratio": 2.505434782608696
+            "odds_strength_ratio": 2.505434782608696,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 58.3,
             "away_team_value": 65.2
           }
-        }
+        },
+        "full-score": "2-1",
+        "first-half-score": "1-1",
+        "second-half-score": "1-0"
       },
       {
         "time": "20:30",
@@ -829,29 +1024,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 17.74
+              "percentage": 17.74,
+              "status": false
             },
             {
               "score": "0-0",
-              "percentage": 11.94
+              "percentage": 11.94,
+              "status": true
             },
             {
               "score": "2-0",
-              "percentage": 11.15
+              "percentage": 11.15,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 24.16
+            "percentage": 24.16,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 61.88,
             "over_2_5": 38.05,
             "under_2_5": 61.95,
-            "under_3_5": 79.54
+            "under_3_5": 79.54,
+            "over_1_5_status": false,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 43.49
+            "both_teams_score": 43.49,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.5342935989769133,
@@ -860,13 +1064,19 @@
             "market_efficiency": 0.9082991182607526,
             "goal_expectancy": 0.031199999999999974,
             "overround": 0.10095890207935021,
-            "odds_strength_ratio": 2.882352941176471
+            "odds_strength_ratio": 2.882352941176471,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 73.6,
             "away_team_value": 57.4
           }
-        }
+        },
+        "full-score": "0-0",
+        "first-half-score": "0-0",
+        "second-half-score": "0-0"
       },
       {
         "time": "21:30",
@@ -889,29 +1099,38 @@
           "top_3_correct_scores": [
             {
               "score": "0-1",
-              "percentage": 15.89
+              "percentage": 15.89,
+              "status": false
             },
             {
               "score": "0-0",
-              "percentage": 14.68
+              "percentage": 14.68,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 10.81
+              "percentage": 10.81,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-0",
-            "percentage": 22.13
+            "percentage": 22.13,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 60.48,
             "over_2_5": 36.91,
             "under_2_5": 63.09,
-            "under_3_5": 80.34
+            "under_3_5": 80.34,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": true,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 44.89
+            "both_teams_score": 44.89,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.36776338926010177,
@@ -920,13 +1139,19 @@
             "market_efficiency": 0.9083755714724514,
             "goal_expectancy": 0.08279999999999998,
             "overround": 0.10086624013790679,
-            "odds_strength_ratio": 1.1902834008097165
+            "odds_strength_ratio": 1.1902834008097165,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 65.0,
             "away_team_value": 74.6
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "0-1",
+        "second-half-score": "1-0"
       },
       {
         "time": "21:30",
@@ -949,29 +1174,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-1",
-              "percentage": 9.74
+              "percentage": 9.74,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 9.57
+              "percentage": 9.57,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 9.33
+              "percentage": 9.33,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 16.71
+            "percentage": 16.71,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 76.56,
             "over_2_5": 55.37,
             "under_2_5": 44.63,
-            "under_3_5": 64.39
+            "under_3_5": 64.39,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 55.32
+            "both_teams_score": 55.32,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.370440349434281,
@@ -980,13 +1214,19 @@
             "market_efficiency": 0.9075788561139886,
             "goal_expectancy": 0.09,
             "overround": 0.10183263224281602,
-            "odds_strength_ratio": 1.2367346938775508
+            "odds_strength_ratio": 1.2367346938775508,
+            "home_win_status": true,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 69.9,
             "away_team_value": 67.4
           }
-        }
+        },
+        "full-score": "2-0",
+        "first-half-score": "1-0",
+        "second-half-score": "1-0"
       },
       {
         "time": "21:30",
@@ -1009,29 +1249,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-1",
-              "percentage": 12.04
+              "percentage": 12.04,
+              "status": true
             },
             {
               "score": "1-0",
-              "percentage": 8.88
+              "percentage": 8.88,
+              "status": false
             },
             {
               "score": "2-1",
-              "percentage": 8.64
+              "percentage": 8.64,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 17.37
+            "percentage": 17.37,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 74.14,
             "over_2_5": 51.92,
             "under_2_5": 48.08,
-            "under_3_5": 67.92
+            "under_3_5": 67.92,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 56.37
+            "both_teams_score": 56.37,
+            "both_teams_score_status": true
           },
           "market_analysis": {
             "home_win_prob": 0.3233631373695122,
@@ -1040,13 +1289,19 @@
             "market_efficiency": 0.8989495218872439,
             "goal_expectancy": 0.08279999999999998,
             "overround": 0.1124095131622207,
-            "odds_strength_ratio": 0.9064748201438849
+            "odds_strength_ratio": 0.9064748201438849,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 54.1,
             "away_team_value": 51.8
           }
-        }
+        },
+        "full-score": "1-1",
+        "first-half-score": "0-0",
+        "second-half-score": "1-1"
       }
     ],
     "total_matches": 7
@@ -1077,29 +1332,38 @@
           "top_3_correct_scores": [
             {
               "score": "0-0",
-              "percentage": 12.28
+              "percentage": 12.28,
+              "status": false
             },
             {
               "score": "1-0",
-              "percentage": 12.22
+              "percentage": 12.22,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 11.96
+              "percentage": 11.96,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-1",
-            "percentage": 18.43
+            "percentage": 18.43,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 64.09,
             "over_2_5": 40.35,
             "under_2_5": 59.65,
-            "under_3_5": 77.75
+            "under_3_5": 77.75,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": false
           },
           "teams_markets": {
-            "both_teams_score": 47.08
+            "both_teams_score": 47.08,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.2630890491363408,
@@ -1108,13 +1372,19 @@
             "market_efficiency": 0.910288110011739,
             "goal_expectancy": 0.0648,
             "overround": 0.0985532920858474,
-            "odds_strength_ratio": 0.6127167630057804
+            "odds_strength_ratio": 0.6127167630057804,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 62.8,
             "away_team_value": 72.4
           }
-        }
+        },
+        "full-score": "2-2",
+        "first-half-score": "1-1",
+        "second-half-score": "1-1"
       }
     ],
     "total_matches": 1
@@ -1145,29 +1415,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-0",
-              "percentage": 16.69
+              "percentage": 16.69,
+              "status": false
             },
             {
               "score": "2-0",
-              "percentage": 12.49
+              "percentage": 12.49,
+              "status": false
             },
             {
               "score": "0-0",
-              "percentage": 9.36
+              "percentage": 9.36,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-0",
-            "percentage": 23.41
+            "percentage": 23.41,
+            "status": true
           },
           "goals_markets": {
             "over_1_5": 67.3,
             "over_2_5": 44.02,
             "under_2_5": 55.98,
-            "under_3_5": 74.58
+            "under_3_5": 74.58,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": false
           },
           "teams_markets": {
-            "both_teams_score": 42.43
+            "both_teams_score": 42.43,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.357826331678862,
@@ -1176,13 +1455,19 @@
             "market_efficiency": 0.8981440925139436,
             "goal_expectancy": -0.03359999999999998,
             "overround": 0.11340708950270706,
-            "odds_strength_ratio": 0.8844621513944224
+            "odds_strength_ratio": 0.8844621513944224,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": false
           },
           "team_values": {
             "home_team_value": 66.5,
             "away_team_value": 44.0
           }
-        }
+        },
+        "full-score": "5-0",
+        "first-half-score": "1-0",
+        "second-half-score": "4-0"
       },
       {
         "time": "08:00",
@@ -1205,29 +1490,38 @@
           "top_3_correct_scores": [
             {
               "score": "0-1",
-              "percentage": 12.96
+              "percentage": 12.96,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 11.02
+              "percentage": 11.02,
+              "status": false
             },
             {
               "score": "1-2",
-              "percentage": 9.23
+              "percentage": 9.23,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "0-1",
-            "percentage": 15.24
+            "percentage": 15.24,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 69.33,
             "over_2_5": 46.55,
             "under_2_5": 53.45,
-            "under_3_5": 72.67
+            "under_3_5": 72.67,
+            "over_1_5_status": true,
+            "over_2_5_status": false,
+            "under_2_5_status": false,
+            "under_3_5_status": false
           },
           "teams_markets": {
-            "both_teams_score": 51.25
+            "both_teams_score": 51.25,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.3098616289932371,
@@ -1236,13 +1530,19 @@
             "market_efficiency": 0.9078945729501848,
             "goal_expectancy": -0.050399999999999986,
             "overround": 0.1014494741944767,
-            "odds_strength_ratio": 0.6757679180887372
+            "odds_strength_ratio": 0.6757679180887372,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": true
           },
           "team_values": {
             "home_team_value": 38.0,
             "away_team_value": 66.2
           }
-        }
+        },
+        "full-score": "0-4",
+        "first-half-score": "0-0",
+        "second-half-score": "0-4"
       },
       {
         "time": "09:00",
@@ -1265,29 +1565,38 @@
           "top_3_correct_scores": [
             {
               "score": "1-2",
-              "percentage": 10.96
+              "percentage": 10.96,
+              "status": false
             },
             {
               "score": "1-1",
-              "percentage": 7.8
+              "percentage": 7.8,
+              "status": false
             },
             {
               "score": "0-1",
-              "percentage": 7.64
+              "percentage": 7.64,
+              "status": false
             }
           ],
           "most_likely_halftime_score": {
             "score": "1-1",
-            "percentage": 13.34
+            "percentage": 13.34,
+            "status": false
           },
           "goals_markets": {
             "over_1_5": 77.58,
             "over_2_5": 57.39,
             "under_2_5": 42.6,
-            "under_3_5": 62.0
+            "under_3_5": 62.0,
+            "over_1_5_status": true,
+            "over_2_5_status": true,
+            "under_2_5_status": false,
+            "under_3_5_status": true
           },
           "teams_markets": {
-            "both_teams_score": 57.32
+            "both_teams_score": 57.32,
+            "both_teams_score_status": false
           },
           "market_analysis": {
             "home_win_prob": 0.15842599260353227,
@@ -1296,13 +1605,19 @@
             "market_efficiency": 0.9077809376182399,
             "goal_expectancy": -0.12,
             "overround": 0.10158735280751419,
-            "odds_strength_ratio": 0.23036649214659685
+            "odds_strength_ratio": 0.23036649214659685,
+            "home_win_status": false,
+            "draw_status": false,
+            "away_win_status": true
           },
           "team_values": {
             "home_team_value": 40.5,
             "away_team_value": 58.5
           }
-        }
+        },
+        "full-score": "0-3",
+        "first-half-score": "0-0",
+        "second-half-score": "0-3"
       }
     ],
     "total_matches": 3
